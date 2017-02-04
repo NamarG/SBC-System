@@ -16,5 +16,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmManagerLogin login = new frmManagerLogin();
+            login.Show();
+        }
     }
 }

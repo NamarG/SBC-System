@@ -36,40 +36,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter Recovery Code:";
+            this.label1.Text = "Enter code:";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(130, 38);
+            this.btnSubmit.Location = new System.Drawing.Point(15, 32);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(100, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(172, 23);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(130, 12);
+            this.txtCode.Location = new System.Drawing.Point(80, 6);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 20);
+            this.txtCode.Size = new System.Drawing.Size(107, 20);
             this.txtCode.TabIndex = 2;
             // 
             // frmRecoveryCodeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 76);
+            this.ClientSize = new System.Drawing.Size(199, 65);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmRecoveryCodeManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Enter code:";
+            this.Text = "Verify your email";
             this.ResumeLayout(false);
             this.PerformLayout();
 

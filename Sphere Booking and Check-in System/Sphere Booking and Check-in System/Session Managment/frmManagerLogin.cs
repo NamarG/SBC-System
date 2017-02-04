@@ -9,6 +9,10 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         public frmManagerLogin()
         {
             InitializeComponent();
+
+            FormClosing += new FormClosingEventHandler(frmManagerLogin_FormClosing);
+            txtUsername.KeyPress += new KeyPressEventHandler(CheckEnter);
+            txtPassword.KeyPress += new KeyPressEventHandler(CheckEnter);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -58,13 +62,17 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             }
         }
 
+        private void CheckEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
-            DialogResult closeResult = MessageBox.Show("Do you really want to exit?", "Please Confirm", MessageBoxButtons.YesNo);
-            if (closeResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            //Wait to merge
         }
 
         private void btnRecovery_Click(object sender, EventArgs e)
@@ -72,6 +80,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             frmRecoveryManager recovery = new frmRecoveryManager();
             this.Hide();
             recovery.Show();
+        }
+
+        private void frmManagerLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+            //Wait to merge
         }
     }
 }
