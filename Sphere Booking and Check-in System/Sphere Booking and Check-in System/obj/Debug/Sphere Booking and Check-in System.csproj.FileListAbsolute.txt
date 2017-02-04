@@ -10,3 +10,18 @@ C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and 
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csproj.GenerateResource.Cache
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.exe.config
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csprojResolveAssemblyReference.cache
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Form1.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Properties.Resources.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmManagerLogin.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmSessionManagementMain.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csproj.GenerateResource.Cache
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\mainDatabase.mdf
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\mainDatabase_log.ldf
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.exe
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmRecoveryCodeManager.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmRecoveryManager.resources
