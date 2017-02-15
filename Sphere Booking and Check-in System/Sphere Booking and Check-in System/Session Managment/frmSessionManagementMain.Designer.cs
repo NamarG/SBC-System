@@ -37,13 +37,13 @@
             this.updateSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtCurrentManager = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,13 +73,13 @@
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.lockToolStripMenuItem.Text = "Lock";
             // 
             // logOutToolStripMenuItem1
             // 
             this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
-            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.logOutToolStripMenuItem1.Text = "Log Out";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click_1);
             // 
@@ -99,6 +99,7 @@
             this.addNewSessionToolStripMenuItem.Name = "addNewSessionToolStripMenuItem";
             this.addNewSessionToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.addNewSessionToolStripMenuItem.Text = "Add new Session";
+            this.addNewSessionToolStripMenuItem.Click += new System.EventHandler(this.addNewSessionToolStripMenuItem_Click);
             // 
             // updateSessionToolStripMenuItem
             // 
@@ -117,6 +118,12 @@
             this.viewSessionsToolStripMenuItem.Name = "viewSessionsToolStripMenuItem";
             this.viewSessionsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewSessionsToolStripMenuItem.Text = "View Sessions";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // statusStrip1
             // 
@@ -173,12 +180,6 @@
             this.tabPage2.Text = "News";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // frmSessionManagementMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +189,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmSessionManagementMain";

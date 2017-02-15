@@ -223,6 +223,7 @@
             this.Name = "frmAddNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Session";
+            this.Load += new System.EventHandler(this.frmAddNew_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
