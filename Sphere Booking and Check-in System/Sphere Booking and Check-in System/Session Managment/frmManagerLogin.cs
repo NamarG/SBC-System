@@ -87,5 +87,18 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             System.Environment.Exit(0);
             //Wait to merge
         }
+
+        private void frmManagerLogin_Load(object sender, EventArgs e)
+        {
+            SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|mainDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+            try
+            {
+                Connection.Open();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Unexpected error:" + ex.Message);
+            }
+        }
     }
 }

@@ -129,6 +129,7 @@
             this.Name = "frmManagerLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager Login";
+            this.Load += new System.EventHandler(this.frmManagerLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

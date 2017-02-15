@@ -30,3 +30,4 @@ C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and 
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmRecoveryCodeManager.resources
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmRecoveryManager.resources
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmSessionManagementMain.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.frmAddNew.resources

@@ -83,6 +83,12 @@
     <Compile Include="Session Managment\frmAddNew.Designer.cs">
       <DependentUpon>frmAddNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\frmLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmLock.Designer.cs">
+      <DependentUpon>frmLock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session Managment\frmManagerLogin.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -15,9 +15,11 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         public frmSessionManagementMain()
         {
             InitializeComponent();
+
+            FormClosing += new FormClosingEventHandler(frmSessionManagementMain_FormClosing);
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void frmSessionManagementMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Manager Log Out", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -32,6 +34,17 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         {
             frmAddNew add = new frmAddNew();
             add.Show();
+        }
+
+        private void logOutToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Manager Log Out", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                frmManagerLogin login = new frmManagerLogin();
+                login.Show();
+            }
         }
     }
 }
