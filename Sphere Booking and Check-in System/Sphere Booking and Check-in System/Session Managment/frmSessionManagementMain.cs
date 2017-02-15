@@ -19,9 +19,19 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmManagerLogin login = new frmManagerLogin();
-            login.Show();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Manager Log Out", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                frmManagerLogin login = new frmManagerLogin();
+                login.Show();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAddNew add = new frmAddNew();
+            add.Show();
         }
     }
 }

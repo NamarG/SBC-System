@@ -84,7 +84,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
 
         private void frmManagerLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            System.Environment.Exit(0);
             //Wait to merge
         }
     }

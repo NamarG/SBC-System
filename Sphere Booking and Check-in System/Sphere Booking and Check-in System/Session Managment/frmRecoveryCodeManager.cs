@@ -9,6 +9,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         public frmRecoveryCodeManager()
         {
             InitializeComponent();
+
+            txtCode.KeyPress += new KeyPressEventHandler(CheckEnter);
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -51,6 +53,14 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                         Connection.Close();
                     }
                 }
+            }
+        }
+
+        private void CheckEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnSubmit_Click(this, new EventArgs());
             }
         }
     }
