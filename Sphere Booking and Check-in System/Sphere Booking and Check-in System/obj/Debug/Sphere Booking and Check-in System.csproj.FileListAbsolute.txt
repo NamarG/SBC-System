@@ -10,3 +10,6 @@ C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and 
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csproj.GenerateResource.Cache
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
 C:\Users\starlint\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.exe.config
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
