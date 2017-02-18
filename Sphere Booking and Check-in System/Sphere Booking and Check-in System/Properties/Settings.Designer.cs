@@ -26,8 +26,8 @@ namespace Sphere_Booking_and_Check_in_System.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\mainDatabase." +
-            "mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\bin\\Debug\\mai" +
+            "nDatabase.mdf;Integrated Security=True;Connect Timeout=30")]
         public string mainDatabaseConnectionString {
             get {
                 return ((string)(this["mainDatabaseConnectionString"]));
