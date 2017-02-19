@@ -40,8 +40,6 @@ namespace Sphere_Booking_and_Check_in_System {
         
         private global::System.Data.DataRelation relationFK_Booking_staffID;
         
-        private global::System.Data.DataRelation relationFK_Session_Booking;
-        
         private global::System.Data.DataRelation relationFK_Session_Customer;
         
         private global::System.Data.DataRelation relationFK_Session_Slope;
@@ -330,7 +328,6 @@ namespace Sphere_Booking_and_Check_in_System {
             }
             this.relationFK_Booking_customerID = this.Relations["FK_Booking_customerID"];
             this.relationFK_Booking_staffID = this.Relations["FK_Booking_staffID"];
-            this.relationFK_Session_Booking = this.Relations["FK_Session_Booking"];
             this.relationFK_Session_Customer = this.Relations["FK_Session_Customer"];
             this.relationFK_Session_Slope = this.Relations["FK_Session_Slope"];
             this.relationFK_Session_Staff = this.Relations["FK_Session_Staff"];
@@ -365,10 +362,6 @@ namespace Sphere_Booking_and_Check_in_System {
                         this.tableStaff.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableBooking.staffIDColumn}, false);
             this.Relations.Add(this.relationFK_Booking_staffID);
-            this.relationFK_Session_Booking = new global::System.Data.DataRelation("FK_Session_Booking", new global::System.Data.DataColumn[] {
-                        this.tableBooking.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSession.bookingIDColumn}, false);
-            this.Relations.Add(this.relationFK_Session_Booking);
             this.relationFK_Session_Customer = new global::System.Data.DataRelation("FK_Session_Customer", new global::System.Data.DataColumn[] {
                         this.tableCustomer.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableSession.customerIDColumn}, false);
@@ -2123,8 +2116,6 @@ namespace Sphere_Booking_and_Check_in_System {
             
             private global::System.Data.DataColumn columnslopeID;
             
-            private global::System.Data.DataColumn columnbookingID;
-            
             private global::System.Data.DataColumn columnstartTime;
             
             private global::System.Data.DataColumn columnendTime;
@@ -2198,14 +2189,6 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn bookingIDColumn {
-                get {
-                    return this.columnbookingID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn startTimeColumn {
                 get {
                     return this.columnstartTime;
@@ -2265,11 +2248,10 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SessionRow AddSessionRow(int Id, StaffRow parentStaffRowByFK_Session_Staff, CustomerRow parentCustomerRowByFK_Session_Customer, SlopeRow parentSlopeRowByFK_Session_Slope, BookingRow parentBookingRowByFK_Session_Booking, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date) {
+            public SessionRow AddSessionRow(int Id, StaffRow parentStaffRowByFK_Session_Staff, CustomerRow parentCustomerRowByFK_Session_Customer, SlopeRow parentSlopeRowByFK_Session_Slope, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date) {
                 SessionRow rowSessionRow = ((SessionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        null,
                         null,
                         null,
                         null,
@@ -2284,9 +2266,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 }
                 if ((parentSlopeRowByFK_Session_Slope != null)) {
                     columnValuesArray[3] = parentSlopeRowByFK_Session_Slope[0];
-                }
-                if ((parentBookingRowByFK_Session_Booking != null)) {
-                    columnValuesArray[4] = parentBookingRowByFK_Session_Booking[0];
                 }
                 rowSessionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSessionRow);
@@ -2321,7 +2300,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 this.columnstaffID = base.Columns["staffID"];
                 this.columncustomerID = base.Columns["customerID"];
                 this.columnslopeID = base.Columns["slopeID"];
-                this.columnbookingID = base.Columns["bookingID"];
                 this.columnstartTime = base.Columns["startTime"];
                 this.columnendTime = base.Columns["endTime"];
                 this.columndate = base.Columns["date"];
@@ -2338,8 +2316,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 base.Columns.Add(this.columncustomerID);
                 this.columnslopeID = new global::System.Data.DataColumn("slopeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnslopeID);
-                this.columnbookingID = new global::System.Data.DataColumn("bookingID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbookingID);
                 this.columnstartTime = new global::System.Data.DataColumn("startTime", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstartTime);
                 this.columnendTime = new global::System.Data.DataColumn("endTime", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
@@ -2353,7 +2329,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 this.columnstaffID.AllowDBNull = false;
                 this.columncustomerID.AllowDBNull = false;
                 this.columnslopeID.AllowDBNull = false;
-                this.columnbookingID.AllowDBNull = false;
                 this.columnstartTime.AllowDBNull = false;
                 this.columnendTime.AllowDBNull = false;
                 this.columndate.AllowDBNull = false;
@@ -2582,17 +2557,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Booking_Session"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SessionRow[] GetSessionRows() {
-                if ((this.Table.ChildRelations["FK_Session_Booking"] == null)) {
-                    return new SessionRow[0];
-                }
-                else {
-                    return ((SessionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Session_Booking"])));
                 }
             }
         }
@@ -2992,17 +2956,6 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int bookingID {
-                get {
-                    return ((int)(this[this.tableSession.bookingIDColumn]));
-                }
-                set {
-                    this[this.tableSession.bookingIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.TimeSpan startTime {
                 get {
                     return ((global::System.TimeSpan)(this[this.tableSession.startTimeColumn]));
@@ -3031,17 +2984,6 @@ namespace Sphere_Booking_and_Check_in_System {
                 }
                 set {
                     this[this.tableSession.dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BookingRow BookingRow {
-                get {
-                    return ((BookingRow)(this.GetParentRow(this.Table.ParentRelations["FK_Session_Booking"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Session_Booking"]);
                 }
             }
             
@@ -5319,46 +5261,40 @@ SELECT Id, slopeName, slopeLocation, slopeDifficulty FROM Slope WHERE (Id = @Id)
             tableMapping.ColumnMappings.Add("staffID", "staffID");
             tableMapping.ColumnMappings.Add("customerID", "customerID");
             tableMapping.ColumnMappings.Add("slopeID", "slopeID");
-            tableMapping.ColumnMappings.Add("bookingID", "bookingID");
             tableMapping.ColumnMappings.Add("startTime", "startTime");
             tableMapping.ColumnMappings.Add("endTime", "endTime");
             tableMapping.ColumnMappings.Add("date", "date");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Session] WHERE (([Id] = @Original_Id) AND ([staffID] = @Original_staffID) AND ([customerID] = @Original_customerID) AND ([slopeID] = @Original_slopeID) AND ([bookingID] = @Original_bookingID) AND ([startTime] = @Original_startTime) AND ([endTime] = @Original_endTime) AND ([date] = @Original_date))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Session] WHERE (([Id] = @Original_Id) AND ([staffID] = @Original_staffID) AND ([customerID] = @Original_customerID) AND ([slopeID] = @Original_slopeID) AND ([startTime] = @Original_startTime) AND ([endTime] = @Original_endTime) AND ([date] = @Original_date))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_slopeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "slopeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "startTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Session] ([Id], [staffID], [customerID], [slopeID], [bookingID], [startTime], [endTime], [date]) VALUES (@Id, @staffID, @customerID, @slopeID, @bookingID, @startTime, @endTime, @date);
-SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FROM Session WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Session] ([staffID], [customerID], [slopeID], [startTime], [endTime], [date]) VALUES (@staffID, @customerID, @slopeID, @startTime, @endTime, @date);
+SELECT Id, staffID, customerID, slopeID, startTime, endTime, date FROM Session WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@slopeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "slopeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "startTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Session] SET [Id] = @Id, [staffID] = @staffID, [customerID] = @customerID, [slopeID] = @slopeID, [bookingID] = @bookingID, [startTime] = @startTime, [endTime] = @endTime, [date] = @date WHERE (([Id] = @Original_Id) AND ([staffID] = @Original_staffID) AND ([customerID] = @Original_customerID) AND ([slopeID] = @Original_slopeID) AND ([bookingID] = @Original_bookingID) AND ([startTime] = @Original_startTime) AND ([endTime] = @Original_endTime) AND ([date] = @Original_date));
-SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FROM Session WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Session] SET [staffID] = @staffID, [customerID] = @customerID, [slopeID] = @slopeID, [startTime] = @startTime, [endTime] = @endTime, [date] = @date WHERE (([Id] = @Original_Id) AND ([staffID] = @Original_staffID) AND ([customerID] = @Original_customerID) AND ([slopeID] = @Original_slopeID) AND ([startTime] = @Original_startTime) AND ([endTime] = @Original_endTime) AND ([date] = @Original_date));
+SELECT Id, staffID, customerID, slopeID, startTime, endTime, date FROM Session WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@slopeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "slopeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "startTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5366,10 +5302,10 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_slopeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "slopeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bookingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bookingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "startTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5385,8 +5321,7 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FROM" +
-                " dbo.Session";
+            this._commandCollection[0].CommandText = "SELECT Id, staffID, customerID, slopeID, startTime, endTime, date FROM Session";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5447,15 +5382,14 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_staffID, int Original_customerID, int Original_slopeID, int Original_bookingID, System.TimeSpan Original_startTime, System.TimeSpan Original_endTime, System.DateTime Original_date) {
+        public virtual int Delete(int Original_Id, int Original_staffID, int Original_customerID, int Original_slopeID, System.TimeSpan Original_startTime, System.TimeSpan Original_endTime, System.DateTime Original_date) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_staffID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_customerID));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_slopeID));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_bookingID));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.TimeSpan)(Original_startTime));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.TimeSpan)(Original_endTime));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_date));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_startTime));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.TimeSpan)(Original_endTime));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_date));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5476,15 +5410,13 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, int staffID, int customerID, int slopeID, int bookingID, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(staffID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(customerID));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(slopeID));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(bookingID));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.TimeSpan)(startTime));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((System.TimeSpan)(endTime));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(date));
+        public virtual int Insert(int staffID, int customerID, int slopeID, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(staffID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(customerID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(slopeID));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(startTime));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.TimeSpan)(endTime));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(date));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5505,39 +5437,21 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int Id, 
-                    int staffID, 
-                    int customerID, 
-                    int slopeID, 
-                    int bookingID, 
-                    System.TimeSpan startTime, 
-                    System.TimeSpan endTime, 
-                    System.DateTime date, 
-                    int Original_Id, 
-                    int Original_staffID, 
-                    int Original_customerID, 
-                    int Original_slopeID, 
-                    int Original_bookingID, 
-                    System.TimeSpan Original_startTime, 
-                    System.TimeSpan Original_endTime, 
-                    System.DateTime Original_date) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(staffID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(customerID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(slopeID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(bookingID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.TimeSpan)(startTime));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.TimeSpan)(endTime));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(date));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_staffID));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_customerID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_slopeID));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_bookingID));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_startTime));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.TimeSpan)(Original_endTime));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_date));
+        public virtual int Update(int staffID, int customerID, int slopeID, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date, int Original_Id, int Original_staffID, int Original_customerID, int Original_slopeID, System.TimeSpan Original_startTime, System.TimeSpan Original_endTime, System.DateTime Original_date, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(staffID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(customerID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(slopeID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(startTime));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.TimeSpan)(endTime));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(date));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_staffID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_customerID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_slopeID));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_startTime));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.TimeSpan)(Original_endTime));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_date));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5558,8 +5472,8 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int staffID, int customerID, int slopeID, int bookingID, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date, int Original_Id, int Original_staffID, int Original_customerID, int Original_slopeID, int Original_bookingID, System.TimeSpan Original_startTime, System.TimeSpan Original_endTime, System.DateTime Original_date) {
-            return this.Update(Original_Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date, Original_Id, Original_staffID, Original_customerID, Original_slopeID, Original_bookingID, Original_startTime, Original_endTime, Original_date);
+        public virtual int Update(int staffID, int customerID, int slopeID, System.TimeSpan startTime, System.TimeSpan endTime, System.DateTime date, int Original_Id, int Original_staffID, int Original_customerID, int Original_slopeID, System.TimeSpan Original_startTime, System.TimeSpan Original_endTime, System.DateTime Original_date) {
+            return this.Update(staffID, customerID, slopeID, startTime, endTime, date, Original_Id, Original_staffID, Original_customerID, Original_slopeID, Original_startTime, Original_endTime, Original_date, Original_Id);
         }
     }
     
@@ -5789,15 +5703,6 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._bookingTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bookingTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._slopeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Slope.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5813,6 +5718,15 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._sessionTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bookingTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bookingTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5851,14 +5765,6 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._bookingTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bookingTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._slopeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Slope.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5872,6 +5778,14 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._sessionTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bookingTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bookingTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5901,6 +5815,14 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._bookingTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bookingTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._sessionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Session.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5914,14 +5836,6 @@ SELECT Id, staffID, customerID, slopeID, bookingID, startTime, endTime, date FRO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._slopeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._bookingTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Booking.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bookingTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

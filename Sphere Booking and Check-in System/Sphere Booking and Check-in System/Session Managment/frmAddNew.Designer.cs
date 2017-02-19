@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
+            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxSlope = new System.Windows.Forms.ComboBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
@@ -40,11 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
-            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +69,34 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter record details:";
+            // 
+            // txtEndTime
+            // 
+            this.txtEndTime.Location = new System.Drawing.Point(81, 176);
+            this.txtEndTime.Mask = "00:00";
+            this.txtEndTime.Name = "txtEndTime";
+            this.txtEndTime.Size = new System.Drawing.Size(100, 20);
+            this.txtEndTime.TabIndex = 6;
+            this.txtEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEndTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtStartTime
+            // 
+            this.txtStartTime.Location = new System.Drawing.Point(81, 150);
+            this.txtStartTime.Mask = "00:00";
+            this.txtStartTime.Name = "txtStartTime";
+            this.txtStartTime.Size = new System.Drawing.Size(100, 20);
+            this.txtStartTime.TabIndex = 5;
+            this.txtStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtStartTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(81, 124);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 19, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -174,53 +201,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Session ID:";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(13, 226);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 18;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(94, 226);
+            this.button3.Location = new System.Drawing.Point(13, 226);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 23);
+            this.button3.Size = new System.Drawing.Size(231, 23);
             this.button3.TabIndex = 19;
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(81, 124);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 19, 0, 0, 0, 0);
-            // 
-            // txtStartTime
-            // 
-            this.txtStartTime.Location = new System.Drawing.Point(81, 150);
-            this.txtStartTime.Mask = "00:00";
-            this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(100, 20);
-            this.txtStartTime.TabIndex = 5;
-            this.txtStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtStartTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtEndTime
-            // 
-            this.txtEndTime.Location = new System.Drawing.Point(81, 176);
-            this.txtEndTime.Mask = "00:00";
-            this.txtEndTime.Name = "txtEndTime";
-            this.txtEndTime.Size = new System.Drawing.Size(100, 20);
-            this.txtEndTime.TabIndex = 6;
-            this.txtEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtEndTime.ValidatingType = typeof(System.DateTime);
             // 
             // frmAddNew
             // 
@@ -228,7 +217,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(256, 260);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -256,7 +244,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtKey;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

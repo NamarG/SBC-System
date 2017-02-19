@@ -28,5 +28,26 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             newSession.MdiParent = this;
             newSession.Show();
         }
+
+        private void updateSessionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdate updateSession = new frmUpdate();
+            updateSession.MdiParent = this;
+            updateSession.Show();
+        }
+
+        private void deleteSessionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDelete deleteSession = new frmDelete();
+            deleteSession.MdiParent = this;
+            deleteSession.Show();
+        }
+
+        private void viewSessionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewSessions viewSession = new frmViewSessions();
+            viewSession.MdiParent = this;
+            viewSession.Show();
+        }
     }
 }

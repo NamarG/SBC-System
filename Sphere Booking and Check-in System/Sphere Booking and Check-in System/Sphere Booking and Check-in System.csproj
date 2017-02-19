@@ -83,6 +83,12 @@
     <Compile Include="Session Managment\frmAddNew.Designer.cs">
       <DependentUpon>frmAddNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmDelete.Designer.cs">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session Managment\frmManagerLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +107,29 @@
     <Compile Include="Session Managment\frmRecoveryManager.Designer.cs">
       <DependentUpon>frmRecoveryManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\frmSessionAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmSessionAbout.Designer.cs">
+      <DependentUpon>frmSessionAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session Managment\frmSessionManagementMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Session Managment\frmSessionManagementMain.Designer.cs">
       <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmViewSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmViewSessions.Designer.cs">
+      <DependentUpon>frmViewSessions.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -122,6 +146,9 @@
     <EmbeddedResource Include="Session Managment\frmAddNew.resx">
       <DependentUpon>frmAddNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmDelete.resx">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Session Managment\frmManagerLogin.resx">
       <DependentUpon>frmManagerLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,8 +158,17 @@
     <EmbeddedResource Include="Session Managment\frmRecoveryManager.resx">
       <DependentUpon>frmRecoveryManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmSessionAbout.resx">
+      <DependentUpon>frmSessionAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Session Managment\frmSessionManagementMain.resx">
       <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmViewSessions.resx">
+      <DependentUpon>frmViewSessions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="mainDatabaseDataSet.xsc">
       <DependentUpon>mainDatabaseDataSet.xsd</DependentUpon>
