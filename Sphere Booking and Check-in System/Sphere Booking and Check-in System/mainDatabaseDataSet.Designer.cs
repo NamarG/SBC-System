@@ -3486,7 +3486,7 @@ SELECT Id, staffID, customerID, cost, sessionID FROM Booking WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3819,7 +3819,7 @@ SELECT Id, firstName, lastName, Membership, emailAddress, phoneNumber, address F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4234,7 +4234,7 @@ SELECT Id, username, password, email, recoveryCode FROM Manager WHERE (Id = @Id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4627,7 +4627,7 @@ SELECT Id, staffID, customerID, slopeID, startTime, endTime, date FROM Session W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4957,7 +4957,7 @@ SELECT Id, slopeName, slopeLocation, slopeDifficulty FROM Slope WHERE (Id = @Id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5341,7 +5341,7 @@ SELECT Id, firstName, lastName, address, phoneNumber, emailAddress FROM Staff WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString1;
+            this._connection.ConnectionString = global::Sphere_Booking_and_Check_in_System.Properties.Settings.Default.mainDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
