@@ -46,6 +46,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                         {
                             MessageBox.Show("Session has been added");
                             getPrimaryKey();
+
+                            txtCustomerID.Clear();
+                            txtEndTime.Clear();
+                            txtKey.Clear();
+                            txtStaffID.Clear();
+                            txtStartTime.Clear();
+                            comboBoxSlope.Text = "Select Slope....";
                         }
                         else
                         {

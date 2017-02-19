@@ -77,6 +77,14 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                         if(i > 0)
                         {
                             MessageBox.Show("Record Deleted");
+                            txtSearchBox.Clear();
+                            lblSessionID.Text = "";
+                            lblSlopeID.Text = "";
+                            lblStaffID.Text = "";
+                            lblCustomerID.Text = "";
+                            lblStartTime.Text = "";
+                            lblEndTime.Text = "";
+                            lblDate.Text = "";
                         }
                         else
                         {

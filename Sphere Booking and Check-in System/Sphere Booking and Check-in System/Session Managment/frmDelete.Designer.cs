@@ -34,13 +34,6 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lblEndTime = new System.Windows.Forms.Label();
             this.lblStartTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -48,6 +41,13 @@
             this.lblStaffID = new System.Windows.Forms.Label();
             this.lblSlopeID = new System.Windows.Forms.Label();
             this.lblSessionID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -125,50 +125,61 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Session Details:";
             // 
-            // label2
+            // lblEndTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Session ID:";
+            this.lblEndTime.AutoSize = true;
+            this.lblEndTime.Location = new System.Drawing.Point(78, 202);
+            this.lblEndTime.Name = "lblEndTime";
+            this.lblEndTime.Size = new System.Drawing.Size(0, 13);
+            this.lblEndTime.TabIndex = 13;
             // 
-            // label3
+            // lblStartTime
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Slope ID:";
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Location = new System.Drawing.Point(78, 171);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(0, 13);
+            this.lblStartTime.TabIndex = 12;
             // 
-            // label4
+            // lblDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Staff ID:";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(78, 142);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 13);
+            this.lblDate.TabIndex = 11;
             // 
-            // label6
+            // lblCustomerID
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 142);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Date:";
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Location = new System.Drawing.Point(78, 113);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(0, 13);
+            this.lblCustomerID.TabIndex = 10;
             // 
-            // label7
+            // lblStaffID
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Customer ID:";
+            this.lblStaffID.AutoSize = true;
+            this.lblStaffID.Location = new System.Drawing.Point(78, 86);
+            this.lblStaffID.Name = "lblStaffID";
+            this.lblStaffID.Size = new System.Drawing.Size(0, 13);
+            this.lblStaffID.TabIndex = 9;
+            // 
+            // lblSlopeID
+            // 
+            this.lblSlopeID.AutoSize = true;
+            this.lblSlopeID.Location = new System.Drawing.Point(78, 56);
+            this.lblSlopeID.Name = "lblSlopeID";
+            this.lblSlopeID.Size = new System.Drawing.Size(0, 13);
+            this.lblSlopeID.TabIndex = 8;
+            // 
+            // lblSessionID
+            // 
+            this.lblSessionID.AutoSize = true;
+            this.lblSessionID.Location = new System.Drawing.Point(78, 25);
+            this.lblSessionID.Name = "lblSessionID";
+            this.lblSessionID.Size = new System.Drawing.Size(0, 13);
+            this.lblSessionID.TabIndex = 7;
             // 
             // label5
             // 
@@ -188,68 +199,50 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Start Time:";
             // 
-            // lblEndTime
+            // label6
             // 
-            this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(78, 202);
-            this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(22, 13);
-            this.lblEndTime.TabIndex = 13;
-            this.lblEndTime.Text = "PH";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Date:";
             // 
-            // lblStartTime
+            // label7
             // 
-            this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(78, 171);
-            this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(22, 13);
-            this.lblStartTime.TabIndex = 12;
-            this.lblStartTime.Text = "PH";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Customer ID:";
             // 
-            // lblDate
+            // label4
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(78, 142);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(22, 13);
-            this.lblDate.TabIndex = 11;
-            this.lblDate.Text = "PH";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Staff ID:";
             // 
-            // lblCustomerID
+            // label3
             // 
-            this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(78, 113);
-            this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(22, 13);
-            this.lblCustomerID.TabIndex = 10;
-            this.lblCustomerID.Text = "PH";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Slope ID:";
             // 
-            // lblStaffID
+            // label2
             // 
-            this.lblStaffID.AutoSize = true;
-            this.lblStaffID.Location = new System.Drawing.Point(78, 86);
-            this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.Size = new System.Drawing.Size(22, 13);
-            this.lblStaffID.TabIndex = 9;
-            this.lblStaffID.Text = "PH";
-            // 
-            // lblSlopeID
-            // 
-            this.lblSlopeID.AutoSize = true;
-            this.lblSlopeID.Location = new System.Drawing.Point(78, 56);
-            this.lblSlopeID.Name = "lblSlopeID";
-            this.lblSlopeID.Size = new System.Drawing.Size(22, 13);
-            this.lblSlopeID.TabIndex = 8;
-            this.lblSlopeID.Text = "PH";
-            // 
-            // lblSessionID
-            // 
-            this.lblSessionID.AutoSize = true;
-            this.lblSessionID.Location = new System.Drawing.Point(78, 25);
-            this.lblSessionID.Name = "lblSessionID";
-            this.lblSessionID.Size = new System.Drawing.Size(22, 13);
-            this.lblSessionID.TabIndex = 7;
-            this.lblSessionID.Text = "PH";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Session ID:";
             // 
             // frmDelete
             // 
