@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sphere_Booking_and_Check_in_System.Session_Managment
 {
@@ -21,6 +16,31 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         {
             // TODO: This line of code loads data into the 'mainDatabaseDataSet.Session' table. You can move, or remove it, as needed.
             this.sessionTableAdapter.Fill(this.mainDatabaseDataSet.Session);
+        }
+
+        private void BindGrid()
+        {
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Session", con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        using (DataSet ds = new DataSet())
+                        {
+                            sda.Fill(ds);
+                            dataGridView1.DataSource = ds.Tables[0];
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BindGrid();
         }
     }
 }

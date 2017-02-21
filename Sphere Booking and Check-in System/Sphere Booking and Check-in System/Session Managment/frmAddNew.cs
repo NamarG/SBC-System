@@ -31,8 +31,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                     {
                         Connection.Open();
                         SqlCommand cmd = new SqlCommand(@"INSERT INTO Session ([staffID], [customerID], [slopeID], [startTime], [endTime], [date]) VALUES (@staffID, @customerID, @slopeID, @startTime, @endTime, @date);", Connection);
-                        int slope = int.Parse(comboBoxSlope.Text) + 1;
-                        cmd.Parameters.AddWithValue("@slopeID", slope);
+                        cmd.Parameters.AddWithValue("@slopeID", comboBoxSlope.Text);
                         cmd.Parameters.AddWithValue("@staffID", txtStaffID.Text);
                         cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
                         cmd.Parameters.AddWithValue("@startTime", txtStartTime.Text.ToString());
