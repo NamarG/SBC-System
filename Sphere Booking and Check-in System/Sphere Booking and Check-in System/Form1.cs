@@ -17,12 +17,6 @@ namespace Sphere_Booking_and_Check_in_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Session_Managment.frmManagerLogin login = new Session_Managment.frmManagerLogin();
-            login.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Booking.BookingForm book = new Booking.BookingForm();
@@ -33,6 +27,11 @@ namespace Sphere_Booking_and_Check_in_System
         {
             Check_in.CheckIn check = new Check_in.CheckIn();
             check.Show();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Session_Managment.frmManagerLogin login = new Session_Managment.frmManagerLogin();
+            login.Show();
         }
     }
 }

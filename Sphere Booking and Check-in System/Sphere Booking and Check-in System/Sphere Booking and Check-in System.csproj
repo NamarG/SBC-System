@@ -77,7 +77,7 @@
     <Compile Include="Check-in\CheckInDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Check-in\CheckInDetails.Designer.cs">
+    <Compile Include="Check-in\CheckInDetails.designer.cs">
       <DependentUpon>CheckInDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Check-in\Help.cs">
@@ -91,6 +91,30 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainLogin.Designer.cs">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecovery.Designer.cs">
+      <DependentUpon>frmMainRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecoveryCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecoveryCode.Designer.cs">
+      <DependentUpon>frmMainRecoveryCode.cs</DependentUpon>
     </Compile>
     <Compile Include="mainDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -167,6 +191,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainLogin.resx">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainRecovery.resx">
+      <DependentUpon>frmMainRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainRecoveryCode.resx">
+      <DependentUpon>frmMainRecoveryCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
