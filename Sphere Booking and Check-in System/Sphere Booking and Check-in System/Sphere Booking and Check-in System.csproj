@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +62,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking\BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\CheckIn.designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\CheckInDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\CheckInDetails.Designer.cs">
+      <DependentUpon>CheckInDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\Help.designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +153,18 @@
     <Compile Include="Session Managment\frmViewSessions.Designer.cs">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Booking\BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\CheckInDetails.resx">
+      <DependentUpon>CheckInDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,8 +241,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Booking\" />
-    <Folder Include="Check-in\" />
     <Folder Include="Employee Managment\" />
     <Folder Include="Registration\" />
     <Folder Include="Scheduling\" />
