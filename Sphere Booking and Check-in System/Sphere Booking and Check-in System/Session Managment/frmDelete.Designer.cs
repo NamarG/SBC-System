@@ -37,14 +37,12 @@
             this.lblEndTime = new System.Windows.Forms.Label();
             this.lblStartTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblStaffID = new System.Windows.Forms.Label();
             this.lblSlopeID = new System.Windows.Forms.Label();
             this.lblSessionID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -94,7 +92,7 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(12, 331);
+            this.btnDelete.Location = new System.Drawing.Point(12, 306);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(204, 23);
             this.btnDelete.TabIndex = 3;
@@ -107,20 +105,18 @@
             this.groupBox2.Controls.Add(this.lblEndTime);
             this.groupBox2.Controls.Add(this.lblStartTime);
             this.groupBox2.Controls.Add(this.lblDate);
-            this.groupBox2.Controls.Add(this.lblCustomerID);
             this.groupBox2.Controls.Add(this.lblStaffID);
             this.groupBox2.Controls.Add(this.lblSlopeID);
             this.groupBox2.Controls.Add(this.lblSessionID);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(204, 225);
+            this.groupBox2.Size = new System.Drawing.Size(204, 200);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Session Details:";
@@ -128,7 +124,7 @@
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(78, 202);
+            this.lblEndTime.Location = new System.Drawing.Point(78, 176);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(0, 13);
             this.lblEndTime.TabIndex = 13;
@@ -136,7 +132,7 @@
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(78, 171);
+            this.lblStartTime.Location = new System.Drawing.Point(78, 145);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(0, 13);
             this.lblStartTime.TabIndex = 12;
@@ -144,18 +140,10 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(78, 142);
+            this.lblDate.Location = new System.Drawing.Point(78, 116);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(0, 13);
             this.lblDate.TabIndex = 11;
-            // 
-            // lblCustomerID
-            // 
-            this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(78, 113);
-            this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(0, 13);
-            this.lblCustomerID.TabIndex = 10;
             // 
             // lblStaffID
             // 
@@ -184,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 202);
+            this.label5.Location = new System.Drawing.Point(11, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 6;
@@ -193,7 +181,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 171);
+            this.label8.Location = new System.Drawing.Point(11, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 5;
@@ -202,20 +190,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 142);
+            this.label6.Location = new System.Drawing.Point(11, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Date:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Customer ID:";
             // 
             // label4
             // 
@@ -248,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 366);
+            this.ClientSize = new System.Drawing.Size(228, 338);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox1);
@@ -275,7 +254,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -284,7 +262,6 @@
         private System.Windows.Forms.Label lblEndTime;
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.Label lblStaffID;
         private System.Windows.Forms.Label lblSlopeID;
         private System.Windows.Forms.Label lblSessionID;

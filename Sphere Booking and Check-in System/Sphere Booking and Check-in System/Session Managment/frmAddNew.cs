@@ -21,7 +21,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
             {
                 if (txtKey.Text == String.Empty || txtStaffID.Text == String.Empty ||
-                    txtStartTime.Text == String.Empty || txtCustomerID.Text == String.Empty || comboBoxSlope.Text == String.Empty)
+                    txtStartTime.Text == String.Empty || comboBoxSlope.Text == String.Empty)
                 {
                     MessageBox.Show("Error, values missing", "Value Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -30,13 +30,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                     try
                     {
                         Connection.Open();
-                        SqlCommand cmd = new SqlCommand(@"INSERT INTO Session ([staffID], [customerID], [slopeID], [startTime], [endTime], [date]) VALUES (@staffID, @customerID, @slopeID, @startTime, @endTime, @date);", Connection);
+                        SqlCommand cmd = new SqlCommand(@"INSERT INTO Session ([staffID], [slopeID], [startTime], [endTime], [date]) VALUES (@staffID, @slopeID, @startTime, @endTime, @date);", Connection);
                         cmd.Parameters.AddWithValue("@slopeID", comboBoxSlope.Text);
                         cmd.Parameters.AddWithValue("@staffID", txtStaffID.Text);
                         cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
                         cmd.Parameters.AddWithValue("@startTime", txtStartTime.Text.ToString());
                         cmd.Parameters.AddWithValue("@endTime", txtEndTime.Text.ToString());
-                        cmd.Parameters.AddWithValue("@customerID", txtCustomerID.Text);
 
                         int i = cmd.ExecuteNonQuery();
                         Connection.Close();
@@ -46,7 +45,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                             MessageBox.Show("Session has been added");
                             getPrimaryKey();
 
-                            txtCustomerID.Clear();
                             txtEndTime.Clear();
                             txtKey.Clear();
                             txtStaffID.Clear();

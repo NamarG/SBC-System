@@ -21,9 +21,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                     try
                     {
                         Connection.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=@staff, customerID=@customer, slopeID=@slope, startTime=@start, endTime=@end, date=@d WHERE Id = '" + txtSearchBox.Text + "'", Connection);
+                        SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=@staff, slopeID=@slope, startTime=@start, endTime=@end, date=@d WHERE Id = '" + txtSearchBox.Text + "'", Connection);
                         cmd.Parameters.AddWithValue("@staff", txtStaffID.Text);
-                        cmd.Parameters.AddWithValue("@customer", txtCustomerID.Text);
                         cmd.Parameters.AddWithValue("@slope", comboBoxSlope.Text);
                         cmd.Parameters.AddWithValue("@start", txtStartTime.Text);
                         cmd.Parameters.AddWithValue("@end", txtEndTime.Text);
@@ -39,14 +38,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                             txtSessionID.Text = "";
                             comboBoxSlope.Text = "Select Slope....";
                             txtStaffID.Text = "";
-                            txtCustomerID.Text = "";
                             txtStartTime.Text = "";
                             txtEndTime.Text = "";
                             dateTimePicker1.Text = "";
 
                             comboBoxSlope.Enabled = false;
                             txtStaffID.Enabled = false;
-                            txtCustomerID.Enabled = false;
                             txtStartTime.Enabled = false;
                             txtEndTime.Enabled = false;
                             dateTimePicker1.Enabled = false;
@@ -97,14 +94,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                                 txtSessionID.Text = (sdr["Id"].ToString());
                                 comboBoxSlope.Text = (sdr["slopeID"].ToString());
                                 txtStaffID.Text = (sdr["staffID"].ToString());
-                                txtCustomerID.Text = (sdr["customerID"].ToString());
                                 txtStartTime.Text = (sdr["startTime"].ToString());
                                 txtEndTime.Text = (sdr["endTime"].ToString());
                                 dateTimePicker1.Text = (sdr["date"].ToString());
 
                                 comboBoxSlope.Enabled = true;
                                 txtStaffID.Enabled = true;
-                                txtCustomerID.Enabled = true;
                                 txtStartTime.Enabled = true;
                                 txtEndTime.Enabled = true;
                                 dateTimePicker1.Enabled = true;

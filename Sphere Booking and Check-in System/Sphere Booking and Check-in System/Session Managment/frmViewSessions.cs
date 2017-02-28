@@ -18,10 +18,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             this.sessionTableAdapter.Fill(this.mainDatabaseDataSet.Session);
         }
 
-        private void BindGrid()
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30";
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT * FROM Session", con))
                 {
@@ -36,11 +35,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                     }
                 }
             }
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            BindGrid();
         }
     }
 }

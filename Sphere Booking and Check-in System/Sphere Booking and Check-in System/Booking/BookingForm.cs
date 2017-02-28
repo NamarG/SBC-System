@@ -181,9 +181,7 @@ namespace Sphere_Booking_and_Check_in_System.Booking
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 bf = new Form1();
             this.Hide(); //this while hide the bookingform form.
-            bf.ShowDialog(); //this opens form1 form "bf"
         }
     }
 }

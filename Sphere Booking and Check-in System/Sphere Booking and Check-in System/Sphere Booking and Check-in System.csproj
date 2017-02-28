@@ -86,12 +86,6 @@
     <Compile Include="Check-in\Help.designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main UI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +171,12 @@
     <Compile Include="Session Managment\frmViewSessions.Designer.cs">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff Scheduling\frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Scheduling\frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Booking\BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Check-in\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -239,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Session Managment\frmViewSessions.resx">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Scheduling\frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="mainDatabaseDataSet.xsc">
       <DependentUpon>mainDatabaseDataSet.xsd</DependentUpon>

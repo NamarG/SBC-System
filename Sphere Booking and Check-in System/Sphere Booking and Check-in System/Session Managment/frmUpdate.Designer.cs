@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxSlope = new System.Windows.Forms.ComboBox();
+            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
+            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtStaffID = new System.Windows.Forms.TextBox();
+            this.txtSessionID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,13 +46,6 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSessionID = new System.Windows.Forms.TextBox();
-            this.txtStaffID = new System.Windows.Forms.TextBox();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
-            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxSlope = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,27 +56,88 @@
             this.groupBox2.Controls.Add(this.txtEndTime);
             this.groupBox2.Controls.Add(this.txtStartTime);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.txtCustomerID);
             this.groupBox2.Controls.Add(this.txtStaffID);
             this.groupBox2.Controls.Add(this.txtSessionID);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(204, 225);
+            this.groupBox2.Size = new System.Drawing.Size(204, 205);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Session Details:";
             // 
+            // comboBoxSlope
+            // 
+            this.comboBoxSlope.Cursor = System.Windows.Forms.Cursors.Default;
+            this.comboBoxSlope.Enabled = false;
+            this.comboBoxSlope.FormattingEnabled = true;
+            this.comboBoxSlope.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBoxSlope.Location = new System.Drawing.Point(78, 53);
+            this.comboBoxSlope.Name = "comboBoxSlope";
+            this.comboBoxSlope.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxSlope.TabIndex = 14;
+            this.comboBoxSlope.Text = "Select Slope....";
+            // 
+            // txtEndTime
+            // 
+            this.txtEndTime.Enabled = false;
+            this.txtEndTime.Location = new System.Drawing.Point(78, 172);
+            this.txtEndTime.Mask = "00:00";
+            this.txtEndTime.Name = "txtEndTime";
+            this.txtEndTime.Size = new System.Drawing.Size(100, 20);
+            this.txtEndTime.TabIndex = 13;
+            this.txtEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEndTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtStartTime
+            // 
+            this.txtStartTime.Enabled = false;
+            this.txtStartTime.Location = new System.Drawing.Point(78, 141);
+            this.txtStartTime.Mask = "00:00";
+            this.txtStartTime.Name = "txtStartTime";
+            this.txtStartTime.Size = new System.Drawing.Size(100, 20);
+            this.txtStartTime.TabIndex = 12;
+            this.txtStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtStartTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(78, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(120, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 19, 0, 0, 0, 0);
+            // 
+            // txtStaffID
+            // 
+            this.txtStaffID.Enabled = false;
+            this.txtStaffID.Location = new System.Drawing.Point(78, 83);
+            this.txtStaffID.Name = "txtStaffID";
+            this.txtStaffID.Size = new System.Drawing.Size(100, 20);
+            this.txtStaffID.TabIndex = 9;
+            // 
+            // txtSessionID
+            // 
+            this.txtSessionID.Enabled = false;
+            this.txtSessionID.Location = new System.Drawing.Point(78, 22);
+            this.txtSessionID.Name = "txtSessionID";
+            this.txtSessionID.Size = new System.Drawing.Size(100, 20);
+            this.txtSessionID.TabIndex = 7;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 202);
+            this.label5.Location = new System.Drawing.Point(11, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 6;
@@ -87,7 +146,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 171);
+            this.label8.Location = new System.Drawing.Point(11, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 5;
@@ -96,20 +155,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 142);
+            this.label6.Location = new System.Drawing.Point(11, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Date:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Customer ID:";
             // 
             // label4
             // 
@@ -142,7 +192,7 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(12, 331);
+            this.btnSave.Location = new System.Drawing.Point(12, 311);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(204, 23);
             this.btnSave.TabIndex = 7;
@@ -188,82 +238,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Session ID:";
             // 
-            // txtSessionID
-            // 
-            this.txtSessionID.Enabled = false;
-            this.txtSessionID.Location = new System.Drawing.Point(78, 22);
-            this.txtSessionID.Name = "txtSessionID";
-            this.txtSessionID.Size = new System.Drawing.Size(100, 20);
-            this.txtSessionID.TabIndex = 7;
-            // 
-            // txtStaffID
-            // 
-            this.txtStaffID.Enabled = false;
-            this.txtStaffID.Location = new System.Drawing.Point(78, 83);
-            this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(100, 20);
-            this.txtStaffID.TabIndex = 9;
-            // 
-            // txtCustomerID
-            // 
-            this.txtCustomerID.Enabled = false;
-            this.txtCustomerID.Location = new System.Drawing.Point(78, 110);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerID.TabIndex = 10;
-            // 
-            // txtEndTime
-            // 
-            this.txtEndTime.Enabled = false;
-            this.txtEndTime.Location = new System.Drawing.Point(78, 199);
-            this.txtEndTime.Mask = "00:00";
-            this.txtEndTime.Name = "txtEndTime";
-            this.txtEndTime.Size = new System.Drawing.Size(100, 20);
-            this.txtEndTime.TabIndex = 13;
-            this.txtEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtEndTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtStartTime
-            // 
-            this.txtStartTime.Enabled = false;
-            this.txtStartTime.Location = new System.Drawing.Point(78, 168);
-            this.txtStartTime.Mask = "00:00";
-            this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(100, 20);
-            this.txtStartTime.TabIndex = 12;
-            this.txtStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtStartTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(78, 136);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 20);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 19, 0, 0, 0, 0);
-            // 
-            // comboBoxSlope
-            // 
-            this.comboBoxSlope.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBoxSlope.Enabled = false;
-            this.comboBoxSlope.FormattingEnabled = true;
-            this.comboBoxSlope.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBoxSlope.Location = new System.Drawing.Point(78, 53);
-            this.comboBoxSlope.Name = "comboBoxSlope";
-            this.comboBoxSlope.Size = new System.Drawing.Size(120, 21);
-            this.comboBoxSlope.TabIndex = 14;
-            this.comboBoxSlope.Text = "Select Slope....";
-            // 
             // frmUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 366);
+            this.ClientSize = new System.Drawing.Size(228, 342);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
@@ -287,7 +266,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -296,7 +274,6 @@
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.TextBox txtSessionID;
         private System.Windows.Forms.MaskedTextBox txtEndTime;

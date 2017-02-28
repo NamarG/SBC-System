@@ -39,7 +39,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                                 lblSessionID.Text = (sdr["Id"].ToString());
                                 lblSlopeID.Text = (sdr["slopeID"].ToString());
                                 lblStaffID.Text = (sdr["staffID"].ToString());
-                                lblCustomerID.Text = (sdr["customerID"].ToString());
                                 lblStartTime.Text = (sdr["startTime"].ToString());
                                 lblEndTime.Text = (sdr["endTime"].ToString());
                                 lblDate.Text = Convert.ToDateTime(sdr["date"]).ToString("dd/mm/yyyy");
@@ -81,7 +80,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                             lblSessionID.Text = "";
                             lblSlopeID.Text = "";
                             lblStaffID.Text = "";
-                            lblCustomerID.Text = "";
                             lblStartTime.Text = "";
                             lblEndTime.Text = "";
                             lblDate.Text = "";
