@@ -53,7 +53,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
                         }
                         else
                         {
-                            MessageBox.Show("Sessio couldn't be added at this time");
+                            MessageBox.Show("Session couldn't be added at this time");
                         }
                     }
 

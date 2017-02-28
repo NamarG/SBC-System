@@ -53,3 +53,4 @@ D:\My Data\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-i
 D:\My Data\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csproj.GenerateResource.Cache
 D:\My Data\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
 D:\My Data\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Desktop\Sphere Booking and Check-in System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csprojResolveAssemblyReference.cache

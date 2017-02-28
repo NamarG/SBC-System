@@ -44,7 +44,7 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                     try
                     {
                         Connection.Open();
-                        SqlCommand cmd = new SqlCommand(@"INSERT INTO Staff_Scheduling ([staffID], [date], [startTime], [endTime]) VALUES (@staffID, @date, @startTime, @endTime);", Connection);
+                        SqlCommand cmd = new SqlCommand(@"INSERT INTO Staff_Scheduling ([staffID], [date], [startTime], [endTime], [booked]) VALUES (@staffID, @date, @startTime, @endTime, 0);", Connection);
                         cmd.Parameters.AddWithValue("@staffID", txtStaffID.Text);
                         cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value);
                         cmd.Parameters.AddWithValue("@startTime", txtStartTime.Text.ToString());
@@ -72,7 +72,7 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                         }
                         else
                         {
-                            MessageBox.Show("Sessio couldn't be added at this time");
+                            MessageBox.Show("Staff couldn't be added at this time");
                         }
                     }
 
@@ -86,8 +86,6 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
 
         private void frmStaff_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mainDatabaseDataSet.Staff_Scheduling' table. You can move, or remove it, as needed.
-            this.staff_SchedulingTableAdapter.Fill(this.mainDatabaseDataSet.Staff_Scheduling);
             // TODO: This line of code loads data into the 'mainDatabaseDataSet.Staff_Scheduling' table. You can move, or remove it, as needed.
             this.staff_SchedulingTableAdapter.Fill(this.mainDatabaseDataSet.Staff_Scheduling);
             using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
