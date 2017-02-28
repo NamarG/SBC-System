@@ -21,5 +21,17 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheckIn checkin = new Check_in.CheckIn();
+            this.Close();
+            checkin.Show();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+       
+        }
     }
 }

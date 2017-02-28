@@ -63,5 +63,17 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
             this.Close();
             checkin.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30")) 
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("UPDATE Booking SET checkedIn = 1", connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("You have successfully checked in.");
+                connection.Close();
+            }
+        }
     }
 }

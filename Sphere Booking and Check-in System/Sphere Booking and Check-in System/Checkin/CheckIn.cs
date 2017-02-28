@@ -41,5 +41,20 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help checkin = new Check_in.Help();
+            this.Close();
+            checkin.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+//Navigation to the Home page, from the check in page.
+            CheckIn checkin = new Check_in.CheckIn();
+            this.Close();
+            checkin.Show();
+        }
     }
 }
