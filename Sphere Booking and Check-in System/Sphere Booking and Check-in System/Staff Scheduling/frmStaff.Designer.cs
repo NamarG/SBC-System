@@ -40,22 +40,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.mainDatabaseDataSet = new Sphere_Booking_and_Check_in_System.mainDatabaseDataSet();
-            this.staffSchedulingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staff_SchedulingTableAdapter = new Sphere_Booking_and_Check_in_System.mainDatabaseDataSetTableAdapters.Staff_SchedulingTableAdapter();
             this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.staffSchedulingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainDatabaseDataSet = new Sphere_Booking_and_Check_in_System.mainDatabaseDataSet();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.staff_SchedulingTableAdapter = new Sphere_Booking_and_Check_in_System.mainDatabaseDataSetTableAdapters.Staff_SchedulingTableAdapter();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffSchedulingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabaseDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -101,7 +106,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
             this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 19, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -176,52 +181,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(626, 263);
             this.dataGridView1.TabIndex = 22;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.ForeColor = System.Drawing.Color.Red;
-            this.btnRefresh.Location = new System.Drawing.Point(526, 175);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(112, 23);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Manual Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.btnSubmit);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(247, 186);
-            this.groupBox2.TabIndex = 24;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Scheduling Control";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(563, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 25;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // mainDatabaseDataSet
-            // 
-            this.mainDatabaseDataSet.DataSetName = "mainDatabaseDataSet";
-            this.mainDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffSchedulingBindingSource
-            // 
-            this.staffSchedulingBindingSource.DataMember = "Staff_Scheduling";
-            this.staffSchedulingBindingSource.DataSource = this.mainDatabaseDataSet;
-            // 
-            // staff_SchedulingTableAdapter
-            // 
-            this.staff_SchedulingTableAdapter.ClearBeforeFill = true;
-            // 
             // staffIDDataGridViewTextBoxColumn
             // 
             this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID";
@@ -257,11 +216,96 @@
             this.bookedDataGridViewCheckBoxColumn.Name = "bookedDataGridViewCheckBoxColumn";
             this.bookedDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // staffSchedulingBindingSource
+            // 
+            this.staffSchedulingBindingSource.DataMember = "Staff_Scheduling";
+            this.staffSchedulingBindingSource.DataSource = this.mainDatabaseDataSet;
+            // 
+            // mainDatabaseDataSet
+            // 
+            this.mainDatabaseDataSet.DataSetName = "mainDatabaseDataSet";
+            this.mainDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.ForeColor = System.Drawing.Color.Red;
+            this.btnRefresh.Location = new System.Drawing.Point(526, 175);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(112, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Manual Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.btnSubmit);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(247, 186);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Scheduling Control";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(563, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 25;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // staff_SchedulingTableAdapter
+            // 
+            this.staff_SchedulingTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtSearchBox);
+            this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Location = new System.Drawing.Point(265, 14);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(204, 82);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Search Control";
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.Location = new System.Drawing.Point(78, 23);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Size = new System.Drawing.Size(107, 20);
+            this.txtSearchBox.TabIndex = 3;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(110, 49);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Staff ID:";
+            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 479);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRefresh);
@@ -274,9 +318,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffSchedulingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatabaseDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -305,5 +351,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn bookedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
     }
 }

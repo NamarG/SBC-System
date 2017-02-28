@@ -28,6 +28,7 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                         }
                     }
                 }
+                con.Close();
             }
         }
 
@@ -51,7 +52,6 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                         cmd.Parameters.AddWithValue("@endTime", txtEndTime.Text.ToString());
 
                         int i = cmd.ExecuteNonQuery();
-                        Connection.Close();
 
                         if (i == 1)
                         {
@@ -69,6 +69,8 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                                     }
                                 }
                             }
+
+                            Connection.Close();
                         }
                         else
                         {
@@ -102,12 +104,60 @@ namespace Sphere_Booking_and_Check_in_System.Staff_Scheduling
                         }
                     }
                 }
+
+                con.Close();
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                if (txtSearchBox.Text == String.Empty)
+                {
+                    MessageBox.Show("Search Critera is Empty");
+                    txtSearchBox.Focus();
+                }
+                else
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM Staff_Scheduling WHERE (StaffID = '" + txtSearchBox.Text + "')", Connection);
+                        SqlCommand cmdCheck = new SqlCommand("SELECT COUNT(*) FROM Staff_Scheduling WHERE (staffID = '" + txtSearchBox.Text + "')", Connection);
+                        int result = (int)cmdCheck.ExecuteScalar();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Record Found!");
+
+                            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                            {
+                                using (DataSet ds = new DataSet())
+                                {
+                                    sda.Fill(ds);
+                                    dataGridView1.DataSource = ds.Tables[0];
+                                }
+                            }
+
+                            Connection.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No Record Exists");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Unexpected error:" + ex.Message);
+                    }
+                }
+            }
         }
     }
 }
