@@ -124,6 +124,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnRecovery);
             this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMainLogin";

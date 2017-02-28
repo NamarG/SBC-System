@@ -67,6 +67,7 @@
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMainRecoveryCode";

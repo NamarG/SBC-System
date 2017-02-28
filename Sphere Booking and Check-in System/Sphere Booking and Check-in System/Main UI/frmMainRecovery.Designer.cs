@@ -91,6 +91,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmMainRecovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
