@@ -44,16 +44,20 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                 }
                 if (isreg == true)
                 {
-                    if (rd[3].ToString() == "True")
+                    if (rd[3].ToString() == "1")
                     {
-                        memcheck.Text = "Member: £15";
+                        memcheck.Text = "Member: £20";
+                    }
+                    else if (rd[3].ToString() == "2")
+                    {
+                        memcheck.Text = "Prm Member: £15"; 
                     }
                     else
                     {
                         memcheck.Text = "Non-Member: £25";
                     }
                 }
-                //code to ask for the correct price from the user
+                //code to ask for the correct price from the user so no mistakes are made
             }
             if (isreg == true)
             {
@@ -67,6 +71,13 @@ namespace Sphere_Booking_and_Check_in_System.Booking
        
             isreg = false;
             con.Close();
+           
+            con = new SqlConnection(connectionString);
+            SqlDataAdapter checkup = new SqlDataAdapter("SELECT * FROM [Customer] WHERE id ='" + idBox.Text + "'", con); //this will get all the data
+            DataTable sd = new DataTable();
+
+            checkup.Fill(sd);
+            dataGridView2.DataSource = sd;
         }
 
         private void checkEmail_Click(object sender, EventArgs e)
@@ -97,30 +108,50 @@ namespace Sphere_Booking_and_Check_in_System.Booking
             }
             isreg = false;
             con.Close();
+            con = new SqlConnection(connectionString);
+            SqlDataAdapter checkup = new SqlDataAdapter("SELECT * FROM [Customer] WHERE emailAddress ='" + emailBox.Text + "'", con); //this will get all the data where email matches
+            DataTable sd = new DataTable();
+
+            checkup.Fill(sd);
+            dataGridView2.DataSource = sd;
+            con.Close();
+
+
         }
 
         private void BookingForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mainDatabaseDataSet.Session' table. You can move, or remove it, as needed.
-           // this.sessionTableAdapter.Fill(this.mainDatabaseDataSet.Session);
+            // TODO: This line of code loads data into the 'mainDatabaseDataSet.Staff_Scheduling' table. You can move, or remove it, as needed.
+            this.staff_SchedulingTableAdapter.Fill(this.mainDatabaseDataSet.Staff_Scheduling);
+            // TODO: This line of code loads data into the 'mainDatabaseDataSet.Booking' table. You can move, or remove it, as needed.
+           
 
         }
         private void search_Click(object sender, EventArgs e)
         { //this code needs to be commented and talked about
             con = new SqlConnection(connectionString);
-            SqlDataAdapter sdf = new SqlDataAdapter("SELECT * FROM [Session] WHERE date ='" + dateTimePicker1.Value.ToLongDateString() + "' AND startTime >='"+startTimeBox.Text.ToString()+"' AND endTime <='"+startTimeBox.Text.ToString()+"'", con);
-            DataTable sd = new DataTable();
+            SqlDataAdapter sdf = new SqlDataAdapter("SELECT * FROM [Session] WHERE date ='" + dateTimePicker1.Value.ToLongDateString() +"' AND limit < 30" , con);
+            DataTable sd = new DataTable(); //datagridviewer will be filled with data of sessions available on the day which has less than 30 people booked onit.
 
             sdf.Fill(sd);
             dataGridView1.DataSource = sd;
+            con.Close();
+
+            con = new SqlConnection(connectionString);
+            SqlDataAdapter staffcheck = new SqlDataAdapter("SELECT * FROM [Staff_Scheduling] WHERE date ='" + dateTimePicker1.Value.ToLongDateString() +"' AND booked =  0", con); //this will get all the data where email matches
+            DataTable staffdata = new DataTable(); //datagridviewer will be filled with with staff members who are not booked on the day the customer wants one.
+
+            staffcheck.Fill(staffdata);
+            dataGridView3.DataSource = staffdata;
+            con.Close();
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
             con = new SqlConnection(connectionString); //create a new sql connection
-            if (cusID.Text == String.Empty ||
-                    slopeComboBox.Text == String.Empty || dateTimePicker2.Text == String.Empty || textStartTime.Text == String.Empty ||
-                    textEndTime.Text == String.Empty || payment.Text == String.Empty) //this code here will check if the all the values have been entered
+            if (cusidBox.Text == String.Empty ||
+                    sessionBox.Text == String.Empty || dateTimePicker1.Text == String.Empty 
+                     || payment.Text == String.Empty) //this code here will check if the all the values have been entered
             {
                 MessageBox.Show("Error, missing valeus", "Please Complete Form", MessageBoxButtons.OK, MessageBoxIcon.Error); //show the error if they are not.
             }
@@ -128,44 +159,49 @@ namespace Sphere_Booking_and_Check_in_System.Booking
             {
                 try
                 {
+                  
+
+                    
                     con.Open(); // open my sql connection that i created above
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Session (staffID, customerID, slopeID, startTime, endTime, date) VALUES (@staffID, @customerID, @slopeID, @startTime, @endTime, @date) SELECT SCOPE_IDENTITY();", con);
-                    //simple insert statement, where we get the auto incremented value as "int"
-
-                    cmd.Parameters.AddWithValue("@staffID", staffID.Text);
-                    cmd.Parameters.AddWithValue("@customerID", cusID.Text);
-                    cmd.Parameters.AddWithValue("@slopeID", slopeComboBox.Text);
-                    cmd.Parameters.AddWithValue("@startTime", textStartTime.Text.ToString());
-                    cmd.Parameters.AddWithValue("@endTime", textEndTime.Text.ToString());
-                    cmd.Parameters.AddWithValue("@date", dateTimePicker2.Value);
-
-                    //add the data to the tables
-                
-                    int a = cmd.ExecuteNonQuery(); 
-                    SqlDataReader rd = cmd.ExecuteReader();
-
-
-                    rd.Read();
-                    string id = rd[0].ToString(); //here we take the auto incremented sessionID and store it in (id) to be used later.
-                    rd.Close();
-                    
-                    
-
-                    SqlCommand cmd2 = new SqlCommand("INSERT INTO Booking (staffID, customerID, cost, sessionID) VALUES (@staffID, @customerID, @cost, @sessionID)",con);
-                    cmd2.Parameters.AddWithValue("@staffID", staffID.Text);
-                    cmd2.Parameters.AddWithValue("@customerID", cusID.Text);
-                    cmd2.Parameters.AddWithValue("@cost", payment.Text);
-                    cmd2.Parameters.AddWithValue("@sessionID", id);
-                    int b = cmd2.ExecuteNonQuery();
-                    //adding data to the booking tables and using the (id = sessionid) which we got by using SCOPE_IDENTITY()
-                    if (a == 1 && b == 1)
+                    SqlCommand limit_increment = new SqlCommand("UPDATE Session set limit = limit + 1 WHERE id ='" + this.sessionBox.Text + "';", con);
+                    int incremnt_check = limit_increment.ExecuteNonQuery();
+                    if (incremnt_check != 1)
                     {
-                        MessageBox.Show("Session has been added: "); //simple error checks
+                        MessageBox.Show("Failed to increment Session limit"); //simple error checks
+
+                    }
+                    con.Close();  //this will incrment the limit com in session tables everytime user enters 
+
+
+
+                    if (staffschBox.Text != String.Empty)
+                    {
+                        con.Open();
+                        SqlCommand staff_Booked = new SqlCommand("UPDATE Staff_Scheduling set booked = 1 WHERE id ='" + staffschBox.Text + "';", con);
+                        int booked_true = staff_Booked.ExecuteNonQuery();
+                        if (booked_true != 1)
+                        {
+                            MessageBox.Show("Failed to book staff with customer");
+                        }
+                        
+                    }
+                    
+               
+                    SqlCommand cmd2 = new SqlCommand("INSERT INTO Booking (staff_Sch, customerID, cost, sessionID) VALUES (@staff_Sch, @customerID, @cost, @sessionID)",con);
+                    cmd2.Parameters.AddWithValue("@staff_Sch", staffschBox.Text);
+                    cmd2.Parameters.AddWithValue("@customerID", cusidBox.Text);
+                    cmd2.Parameters.AddWithValue("@cost", payment.Text);
+                    cmd2.Parameters.AddWithValue("@sessionID", sessionBox.Text);
+                    int b = cmd2.ExecuteNonQuery();
+                    
+                    if (b == 1)
+                    {
+                        MessageBox.Show("Booking has been added: "); //simple error checks
 
                     }
                     else
                     {
-                        MessageBox.Show("Session couldn't be added at this time");
+                        MessageBox.Show("Booking couldn't be added at this time");
                     }
 
                 }
