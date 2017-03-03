@@ -93,7 +93,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CheckIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckIn";
             this.ResumeLayout(false);
             this.PerformLayout();

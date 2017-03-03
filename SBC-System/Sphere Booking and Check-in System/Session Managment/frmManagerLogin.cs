@@ -10,7 +10,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         {
             InitializeComponent();
 
-            FormClosing += new FormClosingEventHandler(frmManagerLogin_FormClosing);
             txtUsername.KeyPress += new KeyPressEventHandler(CheckEnter);
             txtPassword.KeyPress += new KeyPressEventHandler(CheckEnter);
         }
@@ -72,7 +71,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Wait to merge
+            this.Close();
+            frmMain main = new frmMain();
+            main.Show();
         }
 
         private void btnRecovery_Click(object sender, EventArgs e)
@@ -80,11 +81,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
             frmRecoveryManager recovery = new frmRecoveryManager();
             this.Hide();
             recovery.Show();
-        }
-
-        private void frmManagerLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Wait to merge
         }
 
         private void frmManagerLogin_Load(object sender, EventArgs e)

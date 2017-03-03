@@ -217,7 +217,7 @@ namespace Sphere_Booking_and_Check_in_System.Booking
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide(); //this while hide the bookingform form.
+            this.Close(); //this while hide the bookingform form.
         }
     }
 }
