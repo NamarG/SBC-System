@@ -33,8 +33,8 @@ namespace Sphere_Booking_and_Check_in_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
             Session_Managment.frmManagerLogin login = new Session_Managment.frmManagerLogin();
+            this.Close();
             login.Show();
         }
 
