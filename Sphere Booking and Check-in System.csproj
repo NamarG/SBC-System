@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F1A4A87-6E55-4A68-80FA-485498208391}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sphere_Booking_and_Check_in_System</RootNamespace>
+    <AssemblyName>Sphere Booking and Check-in System</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Booking\BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\CheckIn.designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\CheckInDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\CheckInDetails.designer.cs">
+      <DependentUpon>CheckInDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-in\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-in\Help.designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainLogin.Designer.cs">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecovery.Designer.cs">
+      <DependentUpon>frmMainRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecoveryCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main UI\frmMainRecoveryCode.Designer.cs">
+      <DependentUpon>frmMainRecoveryCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mainDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session Managment\frmAddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmAddNew.Designer.cs">
+      <DependentUpon>frmAddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmDelete.Designer.cs">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmManagerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmManagerLogin.Designer.cs">
+      <DependentUpon>frmManagerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmRecoveryCodeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmRecoveryCodeManager.Designer.cs">
+      <DependentUpon>frmRecoveryCodeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmRecoveryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmRecoveryManager.Designer.cs">
+      <DependentUpon>frmRecoveryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmSessionAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmSessionAbout.Designer.cs">
+      <DependentUpon>frmSessionAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmSessionManagementMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmSessionManagementMain.Designer.cs">
+      <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\frmViewSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\frmViewSessions.Designer.cs">
+      <DependentUpon>frmViewSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Scheduling\frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Scheduling\frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Booking\BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\CheckInDetails.resx">
+      <DependentUpon>CheckInDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-in\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainLogin.resx">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainRecovery.resx">
+      <DependentUpon>frmMainRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UI\frmMainRecoveryCode.resx">
+      <DependentUpon>frmMainRecoveryCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Session Managment\frmAddNew.resx">
+      <DependentUpon>frmAddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmDelete.resx">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmManagerLogin.resx">
+      <DependentUpon>frmManagerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmRecoveryCodeManager.resx">
+      <DependentUpon>frmRecoveryCodeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmRecoveryManager.resx">
+      <DependentUpon>frmRecoveryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmSessionAbout.resx">
+      <DependentUpon>frmSessionAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmSessionManagementMain.resx">
+      <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\frmViewSessions.resx">
+      <DependentUpon>frmViewSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Scheduling\frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="mainDatabaseDataSet.xsc">
+      <DependentUpon>mainDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mainDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mainDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mainDatabaseDataSet.xss">
+      <DependentUpon>mainDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Employee Managment\" />
+    <Folder Include="Registration\" />
+    <Folder Include="Scheduling\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mainDatabase.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mainDatabase_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>mainDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
