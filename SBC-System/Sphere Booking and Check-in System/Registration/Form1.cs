@@ -21,7 +21,7 @@ namespace Sphere_Booking_and_Check_in_System.Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

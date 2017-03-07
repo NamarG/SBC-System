@@ -44,5 +44,19 @@ namespace Sphere_Booking_and_Check_in_System
             staff.MdiParent = this;
             staff.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Registration.Form1 reg = new Registration.Form1();
+            reg.MdiParent = this;
+            reg.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Scheduling.frmAddNew add = new Scheduling.frmAddNew();
+            add.MdiParent = this;
+            add.Show();
+        }
     }
 }

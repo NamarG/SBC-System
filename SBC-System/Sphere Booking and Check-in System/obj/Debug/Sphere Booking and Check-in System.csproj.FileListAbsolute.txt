@@ -138,3 +138,6 @@ C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\bin\Debu
 C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\bin\Debug\mainDatabase_log.ldf
 C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.exe
 C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.pdb
+C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Registration.Form1.resources
+C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Scheduling.frmAddNew.resources
+C:\Users\starlint\Desktop\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Scheduling.frmDelete.resources
