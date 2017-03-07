@@ -240,9 +240,9 @@
             this.checkBox2.Enabled = false;
             this.checkBox2.Location = new System.Drawing.Point(93, 83);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(66, 17);
+            this.checkBox2.Size = new System.Drawing.Size(71, 17);
             this.checkBox2.TabIndex = 23;
-            this.checkBox2.Text = "Premium";
+            this.checkBox2.Text = "HOLDER";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // CheckInDetails

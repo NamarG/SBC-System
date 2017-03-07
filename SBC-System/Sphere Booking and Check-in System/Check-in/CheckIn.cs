@@ -51,10 +51,8 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
 
         private void button3_Click(object sender, EventArgs e)
         {
-//Navigation to the Home page, from the check in page.
-            CheckIn checkin = new Check_in.CheckIn();
+            //Navigation to the Home page, from the check in page.
             this.Close();
-            checkin.Show();
         }
     }
 }

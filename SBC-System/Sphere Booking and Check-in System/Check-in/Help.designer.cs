@@ -53,7 +53,6 @@
             this.richTextBox1.Text = "Customer ID is your personal identity within this company.\n\nYour Customer ID stor" +
     "es all information regarding you (i.e. Name, Address, E-mail, Phone Number and y" +
     "our membership status).\n";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Help
             // 

@@ -31,15 +31,23 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
                     textBox7.Text = (sdr["emailAddress"].ToString());
                     textBox6.Text = (sdr["phoneNumber"].ToString());
                     textBox5.Text = (sdr["address"].ToString());
-                    int memeber = sdr.GetOrdinal("Membership");
-                    bool? active = sdr.IsDBNull(memeber) ? (bool?)null : sdr.GetBoolean(memeber);
 
-                    if(active == true)
+                    if (sdr[3].ToString() == "1")
                     {
                         checkBox2.Checked = true;
+                        checkBox2.Text = "Member";
+                    }
+                    else if (sdr[3].ToString() == "2")
+                    {
+                        checkBox2.Checked = true;
+                        checkBox2.Text = "Premium Member";
+                    }
+                    else
+                    {
+                        checkBox2.Checked = false;
+                        checkBox2.Text = "Non-Member";
                     }
 
-                    checkBox1.Checked = true;
                 }
 
                 sdr.Close();
@@ -66,7 +74,7 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30")) 
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("UPDATE Booking SET checkedIn = 1", connection);
