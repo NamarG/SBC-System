@@ -33,5 +33,50 @@ namespace Sphere_Booking_and_Check_in_System.Properties {
                 return ((string)(this["mainDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int staffID {
+            get {
+                return ((int)(this["staffID"]));
+            }
+            set {
+                this["staffID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime sessionDate {
+            get {
+                return ((global::System.DateTime)(this["sessionDate"]));
+            }
+            set {
+                this["sessionDate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime sessionStartTime {
+            get {
+                return ((global::System.DateTime)(this["sessionStartTime"]));
+            }
+            set {
+                this["sessionStartTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime SessionEndTime {
+            get {
+                return ((global::System.DateTime)(this["SessionEndTime"]));
+            }
+            set {
+                this["SessionEndTime"] = value;
+            }
+        }
     }
 }

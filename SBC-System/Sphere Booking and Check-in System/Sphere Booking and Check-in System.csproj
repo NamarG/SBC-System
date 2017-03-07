@@ -48,6 +48,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.8.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.8.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -135,59 +141,83 @@
     <Compile Include="Scheduling\frmDelete.Designer.cs">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmAddNew.cs">
+    <Compile Include="Session Managment\V1\frmAddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmAddNew.Designer.cs">
+    <Compile Include="Session Managment\V1\frmAddNew.Designer.cs">
       <DependentUpon>frmAddNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmDelete.cs">
+    <Compile Include="Session Managment\V1\frmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmDelete.Designer.cs">
+    <Compile Include="Session Managment\V1\frmDelete.Designer.cs">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmManagerLogin.cs">
+    <Compile Include="Session Managment\V1\frmManagerLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmManagerLogin.Designer.cs">
+    <Compile Include="Session Managment\V1\frmManagerLogin.Designer.cs">
       <DependentUpon>frmManagerLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmRecoveryCodeManager.cs">
+    <Compile Include="Session Managment\V1\frmRecoveryCodeManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmRecoveryCodeManager.Designer.cs">
+    <Compile Include="Session Managment\V1\frmRecoveryCodeManager.Designer.cs">
       <DependentUpon>frmRecoveryCodeManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmRecoveryManager.cs">
+    <Compile Include="Session Managment\V1\frmRecoveryManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmRecoveryManager.Designer.cs">
+    <Compile Include="Session Managment\V1\frmRecoveryManager.Designer.cs">
       <DependentUpon>frmRecoveryManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmSessionAbout.cs">
+    <Compile Include="Session Managment\V1\frmSessionManagementMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmSessionAbout.Designer.cs">
-      <DependentUpon>frmSessionAbout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Session Managment\frmSessionManagementMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Session Managment\frmSessionManagementMain.Designer.cs">
+    <Compile Include="Session Managment\V1\frmSessionManagementMain.Designer.cs">
       <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmUpdate.cs">
+    <Compile Include="Session Managment\V1\frmUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmUpdate.Designer.cs">
+    <Compile Include="Session Managment\V1\frmUpdate.Designer.cs">
       <DependentUpon>frmUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\frmViewSessions.cs">
+    <Compile Include="Session Managment\V1\frmViewSessions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Session Managment\frmViewSessions.Designer.cs">
+    <Compile Include="Session Managment\V1\frmViewSessions.Designer.cs">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmFindSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmFindSession.Designer.cs">
+      <DependentUpon>frmFindSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmFindStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmFindStaff.Designer.cs">
+      <DependentUpon>frmFindStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerMain.Designer.cs">
+      <DependentUpon>frmManagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerSettings.Designer.cs">
+      <DependentUpon>frmManagerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmSessionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmSessionUpdate.Designer.cs">
+      <DependentUpon>frmSessionUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff Scheduling\frmStaff.cs">
       <SubType>Form</SubType>
@@ -237,32 +267,44 @@
     <EmbeddedResource Include="Scheduling\frmDelete.resx">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmAddNew.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmAddNew.resx">
       <DependentUpon>frmAddNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmDelete.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmDelete.resx">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmManagerLogin.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmManagerLogin.resx">
       <DependentUpon>frmManagerLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmRecoveryCodeManager.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmRecoveryCodeManager.resx">
       <DependentUpon>frmRecoveryCodeManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmRecoveryManager.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmRecoveryManager.resx">
       <DependentUpon>frmRecoveryManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmSessionAbout.resx">
-      <DependentUpon>frmSessionAbout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmSessionManagementMain.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmSessionManagementMain.resx">
       <DependentUpon>frmSessionManagementMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmUpdate.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmUpdate.resx">
       <DependentUpon>frmUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Session Managment\frmViewSessions.resx">
+    <EmbeddedResource Include="Session Managment\V1\frmViewSessions.resx">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmFindSession.resx">
+      <DependentUpon>frmFindSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmFindStaff.resx">
+      <DependentUpon>frmFindStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerMain.resx">
+      <DependentUpon>frmManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerSettings.resx">
+      <DependentUpon>frmManagerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmSessionUpdate.resx">
+      <DependentUpon>frmSessionUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Scheduling\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
