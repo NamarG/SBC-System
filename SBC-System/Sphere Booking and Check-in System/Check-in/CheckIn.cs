@@ -25,6 +25,7 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
                     {
                         int id = int.Parse(textBox1.Text);
                         Check_in.CheckInDetails details = new CheckInDetails(id);
+                        details.MdiParent = this.ParentForm;
                         details.Show();
                         this.Close();
                     }
@@ -45,7 +46,7 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         private void button1_Click(object sender, EventArgs e)
         {
             Help checkin = new Check_in.Help();
-            this.Close();
+            checkin.MdiParent = this.ParentForm;
             checkin.Show();
         }
 
