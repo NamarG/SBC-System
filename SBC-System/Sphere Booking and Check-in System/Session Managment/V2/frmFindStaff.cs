@@ -251,7 +251,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
             groupBox5.Enabled = false;
             btnSearchStaff.Enabled = true;
+            btnClear.Enabled = false;
 
+            comboBox1.Text = "";
             lblUsername.Text = "";
             lblFirst.Text = "";
             lblLast.Text = "";
@@ -288,6 +290,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
                         if (result > 0)
                         {
+                            btnClear.Enabled = true;
                             using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                             {
                                 using (DataSet ds = new DataSet())
@@ -306,6 +309,26 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                     catch (Exception ex)
                     {
                         MessageBoxEx.Show("Unexpected error:" + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            btnClear.Enabled = false;
+            using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT date, startTime, endTime FROM Staff_Scheduling WHERE (staffID = '" + txtSearchBox.Text + "')", con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        using (DataSet ds = new DataSet())
+                        {
+                            sda.Fill(ds);
+                            dataGridViewX1.DataSource = ds.Tables[0];
+                        }
                     }
                 }
             }
