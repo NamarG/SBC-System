@@ -74,36 +74,45 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
                             if (result > 0)
                             {
-                                Connection.Close();
-                                using (cmd = new SqlCommand("SELECT Id, firstName, lastName, emailAddress FROM Staff WHERE firstName=@first AND lastName=@last", Connection))
+                                groupBox1.Visible = true;
+                                this.Size = new Size(483, 483);
+                                groupBox5.Enabled = true;
+                                groupBox5.Visible = true;
+                                btnSearchStaff.Enabled = false;
+
+                                using (cmd = new SqlCommand("SELECT * FROM Staff WHERE firstName=@first AND lastName=@last", Connection))
                                 {
                                     cmd.Parameters.AddWithValue("@first", txtFirstName.Text);
                                     cmd.Parameters.AddWithValue("@last", txtLastName.Text);
 
-                                    cmd.CommandType = CommandType.Text;
-                                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                                    SqlDataReader sdr = cmd.ExecuteReader();
+
+                                    while (sdr.Read())
                                     {
-                                        using (DataSet ds = new DataSet())
-                                        {
-                                            sda.Fill(ds);
-                                            dataGridViewX1.DataSource = ds.Tables[0];
-                                        }
+                                        lblID.Text = (sdr["Id"].ToString());
+                                        lblUsername.Text = (sdr["username"].ToString());
+                                        lblFirst.Text = (sdr["firstName"].ToString());
+                                        lblLast.Text = (sdr["lastName"].ToString());
+                                        lblEmail.Text = (sdr["emailAddress"].ToString());
+                                        lblAddress.Text = (sdr["address"].ToString());
+                                        lblPhone.Text = (sdr["phoneNumber"].ToString());
+                                        lblDays.Text = (sdr["preferWork"].ToString());
+
+                                        txtSearchBox.Text = (sdr["Id"].ToString());
                                     }
+                                    sdr.Close();
                                 }
-                                txtSearchBox.Text = dataGridViewX1.CurrentRow.Cells[0].Value.ToString();
                                 Properties.Settings.Default.staffID = int.Parse(txtSearchBox.Text);
                             }
                             else
                             {
                                 MessageBoxEx.Show("Staff Member Does Not Exist");
-                                //Clear rows
                             }
                         }
 
                         catch (Exception ex)
                         {
                             MessageBoxEx.Show("Unexpected error:" + ex.Message);
-                            //Clear rows
                         }
                     }
                     else
@@ -121,23 +130,32 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
                                 if (result > 0)
                                 {
-                                    Connection.Close();
-                                    using (cmd = new SqlCommand("SELECT Id, firstName, lastName, emailAddress FROM Staff WHERE firstName=@first AND lastName=@last AND emailAddress=@mail", Connection))
+                                    groupBox1.Visible = true;
+                                    this.Size = new Size(483, 483);
+
+                                    using (cmd = new SqlCommand("SELECT * FROM Staff WHERE firstName=@first AND lastName=@last AND emailAddress=@mail", Connection))
                                     {
                                         cmd.Parameters.AddWithValue("@first", txtFirstName.Text);
                                         cmd.Parameters.AddWithValue("@last", txtLastName.Text);
+                                        cmd.Parameters.AddWithValue("@mail", txtEmail.Text);
 
-                                        cmd.CommandType = CommandType.Text;
-                                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                                        SqlDataReader sdr = cmd.ExecuteReader();
+
+                                        while (sdr.Read())
                                         {
-                                            using (DataSet ds = new DataSet())
-                                            {
-                                                sda.Fill(ds);
-                                                dataGridViewX1.DataSource = ds.Tables[0];
-                                            }
+                                            lblID.Text = (sdr["Id"].ToString());
+                                            lblUsername.Text = (sdr["username"].ToString());
+                                            lblFirst.Text = (sdr["firstName"].ToString());
+                                            lblLast.Text = (sdr["lastName"].ToString());
+                                            lblEmail.Text = (sdr["emailAddress"].ToString());
+                                            lblAddress.Text = (sdr["address"].ToString());
+                                            lblPhone.Text = (sdr["phoneNumber"].ToString());
+                                            lblDays.Text = (sdr["preferWork"].ToString());
+
+                                            txtSearchBox.Text = (sdr["Id"].ToString());
                                         }
+                                        sdr.Close();
                                     }
-                                    txtSearchBox.Text = dataGridViewX1.CurrentRow.Cells[0].Value.ToString();
                                     Properties.Settings.Default.staffID = int.Parse(txtSearchBox.Text);
                                 }
                                 else
@@ -183,6 +201,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
                         if (result > 0)
                         {
+                            labelX5.Visible = true;
+                            dataGridViewX1.Visible = true;
+                            groupBox2.Visible = true;
+                            groupBox5.Enabled = false;
+                            this.Size = new Size(677, 483);
+
                             using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                             {
                                 using (DataSet ds = new DataSet())
@@ -193,6 +217,86 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                             }
                             Connection.Close();
                             Properties.Settings.Default.staffID = int.Parse(txtSearchBox.Text);
+                        }
+                        else
+                        {
+                            MessageBoxEx.Show("No Record Exists");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBoxEx.Show("Unexpected error:" + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void frmFindStaff_Load(object sender, EventArgs e)
+        {
+            this.Size = new Size(273, 216);
+            label15.ForeColor = Color.Red;
+            lblDays.ForeColor = Color.Red;
+            label1.ForeColor = Color.Red;
+            label2.ForeColor = Color.Red;
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(273, 216);
+            labelX5.Visible = false;
+            groupBox1.Visible = false;
+            dataGridViewX1.Visible = false;
+            groupBox2.Visible = false;
+            groupBox5.Visible = false;
+
+            groupBox5.Enabled = false;
+            btnSearchStaff.Enabled = true;
+
+            lblUsername.Text = "";
+            lblFirst.Text = "";
+            lblLast.Text = "";
+            lblEmail.Text = "";
+            lblAddress.Text = "";
+            lblPhone.Text = "";
+            lblDays.Text = "";
+            txtSearchBox.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                if (comboBox1.Text == String.Empty)
+                {
+                    MessageBoxEx.Show("Search Critera is Empty");
+                    txtSearchBox.Focus();
+                }
+                else
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT date, startTime, endTime FROM Staff_Scheduling WHERE EXISTS (SELECT preferWork FROM Staff WHERE preferWork LIKE '%'+ @search + '%')  AND booked = 0", Connection);
+                        SqlCommand cmdCheck = new SqlCommand("SELECT COUNT(*) FROM Staff WHERE preferWork LIKE '%'+ @search + '%'", Connection);
+                        cmdCheck.Parameters.AddWithValue("@search", comboBox1.Text);
+                        cmd.Parameters.AddWithValue("@search", comboBox1.Text);
+
+                        int result = (int)cmdCheck.ExecuteScalar();
+
+                        if (result > 0)
+                        {
+                            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                            {
+                                using (DataSet ds = new DataSet())
+                                {
+                                    sda.Fill(ds);
+                                    dataGridViewX1.DataSource = ds.Tables[0];
+                                }
+                            }
+                            Connection.Close();
                         }
                         else
                         {

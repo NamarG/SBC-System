@@ -72,7 +72,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            Session_Managment.V2.frmManagerMain main = new V2.frmManagerMain();
+            Session_Managment.V2.frmManagerLogin main = new V2.frmManagerLogin();
             main.Show();
         }
 

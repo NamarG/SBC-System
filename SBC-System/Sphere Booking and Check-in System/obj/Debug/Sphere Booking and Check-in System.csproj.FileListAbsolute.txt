@@ -154,3 +154,7 @@ D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sp
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmSessionUpdate.resources
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmFindSession.resources
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmFindStaff.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmManagerDetails.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmManagerLogin.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmManagerRecovery.resources
+D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Session_Managment.V2.frmManagerRecoveryCode.resources

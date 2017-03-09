@@ -48,34 +48,13 @@ namespace Sphere_Booking_and_Check_in_System.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime sessionDate {
+        [global::System.Configuration.DefaultSettingValueAttribute("null")]
+        public string Manager {
             get {
-                return ((global::System.DateTime)(this["sessionDate"]));
+                return ((string)(this["Manager"]));
             }
             set {
-                this["sessionDate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime sessionStartTime {
-            get {
-                return ((global::System.DateTime)(this["sessionStartTime"]));
-            }
-            set {
-                this["sessionStartTime"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime SessionEndTime {
-            get {
-                return ((global::System.DateTime)(this["SessionEndTime"]));
-            }
-            set {
-                this["SessionEndTime"] = value;
+                this["Manager"] = value;
             }
         }
     }

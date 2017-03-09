@@ -201,11 +201,35 @@
     <Compile Include="Session Managment\V2\frmFindStaff.Designer.cs">
       <DependentUpon>frmFindStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\V2\frmManagerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerDetails.Designer.cs">
+      <DependentUpon>frmManagerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerLogin.Designer.cs">
+      <DependentUpon>frmManagerLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session Managment\V2\frmManagerMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Session Managment\V2\frmManagerMain.Designer.cs">
       <DependentUpon>frmManagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerRecovery.Designer.cs">
+      <DependentUpon>frmManagerRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerRecoveryCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session Managment\V2\frmManagerRecoveryCode.Designer.cs">
+      <DependentUpon>frmManagerRecoveryCode.cs</DependentUpon>
     </Compile>
     <Compile Include="Session Managment\V2\frmManagerSettings.cs">
       <SubType>Form</SubType>
@@ -297,8 +321,20 @@
     <EmbeddedResource Include="Session Managment\V2\frmFindStaff.resx">
       <DependentUpon>frmFindStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerDetails.resx">
+      <DependentUpon>frmManagerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerLogin.resx">
+      <DependentUpon>frmManagerLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Session Managment\V2\frmManagerMain.resx">
       <DependentUpon>frmManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerRecovery.resx">
+      <DependentUpon>frmManagerRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session Managment\V2\frmManagerRecoveryCode.resx">
+      <DependentUpon>frmManagerRecoveryCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Session Managment\V2\frmManagerSettings.resx">
       <DependentUpon>frmManagerSettings.cs</DependentUpon>

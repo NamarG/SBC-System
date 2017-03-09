@@ -13,14 +13,8 @@
     <Setting Name="staffID" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="sessionDate" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="sessionStartTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SessionEndTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="Manager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
     </Setting>
   </Settings>
 </SettingsFile>
