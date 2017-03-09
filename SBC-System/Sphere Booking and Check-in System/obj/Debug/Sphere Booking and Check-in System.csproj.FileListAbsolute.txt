@@ -120,7 +120,6 @@ D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sp
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\bin\Debug\Sphere Booking and Check-in System.pdb
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\bin\Debug\DevComponents.DotNetBar2.dll
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\bin\Debug\DevComponents.DotNetBar2.xml
-D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csprojResolveAssemblyReference.cache
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Booking.BookingForm.resources
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Check_in.CheckIn.resources
 D:\My Data\Documents\GitHub\Sphere-Booking-and-Check-in-SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere_Booking_and_Check_in_System.Check_in.CheckInDetails.resources

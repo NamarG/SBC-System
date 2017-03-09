@@ -279,8 +279,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                     try
                     {
                         Connection.Open();
-                        SqlCommand cmd = new SqlCommand("SELECT date, startTime, endTime FROM Staff_Scheduling WHERE EXISTS (SELECT preferWork FROM Staff WHERE preferWork LIKE '%'+ @search + '%')  AND booked = 0", Connection);
-                        SqlCommand cmdCheck = new SqlCommand("SELECT COUNT(*) FROM Staff WHERE preferWork LIKE '%'+ @search + '%'", Connection);
+                        SqlCommand cmd = new SqlCommand("SELECT date, startTime, endTime FROM Staff_Scheduling WHERE DATENAME(dw, date) LIKE '%'+ @search + '%'", Connection);
+                        SqlCommand cmdCheck = new SqlCommand("SELECT COUNT(*) FROM Staff_Scheduling WHERE DATENAME(dw, date) LIKE '%'+ @search + '%' AND booked = 0", Connection);
                         cmdCheck.Parameters.AddWithValue("@search", comboBox1.Text);
                         cmd.Parameters.AddWithValue("@search", comboBox1.Text);
 
