@@ -34,6 +34,7 @@ namespace Sphere_Booking_and_Check_in_System.Booking
             checkid.Connection = con;
 
             SqlDataReader rd = checkid.ExecuteReader();
+            
             while (rd.Read())
             {
                 memcheck.Text = "............................";
@@ -47,20 +48,24 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                     if (rd[3].ToString() == "1")
                     {
                         memcheck.Text = "Member: £20";
+                        payment.Text = "20";
                     }
                     else if (rd[3].ToString() == "2")
                     {
-                        memcheck.Text = "Prm Member: £15"; 
+                        memcheck.Text = "Prm Member: £15";
+                        payment.Text = "15";
                     }
                     else
                     {
                         memcheck.Text = "Non-Member: £25";
+                        payment.Text = "25";
                     }
                 }
                 //code to ask for the correct price from the user so no mistakes are made
             }
             if (isreg == true)
             {
+                cusidBox.Text = idBox.Text;
                 idLabel.Text = "Is registerd";
             }
             else
@@ -89,6 +94,21 @@ namespace Sphere_Booking_and_Check_in_System.Booking
             checkEmail.Connection = con;
 
             SqlDataReader rd = checkEmail.ExecuteReader();
+
+            string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"; //check for invalid inputs
+            RegexStringValidator myRegexValidator = new RegexStringValidator(pattern);
+
+            try
+            {
+                myRegexValidator.Validate(emailBox.Text); //checking what has been typed and if it matches the pattern. 
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Email");
+
+            }
+
             while (rd.Read())
             {
                 if (rd[4].ToString() == emailBox.Text) //the 4 here is calling to the Email col
@@ -96,6 +116,25 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                     isreg = true;
                     //we then print it out to the label.
                 }
+                if (isreg == true)
+                {
+                    if (rd[3].ToString() == "1")
+                    {
+                        memcheck.Text = "Member: £20";
+                        payment.Text = "20";
+                    }
+                    else if (rd[3].ToString() == "2")
+                    {
+                        memcheck.Text = "Prm Member: £15";
+                        payment.Text = "15";
+                    }
+                    else
+                    {
+                        memcheck.Text = "Non-Member: £25";
+                        payment.Text = "25";
+                    }
+                }
+                //code to ask for the correct price from the user so no mistakes are made
 
             }
             if (isreg == true)
@@ -219,5 +258,30 @@ namespace Sphere_Booking_and_Check_in_System.Booking
         {
             this.Close(); //this while hide the bookingform form.
         }
+
+
+        int a, b, c;
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            b = e.RowIndex; //needs to know the row that has been clicked
+            DataGridViewRow row = dataGridView1.Rows[b];
+            sessionBox.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            a = e.RowIndex; //needs to know the row that has been clicked
+            DataGridViewRow row = dataGridView2.Rows[a];
+            cusidBox.Text = row.Cells[0].Value.ToString();
+
+        }
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            c = e.RowIndex; //needs to know the row that has been clicked
+            DataGridViewRow row = dataGridView3.Rows[c];
+            staffschBox.Text = row.Cells[0].Value.ToString();
+        }
+
     }
 }
