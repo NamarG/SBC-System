@@ -34,9 +34,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSearchID = new DevComponents.DotNetBar.ButtonX();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dateTimeInput1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.txtEndTime = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-            this.txtStartTime = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -50,9 +47,11 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.btnSubmit = new DevComponents.DotNetBar.ButtonX();
+            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
+            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -155,7 +154,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dateTimeInput1);
+            this.groupPanel3.Controls.Add(this.dateTimePicker1);
             this.groupPanel3.Controls.Add(this.txtEndTime);
             this.groupPanel3.Controls.Add(this.txtStartTime);
             this.groupPanel3.Controls.Add(this.labelX6);
@@ -201,90 +200,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.TabIndex = 2;
             this.groupPanel3.Text = "Update Session";
             // 
-            // dateTimeInput1
-            // 
-            // 
-            // 
-            // 
-            this.dateTimeInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateTimeInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateTimeInput1.ButtonDropDown.Visible = true;
-            this.dateTimeInput1.IsPopupCalendarOpen = false;
-            this.dateTimeInput1.Location = new System.Drawing.Point(80, 70);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.dateTimeInput1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dateTimeInput1.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2017, 3, 1, 0, 0, 0, 0);
-            this.dateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            // 
-            // 
-            // 
-            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput1.MonthCalendar.TodayButtonVisible = true;
-            this.dateTimeInput1.Name = "dateTimeInput1";
-            this.dateTimeInput1.Size = new System.Drawing.Size(105, 22);
-            this.dateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateTimeInput1.TabIndex = 36;
-            // 
-            // txtEndTime
-            // 
-            // 
-            // 
-            // 
-            this.txtEndTime.BackgroundStyle.Class = "TextBoxBorder";
-            this.txtEndTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtEndTime.ButtonClear.Visible = true;
-            this.txtEndTime.Location = new System.Drawing.Point(80, 125);
-            this.txtEndTime.Mask = "00:00";
-            this.txtEndTime.Name = "txtEndTime";
-            this.txtEndTime.Size = new System.Drawing.Size(105, 21);
-            this.txtEndTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtEndTime.TabIndex = 31;
-            this.txtEndTime.Text = "";
-            // 
-            // txtStartTime
-            // 
-            // 
-            // 
-            // 
-            this.txtStartTime.BackgroundStyle.Class = "TextBoxBorder";
-            this.txtStartTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStartTime.ButtonClear.Visible = true;
-            this.txtStartTime.Location = new System.Drawing.Point(80, 98);
-            this.txtStartTime.Mask = "00:00";
-            this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(105, 21);
-            this.txtStartTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtStartTime.TabIndex = 30;
-            this.txtStartTime.Text = "";
-            // 
             // labelX6
             // 
             // 
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(12, 123);
+            this.labelX6.Location = new System.Drawing.Point(12, 126);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(62, 23);
             this.labelX6.TabIndex = 29;
@@ -415,6 +337,31 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // txtStartTime
+            // 
+            this.txtStartTime.Location = new System.Drawing.Point(80, 98);
+            this.txtStartTime.Mask = "00:00";
+            this.txtStartTime.Name = "txtStartTime";
+            this.txtStartTime.Size = new System.Drawing.Size(105, 22);
+            this.txtStartTime.TabIndex = 37;
+            this.txtStartTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtEndTime
+            // 
+            this.txtEndTime.Location = new System.Drawing.Point(80, 126);
+            this.txtEndTime.Mask = "00:00";
+            this.txtEndTime.Name = "txtEndTime";
+            this.txtEndTime.Size = new System.Drawing.Size(105, 22);
+            this.txtEndTime.TabIndex = 38;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
+            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
+            // 
             // frmSessionUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,6 +372,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmSessionUpdate";
@@ -432,7 +380,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.Load += new System.EventHandler(this.frmSessionUpdate_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
+            this.groupPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,8 +406,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.ButtonX btnSubmit;
-        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtEndTime;
-        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtStartTime;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput1;
+        private System.Windows.Forms.MaskedTextBox txtEndTime;
+        private System.Windows.Forms.MaskedTextBox txtStartTime;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

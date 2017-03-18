@@ -1,0 +1,5 @@
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\CodedUISessionManagement\bin\Debug\CodedUISessionManagement.dll
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\CodedUISessionManagement\bin\Debug\CodedUISessionManagement.pdb
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\CodedUISessionManagement\obj\Debug\CodedUISessionManagement.csprojResolveAssemblyReference.cache
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\CodedUISessionManagement\obj\Debug\CodedUISessionManagement.dll
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\CodedUISessionManagement\obj\Debug\CodedUISessionManagement.pdb
