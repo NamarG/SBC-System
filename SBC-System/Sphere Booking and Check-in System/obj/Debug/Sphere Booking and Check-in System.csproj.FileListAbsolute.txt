@@ -195,3 +195,4 @@ D:\My Data\Documents\GitHub\SBC-System\SBC-System\Sphere Booking and Check-in Sy
 D:\My Data\Documents\GitHub\SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csproj.GenerateResource.Cache
 D:\My Data\Documents\GitHub\SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.exe
 D:\My Data\Documents\GitHub\SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.pdb
+D:\My Data\Documents\GitHub\SBC-System\SBC-System\Sphere Booking and Check-in System\obj\Debug\Sphere Booking and Check-in System.csprojResolveAssemblyReference.cache

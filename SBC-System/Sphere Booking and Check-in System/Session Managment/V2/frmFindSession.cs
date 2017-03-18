@@ -1,6 +1,7 @@
 using System;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar;
+using DevComponents.Schedule.Model;
 using System.Drawing;
 using System.Data;
 
@@ -13,6 +14,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         public frmFindSession()
         {
             InitializeComponent();
+
+            calendarView1.CalendarModel = new CalendarModel();
         }
 
         protected override void OnLocationChanged(EventArgs e)
@@ -27,114 +30,120 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             base.OnLocationChanged(e);
         }
 
-        //private void btnSearchSession_Click(object sender, EventArgs e)
-        //{
-        //    using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
-        //    {
-        //        if (dateTimeInput1.Text == String.Empty)
-        //        {
-        //            MessageBoxEx.Show("Please enter the first name", "Input Error");
-        //            dateTimeInput1.Focus();
-        //        }
-        //        else
-        //        {
-        //            if (String.IsNullOrEmpty(maskedTextBoxAdv1.Text) || String.IsNullOrEmpty(maskedTextBoxAdv2.Text))
-        //            {
-        //                try
-        //                {
-        //                    Connection.Open();
-        //                    SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM Session WHERE date=@d", Connection);
-        //                    cmd.Parameters.AddWithValue("@d", dateTimeInput1.Value.ToString("dd/mm/yyyy"));
-        //                    int result = (int)cmd.ExecuteScalar();
-
-        //                    if (result > 0)
-        //                    {
-        //                        Connection.Close();
-        //                        using (cmd = new SqlCommand("SELECT Id, slopeID, date, startTime, endTime FROM Session WHERE date=@d", Connection))
-        //                        {
-        //                            cmd.Parameters.AddWithValue("@d", dateTimeInput1.Value.ToString("dd/mm/yyyy"));
-
-        //                            cmd.CommandType = CommandType.Text;
-        //                            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-        //                            {
-        //                                using (DataSet ds = new DataSet())
-        //                                {
-        //                                    sda.Fill(ds);
-        //                                    dataGridViewX1.DataSource = ds.Tables[0];
-        //                                }
-        //                            }
-        //                        }
-        //                        Properties.Settings.Default.sessionDate = dateTimeInput1.Value;
-        //                    }
-        //                    else
-        //                    {
-        //                        MessageBoxEx.Show("Not Session Exist");
-        //                        //Clear rows
-        //                    }
-        //                }
-
-        //                catch (Exception ex)
-        //                {
-        //                    MessageBoxEx.Show("Unexpected error:" + ex.Message);
-        //                    //Clear rows
-        //                }
-        //            }
-        //            else
-        //            {
-        //                try
-        //                {
-        //                    Connection.Open();
-        //                    SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM Session WHERE date=@d AND startTime=@start AND endTime=@end", Connection);
-        //                    cmd.Parameters.AddWithValue("@d", dateTimeInput1.Value.ToLongDateString());
-        //                    cmd.Parameters.AddWithValue("@start", maskedTextBoxAdv1.Text);
-        //                    cmd.Parameters.AddWithValue("@end", maskedTextBoxAdv2.Text);
-        //                    int result = (int)cmd.ExecuteScalar();
-
-        //                    if (result > 0)
-        //                    {
-        //                        Connection.Close();
-        //                        using (cmd = new SqlCommand("SELECT Id, slopeID, date, startTime, endTime FROM Session WHERE date=@d AND startTime=@start AND endTime=@end", Connection))
-        //                        {
-        //                            cmd.Parameters.AddWithValue("@d", dateTimeInput1.Value.ToLongDateString());
-        //                            cmd.Parameters.AddWithValue("@start", maskedTextBoxAdv1.Text);
-        //                            cmd.Parameters.AddWithValue("@end", maskedTextBoxAdv2.Text);
-
-        //                            cmd.CommandType = CommandType.Text;
-        //                            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-        //                            {
-        //                                using (DataSet ds = new DataSet())
-        //                                {
-        //                                    sda.Fill(ds);
-        //                                    dataGridViewX1.DataSource = ds.Tables[0];
-        //                                }
-        //                            }
-        //                        }
-        //                        Properties.Settings.Default.sessionDate = dateTimeInput1.Value;
-        //                    }
-        //                    else
-        //                    {
-        //                        MessageBoxEx.Show("Not Session Exist");
-        //                        //Clear rows
-        //                    }
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    MessageBoxEx.Show("Unexpected error:" + ex.Message);
-        //                    //Clear rows
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        private void frmFindSession_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnApply_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Appointment appointment = new Appointment();
+
+            using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                if (txtSearchSession.Text == String.Empty)
+                {
+                    MessageBoxEx.Show("Please enter the first name", "Input Error");
+                    txtSearchSession.Focus();
+                }
+                else
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM Session WHERE Id=@SessionID", Connection);
+                        cmd.Parameters.AddWithValue("@SessionID", txtSearchSession.Text);
+                        int result = (int)cmd.ExecuteScalar();
+
+                        if (result > 0)
+                        {
+                            using (cmd = new SqlCommand("SELECT date FROM Session WHERE Id=@SessionID", Connection))
+                                cmd.Parameters.AddWithValue("@SessionID", txtSearchSession.Text);
+                            {
+                                SqlDataReader sdr = cmd.ExecuteReader();
+
+                                while (sdr.Read())
+                                {
+                                    calendarView1.ShowDate(Convert.ToDateTime(sdr["date"]));
+                                }
+                            }
+                            Connection.Close();
+                        }
+                        else
+                        {
+                            MessageBoxEx.Show("Session doesn't exist");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBoxEx.Show("Unexpected error:" + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private Appointment AddAppointment(string title, DateTime startTime, DateTime endTime, string color)
+        {
+            Appointment appointment = new Appointment();
+
+            appointment.StartTime = startTime;
+            appointment.EndTime = endTime;
+
+            appointment.Subject = title;
+            appointment.Description = "This is a test";
+            appointment.CategoryColor = color;
+
+            calendarView1.CalendarModel.Appointments.Add(appointment);
+
+            return (appointment);
+        }
+
+        private void frmFindSession_Load(object sender, EventArgs e)
+        {
+            Appointment appointment = new Appointment();
+
+            
+
+            using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                try
+                {
+                    Connection.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM Session", Connection);
+                    int result = (int)cmd.ExecuteScalar();
+
+                    if (result > 0)
+                    {
+                        using (cmd = new SqlCommand("SELECT Id, slopeID, date, startTime, endTime FROM Session", Connection))
+                        {
+                            SqlDataReader sdr = cmd.ExecuteReader();
+
+                            while (sdr.Read())
+                            {
+                                DateTime date = Convert.ToDateTime(sdr["date"].ToString());
+
+                                int sessionId = int.Parse(sdr["Id"].ToString());
+                                TimeSpan startTime = (TimeSpan)sdr["startTime"];
+                                int st = int.Parse(startTime.Hours.ToString());
+                                TimeSpan endTime = (TimeSpan)sdr["endTime"];
+                                int et = int.Parse(endTime.Hours.ToString());
+
+                                AddAppointment("Session: " + sessionId, date.AddHours(st), date.AddHours(et), Appointment.CategoryBlue);
+                            }
+                            sdr.Close();
+                        }
+                        Connection.Close();
+                    }
+                    else
+                    {
+                        MessageBoxEx.Show("Session doesn't exist");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxEx.Show("Unexpected error:" + ex.Message);
+                }
+            }
         }
     }
 }
