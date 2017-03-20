@@ -235,51 +235,48 @@ namespace CodedUISessionManagement
         }
         
         /// <summary>
-        /// RecordedSessionUpdate - Use 'RecordedSessionUpdateParams' to pass parameters into this method.
+        /// RecordedUpdateSession - Use 'RecordedUpdateSessionParams' to pass parameters into this method.
         /// </summary>
-        public void RecordedSessionUpdate()
+        public void RecordedUpdateSession()
         {
             #region Variable Declarations
             WinEdit uITxtSearchBoxEdit = this.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit;
-            WinButton uISearchButton = this.UIUpdateSessionWindow.UIEnterSessionIDClient.UISearchButton;
             WinEdit uITxtStaffIDEdit = this.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit;
+            WinButton uISearchButton = this.UIUpdateSessionWindow.UIEnterSessionIDClient.UISearchButton;
             WinComboBox uIComboBoxSlopeComboBox = this.UIUpdateSessionWindow.UIComboBoxSlopeWindow.UIComboBoxSlopeComboBox;
             WinDateTimePicker uIDateTimePicker1DateTimePicker = this.UIUpdateSessionWindow.UIDateTimePicker1Window.UIDateTimePicker1DateTimePicker;
-            WinEdit uITxtStartTimeEdit = this.UIUpdateSessionWindow.UI____Window.UITxtStartTimeEdit;
-            WinEdit uITxtEndTimeEdit = this.UIUpdateSessionWindow.UI____Window1.UITxtEndTimeEdit;
+            WinComboBox uIComboBoxEx1ComboBox = this.UIUpdateSessionWindow.UIComboBoxEx1Window.UIComboBoxEx1ComboBox;
+            WinComboBox uIComboBoxEx2ComboBox = this.UIUpdateSessionWindow.UIComboBoxEx2Window.UIComboBoxEx2ComboBox;
             WinButton uISubmitButton = this.UIUpdateSessionWindow.UIUpdateSessionClient.UISubmitButton;
             WinButton uIYesButton = this.UISaveRecordWindow.UIYesWindow.UIYesButton;
             #endregion
 
-            // Type '10' in 'txtSearchBox' text box
-            uITxtSearchBoxEdit.Text = this.RecordedSessionUpdateParams.UITxtSearchBoxEditText;
-
-            // Click 'Search' button
-            Mouse.Click(uISearchButton, new Point(39, 15));
+            // Type '3' in 'txtSearchBox' text box
+            uITxtSearchBoxEdit.Text = this.RecordedUpdateSessionParams.UITxtSearchBoxEditText;
 
             // Type '2' in 'txtStaffID' text box
-            uITxtStaffIDEdit.Text = this.RecordedSessionUpdateParams.UITxtStaffIDEditText;
+            uITxtStaffIDEdit.Text = this.RecordedUpdateSessionParams.UITxtStaffIDEditText;
+
+            // Click 'Search' button
+            Mouse.Click(uISearchButton, new Point(29, 8));
 
             // Select '3' in 'comboBoxSlope' combo box
-            uIComboBoxSlopeComboBox.SelectedItem = this.RecordedSessionUpdateParams.UIComboBoxSlopeComboBoxSelectedItem;
+            uIComboBoxSlopeComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxSlopeComboBoxSelectedItem;
 
             // Select '02/03/2017' in 'dateTimePicker1' date time picker
-            uIDateTimePicker1DateTimePicker.DateTimeAsString = this.RecordedSessionUpdateParams.UIDateTimePicker1DateTimePickerDateTimeAsString;
+            uIDateTimePicker1DateTimePicker.DateTimeAsString = this.RecordedUpdateSessionParams.UIDateTimePicker1DateTimePickerDateTimeAsString;
 
-            // Type '12:00' in 'txtStartTime' text box
-            uITxtStartTimeEdit.Text = this.RecordedSessionUpdateParams.UITxtStartTimeEditText;
+            // Select '10:00' in 'comboBoxEx1' combo box
+            uIComboBoxEx1ComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxEx1ComboBoxSelectedItem;
 
-            // Type '{Tab}' in 'txtStartTime' text box
-            Keyboard.SendKeys(uITxtStartTimeEdit, this.RecordedSessionUpdateParams.UITxtStartTimeEditSendKeys, ModifierKeys.None);
-
-            // Type '13:00' in 'txtEndTime' text box
-            uITxtEndTimeEdit.Text = this.RecordedSessionUpdateParams.UITxtEndTimeEditText;
+            // Select '15:00' in 'comboBoxEx2' combo box
+            uIComboBoxEx2ComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxEx2ComboBoxSelectedItem;
 
             // Click 'Submit' button
-            Mouse.Click(uISubmitButton, new Point(110, 19));
+            Mouse.Click(uISubmitButton, new Point(131, 16));
 
             // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(63, 15));
+            Mouse.Click(uIYesButton, new Point(48, 8));
         }
         
         #region Properties
@@ -451,15 +448,15 @@ namespace CodedUISessionManagement
             }
         }
         
-        public virtual RecordedSessionUpdateParams RecordedSessionUpdateParams
+        public virtual RecordedUpdateSessionParams RecordedUpdateSessionParams
         {
             get
             {
-                if ((this.mRecordedSessionUpdateParams == null))
+                if ((this.mRecordedUpdateSessionParams == null))
                 {
-                    this.mRecordedSessionUpdateParams = new RecordedSessionUpdateParams();
+                    this.mRecordedUpdateSessionParams = new RecordedUpdateSessionParams();
                 }
-                return this.mRecordedSessionUpdateParams;
+                return this.mRecordedUpdateSessionParams;
             }
         }
         
@@ -577,7 +574,7 @@ namespace CodedUISessionManagement
         
         private RecordedSearchStaffParams mRecordedSearchStaffParams;
         
-        private RecordedSessionUpdateParams mRecordedSessionUpdateParams;
+        private RecordedUpdateSessionParams mRecordedUpdateSessionParams;
         
         private UIUpdateSessionWindow mUIUpdateSessionWindow;
         
@@ -816,17 +813,17 @@ namespace CodedUISessionManagement
     }
     
     /// <summary>
-    /// Parameters to be passed into 'RecordedSessionUpdate'
+    /// Parameters to be passed into 'RecordedUpdateSession'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class RecordedSessionUpdateParams
+    public class RecordedUpdateSessionParams
     {
         
         #region Fields
         /// <summary>
-        /// Type '10' in 'txtSearchBox' text box
+        /// Type '3' in 'txtSearchBox' text box
         /// </summary>
-        public string UITxtSearchBoxEditText = "10";
+        public string UITxtSearchBoxEditText = "3";
         
         /// <summary>
         /// Type '2' in 'txtStaffID' text box
@@ -844,19 +841,14 @@ namespace CodedUISessionManagement
         public string UIDateTimePicker1DateTimePickerDateTimeAsString = "02-Mar-2017";
         
         /// <summary>
-        /// Type '12:00' in 'txtStartTime' text box
+        /// Select '10:00' in 'comboBoxEx1' combo box
         /// </summary>
-        public string UITxtStartTimeEditText = "12:00";
+        public string UIComboBoxEx1ComboBoxSelectedItem = "10:00";
         
         /// <summary>
-        /// Type '{Tab}' in 'txtStartTime' text box
+        /// Select '15:00' in 'comboBoxEx2' combo box
         /// </summary>
-        public string UITxtStartTimeEditSendKeys = "{Tab}";
-        
-        /// <summary>
-        /// Type '13:00' in 'txtEndTime' text box
-        /// </summary>
-        public string UITxtEndTimeEditText = "13:00";
+        public string UIComboBoxEx2ComboBoxSelectedItem = "15:00";
         #endregion
     }
     
@@ -993,6 +985,30 @@ namespace CodedUISessionManagement
                 return this.mUIUpdateSessionClient1;
             }
         }
+        
+        public UIComboBoxEx1Window UIComboBoxEx1Window
+        {
+            get
+            {
+                if ((this.mUIComboBoxEx1Window == null))
+                {
+                    this.mUIComboBoxEx1Window = new UIComboBoxEx1Window(this);
+                }
+                return this.mUIComboBoxEx1Window;
+            }
+        }
+        
+        public UIComboBoxEx2Window UIComboBoxEx2Window
+        {
+            get
+            {
+                if ((this.mUIComboBoxEx2Window == null))
+                {
+                    this.mUIComboBoxEx2Window = new UIComboBoxEx2Window(this);
+                }
+                return this.mUIComboBoxEx2Window;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1015,6 +1031,10 @@ namespace CodedUISessionManagement
         private UIEnterSessionIDClient mUIEnterSessionIDClient;
         
         private UIUpdateSessionClient1 mUIUpdateSessionClient1;
+        
+        private UIComboBoxEx1Window mUIComboBoxEx1Window;
+        
+        private UIComboBoxEx2Window mUIComboBoxEx2Window;
         #endregion
     }
     
@@ -1426,6 +1446,76 @@ namespace CodedUISessionManagement
         
         #region Fields
         private WinWindow mUI____Window;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIComboBoxEx1Window : WinWindow
+    {
+        
+        public UIComboBoxEx1Window(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "comboBoxEx1";
+            this.WindowTitles.Add("Update Session");
+            #endregion
+        }
+        
+        #region Properties
+        public WinComboBox UIComboBoxEx1ComboBox
+        {
+            get
+            {
+                if ((this.mUIComboBoxEx1ComboBox == null))
+                {
+                    this.mUIComboBoxEx1ComboBox = new WinComboBox(this);
+                    #region Search Criteria
+                    this.mUIComboBoxEx1ComboBox.WindowTitles.Add("Update Session");
+                    #endregion
+                }
+                return this.mUIComboBoxEx1ComboBox;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinComboBox mUIComboBoxEx1ComboBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIComboBoxEx2Window : WinWindow
+    {
+        
+        public UIComboBoxEx2Window(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "comboBoxEx2";
+            this.WindowTitles.Add("Update Session");
+            #endregion
+        }
+        
+        #region Properties
+        public WinComboBox UIComboBoxEx2ComboBox
+        {
+            get
+            {
+                if ((this.mUIComboBoxEx2ComboBox == null))
+                {
+                    this.mUIComboBoxEx2ComboBox = new WinComboBox(this);
+                    #region Search Criteria
+                    this.mUIComboBoxEx2ComboBox.WindowTitles.Add("Update Session");
+                    #endregion
+                }
+                return this.mUIComboBoxEx2ComboBox;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinComboBox mUIComboBoxEx2ComboBox;
         #endregion
     }
     

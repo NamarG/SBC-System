@@ -34,6 +34,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSearchID = new DevComponents.DotNetBar.ButtonX();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -47,9 +48,34 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.btnSubmit = new DevComponents.DotNetBar.ButtonX();
-            this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
-            this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem5 = new DevComponents.Editors.ComboItem();
+            this.comboItem6 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.comboItem9 = new DevComponents.Editors.ComboItem();
+            this.comboItem10 = new DevComponents.Editors.ComboItem();
+            this.comboItem11 = new DevComponents.Editors.ComboItem();
+            this.comboItem12 = new DevComponents.Editors.ComboItem();
+            this.comboItem13 = new DevComponents.Editors.ComboItem();
+            this.comboItem14 = new DevComponents.Editors.ComboItem();
+            this.comboItem15 = new DevComponents.Editors.ComboItem();
+            this.comboItem16 = new DevComponents.Editors.ComboItem();
+            this.comboItem17 = new DevComponents.Editors.ComboItem();
+            this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem18 = new DevComponents.Editors.ComboItem();
+            this.comboItem19 = new DevComponents.Editors.ComboItem();
+            this.comboItem20 = new DevComponents.Editors.ComboItem();
+            this.comboItem21 = new DevComponents.Editors.ComboItem();
+            this.comboItem22 = new DevComponents.Editors.ComboItem();
+            this.comboItem23 = new DevComponents.Editors.ComboItem();
+            this.comboItem24 = new DevComponents.Editors.ComboItem();
+            this.comboItem25 = new DevComponents.Editors.ComboItem();
+            this.comboItem26 = new DevComponents.Editors.ComboItem();
+            this.comboItem27 = new DevComponents.Editors.ComboItem();
+            this.comboItem28 = new DevComponents.Editors.ComboItem();
+            this.comboItem29 = new DevComponents.Editors.ComboItem();
+            this.comboItem30 = new DevComponents.Editors.ComboItem();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -154,9 +180,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.comboBoxEx2);
+            this.groupPanel3.Controls.Add(this.comboBoxEx1);
             this.groupPanel3.Controls.Add(this.dateTimePicker1);
-            this.groupPanel3.Controls.Add(this.txtEndTime);
-            this.groupPanel3.Controls.Add(this.txtStartTime);
             this.groupPanel3.Controls.Add(this.labelX6);
             this.groupPanel3.Controls.Add(this.labelX5);
             this.groupPanel3.Controls.Add(this.labelX4);
@@ -199,6 +225,14 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 2;
             this.groupPanel3.Text = "Update Session";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
+            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
             // 
             // labelX6
             // 
@@ -337,30 +371,165 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // txtStartTime
+            // comboBoxEx1
             // 
-            this.txtStartTime.Location = new System.Drawing.Point(80, 98);
-            this.txtStartTime.Mask = "00:00";
-            this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(105, 22);
-            this.txtStartTime.TabIndex = 37;
-            this.txtStartTime.ValidatingType = typeof(System.DateTime);
+            this.comboBoxEx1.DisplayMember = "Text";
+            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx1.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxEx1.FormattingEnabled = true;
+            this.comboBoxEx1.ItemHeight = 17;
+            this.comboBoxEx1.Items.AddRange(new object[] {
+            this.comboItem5,
+            this.comboItem6,
+            this.comboItem7,
+            this.comboItem8,
+            this.comboItem9,
+            this.comboItem10,
+            this.comboItem11,
+            this.comboItem12,
+            this.comboItem13,
+            this.comboItem14,
+            this.comboItem15,
+            this.comboItem16,
+            this.comboItem17});
+            this.comboBoxEx1.Location = new System.Drawing.Point(80, 98);
+            this.comboBoxEx1.Name = "comboBoxEx1";
+            this.comboBoxEx1.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx1.TabIndex = 40;
+            this.comboBoxEx1.Text = "Select Time...";
             // 
-            // txtEndTime
+            // comboItem5
             // 
-            this.txtEndTime.Location = new System.Drawing.Point(80, 126);
-            this.txtEndTime.Mask = "00:00";
-            this.txtEndTime.Name = "txtEndTime";
-            this.txtEndTime.Size = new System.Drawing.Size(105, 22);
-            this.txtEndTime.TabIndex = 38;
+            this.comboItem5.Text = "09:00";
             // 
-            // dateTimePicker1
+            // comboItem6
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
-            this.dateTimePicker1.TabIndex = 39;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
+            this.comboItem6.Text = "10:00";
+            // 
+            // comboItem7
+            // 
+            this.comboItem7.Text = "11:00";
+            // 
+            // comboItem8
+            // 
+            this.comboItem8.Text = "12:00";
+            // 
+            // comboItem9
+            // 
+            this.comboItem9.Text = "13:00";
+            // 
+            // comboItem10
+            // 
+            this.comboItem10.Text = "14:00";
+            // 
+            // comboItem11
+            // 
+            this.comboItem11.Text = "15:00";
+            // 
+            // comboItem12
+            // 
+            this.comboItem12.Text = "16:00";
+            // 
+            // comboItem13
+            // 
+            this.comboItem13.Text = "17:00";
+            // 
+            // comboItem14
+            // 
+            this.comboItem14.Text = "18:00";
+            // 
+            // comboItem15
+            // 
+            this.comboItem15.Text = "19:00";
+            // 
+            // comboItem16
+            // 
+            this.comboItem16.Text = "20:00";
+            // 
+            // comboItem17
+            // 
+            this.comboItem17.Text = "21:00";
+            // 
+            // comboBoxEx2
+            // 
+            this.comboBoxEx2.DisplayMember = "Text";
+            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx2.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxEx2.FormattingEnabled = true;
+            this.comboBoxEx2.ItemHeight = 17;
+            this.comboBoxEx2.Items.AddRange(new object[] {
+            this.comboItem18,
+            this.comboItem19,
+            this.comboItem20,
+            this.comboItem21,
+            this.comboItem22,
+            this.comboItem23,
+            this.comboItem24,
+            this.comboItem25,
+            this.comboItem26,
+            this.comboItem27,
+            this.comboItem28,
+            this.comboItem29,
+            this.comboItem30});
+            this.comboBoxEx2.Location = new System.Drawing.Point(80, 126);
+            this.comboBoxEx2.Name = "comboBoxEx2";
+            this.comboBoxEx2.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx2.TabIndex = 41;
+            this.comboBoxEx2.Text = "Select Time...";
+            // 
+            // comboItem18
+            // 
+            this.comboItem18.Text = "09:00";
+            // 
+            // comboItem19
+            // 
+            this.comboItem19.Text = "10:00";
+            // 
+            // comboItem20
+            // 
+            this.comboItem20.Text = "11:00";
+            // 
+            // comboItem21
+            // 
+            this.comboItem21.Text = "12:00";
+            // 
+            // comboItem22
+            // 
+            this.comboItem22.Text = "13:00";
+            // 
+            // comboItem23
+            // 
+            this.comboItem23.Text = "14:00";
+            // 
+            // comboItem24
+            // 
+            this.comboItem24.Text = "15:00";
+            // 
+            // comboItem25
+            // 
+            this.comboItem25.Text = "16:00";
+            // 
+            // comboItem26
+            // 
+            this.comboItem26.Text = "17:00";
+            // 
+            // comboItem27
+            // 
+            this.comboItem27.Text = "18:00";
+            // 
+            // comboItem28
+            // 
+            this.comboItem28.Text = "19:00";
+            // 
+            // comboItem29
+            // 
+            this.comboItem29.Text = "20:00";
+            // 
+            // comboItem30
+            // 
+            this.comboItem30.Text = "21:00";
             // 
             // frmSessionUpdate
             // 
@@ -372,7 +541,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmSessionUpdate";
@@ -380,7 +548,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.Load += new System.EventHandler(this.frmSessionUpdate_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
-            this.groupPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -406,8 +573,34 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.ButtonX btnSubmit;
-        private System.Windows.Forms.MaskedTextBox txtEndTime;
-        private System.Windows.Forms.MaskedTextBox txtStartTime;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
+        private DevComponents.Editors.ComboItem comboItem18;
+        private DevComponents.Editors.ComboItem comboItem19;
+        private DevComponents.Editors.ComboItem comboItem20;
+        private DevComponents.Editors.ComboItem comboItem21;
+        private DevComponents.Editors.ComboItem comboItem22;
+        private DevComponents.Editors.ComboItem comboItem23;
+        private DevComponents.Editors.ComboItem comboItem24;
+        private DevComponents.Editors.ComboItem comboItem25;
+        private DevComponents.Editors.ComboItem comboItem26;
+        private DevComponents.Editors.ComboItem comboItem27;
+        private DevComponents.Editors.ComboItem comboItem28;
+        private DevComponents.Editors.ComboItem comboItem29;
+        private DevComponents.Editors.ComboItem comboItem30;
+        private DevComponents.Editors.ComboItem comboItem5;
+        private DevComponents.Editors.ComboItem comboItem6;
+        private DevComponents.Editors.ComboItem comboItem7;
+        private DevComponents.Editors.ComboItem comboItem8;
+        private DevComponents.Editors.ComboItem comboItem9;
+        private DevComponents.Editors.ComboItem comboItem10;
+        private DevComponents.Editors.ComboItem comboItem11;
+        private DevComponents.Editors.ComboItem comboItem12;
+        private DevComponents.Editors.ComboItem comboItem13;
+        private DevComponents.Editors.ComboItem comboItem14;
+        private DevComponents.Editors.ComboItem comboItem15;
+        private DevComponents.Editors.ComboItem comboItem16;
+        private DevComponents.Editors.ComboItem comboItem17;
     }
 }

@@ -23,7 +23,7 @@ namespace CodedUISessionManagement
         }
 
         [TestMethod]
-        public void CodedUICheckStaff()
+        public void CodedUICheckStaffTest()
         {
             //Check Staff information
             this.UIMap.RecordedSearchStaff();
@@ -41,15 +41,10 @@ namespace CodedUISessionManagement
         }
 
         [TestMethod]
-        public void CodedUICheckSession()
+        public void CodedUIUpdateSessionTest()
         {
-            //this.UIMap.checkSessionID();
-        }
-
-        [TestMethod]
-        public void CodedUIUpdateSession()
-        {
-            this.UIMap.RecordedSessionUpdate();
+            //Add recorded
+            this.UIMap.RecordedUpdateSession();
             this.UIMap.checkSavedUpdate();
         }
 

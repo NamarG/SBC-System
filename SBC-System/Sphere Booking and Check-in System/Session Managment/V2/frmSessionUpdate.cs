@@ -49,7 +49,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(txtStaffID.Text == String.Empty || txtStartTime.Text == String.Empty || txtEndTime.Text == String.Empty || dateTimePicker1.Text == String.Empty || comboBoxSlope.Text == String.Empty)
+            if (txtStaffID.Text == String.Empty || comboBoxEx1.Text == String.Empty || comboBoxEx2.Text == String.Empty || dateTimePicker1.Text == String.Empty || comboBoxSlope.Text == String.Empty)
             {
                 MessageBoxEx.Show("Error, missing details");
             }
@@ -66,27 +66,30 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                             SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=@staff, slopeID=@slope, startTime=@start, endTime=@end, date=@d WHERE Id = '" + txtSearchBox.Text + "'", Connection);
                             cmd.Parameters.AddWithValue("@staff", txtStaffID.Text);
                             cmd.Parameters.AddWithValue("@slope", comboBoxSlope.Text);
-                            cmd.Parameters.AddWithValue("@start", txtStartTime.Text);
-                            cmd.Parameters.AddWithValue("@end", txtEndTime.Text);
+                            cmd.Parameters.AddWithValue("@start", comboBoxEx1.Text);
+                            cmd.Parameters.AddWithValue("@end", comboBoxEx2.Text);
                             cmd.Parameters.AddWithValue("@d", dateTimePicker1.Text);
 
                             cmd.ExecuteNonQuery();
                             int i = cmd.ExecuteNonQuery();
+                            cmd = new SqlCommand("UPDATE Staff_Scheduling SET booked=1 WHERE date=@d", Connection);
+                            cmd.Parameters.AddWithValue("@d", dateTimePicker1.Text);
+                            int j = cmd.ExecuteNonQuery();
 
-                            if (i > 0)
+                            if (i > 0 && j > 0)
                             {
                                 MessageBox.Show("Record Saved");
                                 txtSearchBox.Clear();
                                 comboBoxSlope.Text = "Select Slope....";
                                 txtStaffID.Text = "";
-                                txtStartTime.Text = "";
-                                txtEndTime.Text = "";
+                                comboBoxEx1.Text = "";
+                                comboBoxEx2.Text = "";
                                 dateTimePicker1.Text = "";
 
                                 comboBoxSlope.Enabled = false;
                                 txtStaffID.Enabled = false;
-                                txtStartTime.Enabled = false;
-                                txtEndTime.Enabled = false;
+                                comboBoxEx1.Enabled = false;
+                                comboBoxEx2.Enabled = false;
                                 dateTimePicker1.Enabled = false;
                                 comboBoxSlope.Enabled = false;
 
@@ -94,7 +97,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                             }
                             else
                             {
-                                MessageBox.Show("Unexpected error, record was not deleted");
+                                MessageBox.Show("Unexpected error, record was not updated");
                                 Connection.Close();
                             }
                         }

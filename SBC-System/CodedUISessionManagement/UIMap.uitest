@@ -319,23 +319,23 @@
     </TestStepMarkerAction>
     <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit">
       <ParameterName />
-      <Value Encoded="false">10</Value>
+      <Value Encoded="false">3</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
+      <ParameterName />
+      <Value Encoded="false">2</Value>
       <Type>String</Type>
     </SetValueAction>
     <MouseAction UIObjectName="UIMap.UIUpdateSessionWindow.UIEnterSessionIDClient.UISearchButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="39" Y="15" />
+      <Location X="29" Y="8" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
-      <ParameterName />
-      <Value Encoded="false">2</Value>
-      <Type>String</Type>
-    </SetValueAction>
     <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxSlopeWindow.UIComboBoxSlopeComboBox">
       <ParameterName />
       <Value Encoded="false">3</Value>
@@ -346,27 +346,21 @@
       <Value Encoded="false">02-Mar-2017</Value>
       <Type>String</Type>
     </SetValueAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UI____Window.UITxtStartTimeEdit">
+    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxEx1Window.UIComboBoxEx1ComboBox">
       <ParameterName />
-      <Value Encoded="false">12:00</Value>
+      <Value Encoded="false">10:00</Value>
       <Type>String</Type>
     </SetValueAction>
-    <SendKeysAction UIObjectName="UIMap.UIUpdateSessionWindow.UI____Window.UITxtStartTimeEdit">
+    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxEx2Window.UIComboBoxEx2ComboBox">
       <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Text Encoded="false">{Tab}</Text>
-    </SendKeysAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UI____Window1.UITxtEndTimeEdit">
-      <ParameterName />
-      <Value Encoded="false">13:00</Value>
+      <Value Encoded="false">15:00</Value>
       <Type>String</Type>
     </SetValueAction>
     <MouseAction UIObjectName="UIMap.UIUpdateSessionWindow.UIUpdateSessionClient.UISubmitButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="110" Y="19" />
+      <Location X="131" Y="16" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -375,12 +369,12 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="63" Y="15" />
+      <Location X="48" Y="8" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedSessionUpdate">
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedUpdateSession">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -756,6 +750,66 @@
                     <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.EDIT</PropertyCondition>
                     <PropertyCondition Name="ControlType">Window</PropertyCondition>
                     <PropertyCondition Name="Instance">2</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIComboBoxEx1Window" FriendlyName="comboBoxEx1" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Update Session</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlName">comboBoxEx1</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="ComboBox" Id="UIComboBoxEx1ComboBox" FriendlyName="comboBoxEx1" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Update Session</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">ComboBox</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIComboBoxEx2Window" FriendlyName="comboBoxEx2" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Update Session</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlName">comboBoxEx2</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="ComboBox" Id="UIComboBoxEx2ComboBox" FriendlyName="comboBoxEx2" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Update Session</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">ComboBox</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />

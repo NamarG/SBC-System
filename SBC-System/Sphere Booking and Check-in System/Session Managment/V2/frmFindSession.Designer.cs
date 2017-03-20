@@ -39,7 +39,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboBoxHour = new System.Windows.Forms.ComboBox();
             this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSearchSession = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
@@ -106,7 +106,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 12;
-            this.comboBox1.Text = "0";
+            this.comboBox1.Text = "5";
             // 
             // label1
             // 
@@ -212,7 +212,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox2.Controls.Add(this.txtSearchSession);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
@@ -223,21 +223,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search";
             // 
-            // txtSearchSession
+            // dateTimePicker1
             // 
-            this.txtSearchSession.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtSearchSession.Border.Class = "TextBoxBorder";
-            this.txtSearchSession.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSearchSession.DisabledBackColor = System.Drawing.Color.White;
-            this.txtSearchSession.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchSession.Location = new System.Drawing.Point(85, 22);
-            this.txtSearchSession.Name = "txtSearchSession";
-            this.txtSearchSession.PreventEnterBeep = true;
-            this.txtSearchSession.Size = new System.Drawing.Size(109, 22);
-            this.txtSearchSession.TabIndex = 16;
+            this.dateTimePicker1.Location = new System.Drawing.Point(56, 21);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(138, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 3, 19, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -246,9 +238,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(16, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Session ID:";
+            this.label5.Text = "Date:";
             // 
             // btnSearch
             // 
@@ -271,6 +263,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.TabIndex = 16;
             this.buttonX1.Text = "Reset";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // frmFindSession
             // 
@@ -312,7 +305,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private DevComponents.DotNetBar.ButtonX btnSearch;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtSearchSession;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
