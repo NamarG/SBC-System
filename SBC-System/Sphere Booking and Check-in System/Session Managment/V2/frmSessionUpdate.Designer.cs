@@ -34,34 +34,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSearchID = new DevComponents.DotNetBar.ButtonX();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.txtStaffID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.btnFindStaff = new DevComponents.DotNetBar.ButtonX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.comboBoxSlope = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
-            this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.btnSubmit = new DevComponents.DotNetBar.ButtonX();
-            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem5 = new DevComponents.Editors.ComboItem();
-            this.comboItem6 = new DevComponents.Editors.ComboItem();
-            this.comboItem7 = new DevComponents.Editors.ComboItem();
-            this.comboItem8 = new DevComponents.Editors.ComboItem();
-            this.comboItem9 = new DevComponents.Editors.ComboItem();
-            this.comboItem10 = new DevComponents.Editors.ComboItem();
-            this.comboItem11 = new DevComponents.Editors.ComboItem();
-            this.comboItem12 = new DevComponents.Editors.ComboItem();
-            this.comboItem13 = new DevComponents.Editors.ComboItem();
-            this.comboItem14 = new DevComponents.Editors.ComboItem();
-            this.comboItem15 = new DevComponents.Editors.ComboItem();
-            this.comboItem16 = new DevComponents.Editors.ComboItem();
-            this.comboItem17 = new DevComponents.Editors.ComboItem();
             this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem18 = new DevComponents.Editors.ComboItem();
             this.comboItem19 = new DevComponents.Editors.ComboItem();
@@ -76,14 +48,41 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem28 = new DevComponents.Editors.ComboItem();
             this.comboItem29 = new DevComponents.Editors.ComboItem();
             this.comboItem30 = new DevComponents.Editors.ComboItem();
+            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem5 = new DevComponents.Editors.ComboItem();
+            this.comboItem6 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.comboItem9 = new DevComponents.Editors.ComboItem();
+            this.comboItem10 = new DevComponents.Editors.ComboItem();
+            this.comboItem11 = new DevComponents.Editors.ComboItem();
+            this.comboItem12 = new DevComponents.Editors.ComboItem();
+            this.comboItem13 = new DevComponents.Editors.ComboItem();
+            this.comboItem14 = new DevComponents.Editors.ComboItem();
+            this.comboItem15 = new DevComponents.Editors.ComboItem();
+            this.comboItem16 = new DevComponents.Editors.ComboItem();
+            this.comboItem17 = new DevComponents.Editors.ComboItem();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.txtStaffID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.btnFindStaff = new DevComponents.DotNetBar.ButtonX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.comboBoxSlope = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.comboItem4 = new DevComponents.Editors.ComboItem();
+            this.btnSubmit = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
-            this.groupPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.BackColor = System.Drawing.Color.White;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.txtSearchBox);
             this.groupPanel1.Controls.Add(this.labelX1);
@@ -141,10 +140,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Location = new System.Drawing.Point(12, 18);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(62, 23);
@@ -177,8 +178,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // groupPanel3
             // 
-            this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel3.BackColor = System.Drawing.Color.White;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel3.Controls.Add(this.comboBoxEx2);
             this.groupPanel3.Controls.Add(this.comboBoxEx1);
@@ -226,150 +226,85 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.TabIndex = 2;
             this.groupPanel3.Text = "Update Session";
             // 
-            // dateTimePicker1
+            // comboBoxEx2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
-            this.dateTimePicker1.TabIndex = 39;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
+            this.comboBoxEx2.DisplayMember = "Text";
+            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx2.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxEx2.FormattingEnabled = true;
+            this.comboBoxEx2.ItemHeight = 17;
+            this.comboBoxEx2.Items.AddRange(new object[] {
+            this.comboItem18,
+            this.comboItem19,
+            this.comboItem20,
+            this.comboItem21,
+            this.comboItem22,
+            this.comboItem23,
+            this.comboItem24,
+            this.comboItem25,
+            this.comboItem26,
+            this.comboItem27,
+            this.comboItem28,
+            this.comboItem29,
+            this.comboItem30});
+            this.comboBoxEx2.Location = new System.Drawing.Point(80, 126);
+            this.comboBoxEx2.Name = "comboBoxEx2";
+            this.comboBoxEx2.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx2.TabIndex = 41;
+            this.comboBoxEx2.Text = "Select Time...";
             // 
-            // labelX6
+            // comboItem18
             // 
+            this.comboItem18.Text = "09:00";
             // 
+            // comboItem19
             // 
+            this.comboItem19.Text = "10:00";
             // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(12, 126);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(62, 23);
-            this.labelX6.TabIndex = 29;
-            this.labelX6.Text = "End Time:";
+            // comboItem20
             // 
-            // labelX5
+            this.comboItem20.Text = "11:00";
             // 
+            // comboItem21
             // 
+            this.comboItem21.Text = "12:00";
             // 
+            // comboItem22
             // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(12, 96);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(62, 23);
-            this.labelX5.TabIndex = 28;
-            this.labelX5.Text = "Start Time:";
+            this.comboItem22.Text = "13:00";
             // 
-            // labelX4
+            // comboItem23
             // 
+            this.comboItem23.Text = "14:00";
             // 
+            // comboItem24
             // 
+            this.comboItem24.Text = "15:00";
             // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(12, 69);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(62, 23);
-            this.labelX4.TabIndex = 27;
-            this.labelX4.Text = "Date:";
+            // comboItem25
             // 
-            // txtStaffID
+            this.comboItem25.Text = "16:00";
             // 
-            this.txtStaffID.BackColor = System.Drawing.Color.White;
+            // comboItem26
             // 
+            this.comboItem26.Text = "17:00";
             // 
+            // comboItem27
             // 
-            this.txtStaffID.Border.Class = "TextBoxBorder";
-            this.txtStaffID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStaffID.DisabledBackColor = System.Drawing.Color.White;
-            this.txtStaffID.ForeColor = System.Drawing.Color.Black;
-            this.txtStaffID.Location = new System.Drawing.Point(80, 12);
-            this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.PreventEnterBeep = true;
-            this.txtStaffID.Size = new System.Drawing.Size(105, 22);
-            this.txtStaffID.TabIndex = 20;
-            this.txtStaffID.Click += new System.EventHandler(this.txtStaffID_Click);
+            this.comboItem27.Text = "18:00";
             // 
-            // labelX2
+            // comboItem28
             // 
+            this.comboItem28.Text = "19:00";
             // 
+            // comboItem29
             // 
+            this.comboItem29.Text = "20:00";
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(12, 12);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(62, 23);
-            this.labelX2.TabIndex = 19;
-            this.labelX2.Text = "Staff ID:";
+            // comboItem30
             // 
-            // btnFindStaff
-            // 
-            this.btnFindStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnFindStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
-            this.btnFindStaff.Location = new System.Drawing.Point(191, 12);
-            this.btnFindStaff.Name = "btnFindStaff";
-            this.btnFindStaff.Size = new System.Drawing.Size(31, 23);
-            this.btnFindStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnFindStaff.Symbol = "59552";
-            this.btnFindStaff.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.btnFindStaff.TabIndex = 18;
-            this.btnFindStaff.Click += new System.EventHandler(this.btnFindStaff_Click);
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(12, 42);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(62, 23);
-            this.labelX3.TabIndex = 17;
-            this.labelX3.Text = "Slope:";
-            // 
-            // comboBoxSlope
-            // 
-            this.comboBoxSlope.DisplayMember = "Text";
-            this.comboBoxSlope.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxSlope.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxSlope.FormattingEnabled = true;
-            this.comboBoxSlope.ItemHeight = 17;
-            this.comboBoxSlope.Items.AddRange(new object[] {
-            this.comboItem1,
-            this.comboItem2,
-            this.comboItem3,
-            this.comboItem4});
-            this.comboBoxSlope.Location = new System.Drawing.Point(80, 41);
-            this.comboBoxSlope.Name = "comboBoxSlope";
-            this.comboBoxSlope.Size = new System.Drawing.Size(105, 23);
-            this.comboBoxSlope.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxSlope.TabIndex = 16;
-            this.comboBoxSlope.Text = "Select Slope....";
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "1";
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.Text = "2";
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "3";
-            // 
-            // comboItem4
-            // 
-            this.comboItem4.Text = "4";
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSubmit.Enabled = false;
-            this.btnSubmit.Location = new System.Drawing.Point(12, 303);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(231, 23);
-            this.btnSubmit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSubmit.TabIndex = 3;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.comboItem30.Text = "21:00";
             // 
             // comboBoxEx1
             // 
@@ -451,85 +386,162 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             this.comboItem17.Text = "21:00";
             // 
-            // comboBoxEx2
+            // dateTimePicker1
             // 
-            this.comboBoxEx2.DisplayMember = "Text";
-            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx2.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxEx2.FormattingEnabled = true;
-            this.comboBoxEx2.ItemHeight = 17;
-            this.comboBoxEx2.Items.AddRange(new object[] {
-            this.comboItem18,
-            this.comboItem19,
-            this.comboItem20,
-            this.comboItem21,
-            this.comboItem22,
-            this.comboItem23,
-            this.comboItem24,
-            this.comboItem25,
-            this.comboItem26,
-            this.comboItem27,
-            this.comboItem28,
-            this.comboItem29,
-            this.comboItem30});
-            this.comboBoxEx2.Location = new System.Drawing.Point(80, 126);
-            this.comboBoxEx2.Name = "comboBoxEx2";
-            this.comboBoxEx2.Size = new System.Drawing.Size(105, 23);
-            this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx2.TabIndex = 41;
-            this.comboBoxEx2.Text = "Select Time...";
+            this.dateTimePicker1.BackColor = System.Drawing.Color.White;
+            this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
+            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 2, 28, 0, 0, 0, 0);
             // 
-            // comboItem18
+            // labelX6
             // 
-            this.comboItem18.Text = "09:00";
+            this.labelX6.BackColor = System.Drawing.Color.White;
             // 
-            // comboItem19
             // 
-            this.comboItem19.Text = "10:00";
             // 
-            // comboItem20
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.ForeColor = System.Drawing.Color.Black;
+            this.labelX6.Location = new System.Drawing.Point(12, 126);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(62, 23);
+            this.labelX6.TabIndex = 29;
+            this.labelX6.Text = "End Time:";
             // 
-            this.comboItem20.Text = "11:00";
+            // labelX5
             // 
-            // comboItem21
+            this.labelX5.BackColor = System.Drawing.Color.White;
             // 
-            this.comboItem21.Text = "12:00";
             // 
-            // comboItem22
             // 
-            this.comboItem22.Text = "13:00";
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.ForeColor = System.Drawing.Color.Black;
+            this.labelX5.Location = new System.Drawing.Point(12, 96);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(62, 23);
+            this.labelX5.TabIndex = 28;
+            this.labelX5.Text = "Start Time:";
             // 
-            // comboItem23
+            // labelX4
             // 
-            this.comboItem23.Text = "14:00";
+            this.labelX4.BackColor = System.Drawing.Color.White;
             // 
-            // comboItem24
             // 
-            this.comboItem24.Text = "15:00";
             // 
-            // comboItem25
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Location = new System.Drawing.Point(12, 69);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(62, 23);
+            this.labelX4.TabIndex = 27;
+            this.labelX4.Text = "Date:";
             // 
-            this.comboItem25.Text = "16:00";
+            // txtStaffID
             // 
-            // comboItem26
+            this.txtStaffID.BackColor = System.Drawing.Color.White;
             // 
-            this.comboItem26.Text = "17:00";
             // 
-            // comboItem27
             // 
-            this.comboItem27.Text = "18:00";
+            this.txtStaffID.Border.Class = "TextBoxBorder";
+            this.txtStaffID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtStaffID.DisabledBackColor = System.Drawing.Color.White;
+            this.txtStaffID.ForeColor = System.Drawing.Color.Black;
+            this.txtStaffID.Location = new System.Drawing.Point(80, 12);
+            this.txtStaffID.Name = "txtStaffID";
+            this.txtStaffID.PreventEnterBeep = true;
+            this.txtStaffID.Size = new System.Drawing.Size(105, 22);
+            this.txtStaffID.TabIndex = 20;
+            this.txtStaffID.Click += new System.EventHandler(this.txtStaffID_Click);
             // 
-            // comboItem28
+            // labelX2
             // 
-            this.comboItem28.Text = "19:00";
+            this.labelX2.BackColor = System.Drawing.Color.White;
             // 
-            // comboItem29
             // 
-            this.comboItem29.Text = "20:00";
             // 
-            // comboItem30
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(12, 12);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(62, 23);
+            this.labelX2.TabIndex = 19;
+            this.labelX2.Text = "Staff ID:";
             // 
-            this.comboItem30.Text = "21:00";
+            // btnFindStaff
+            // 
+            this.btnFindStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnFindStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.btnFindStaff.Location = new System.Drawing.Point(191, 12);
+            this.btnFindStaff.Name = "btnFindStaff";
+            this.btnFindStaff.Size = new System.Drawing.Size(31, 23);
+            this.btnFindStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnFindStaff.Symbol = "59552";
+            this.btnFindStaff.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.btnFindStaff.TabIndex = 18;
+            this.btnFindStaff.Click += new System.EventHandler(this.btnFindStaff_Click);
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.ForeColor = System.Drawing.Color.Black;
+            this.labelX3.Location = new System.Drawing.Point(12, 42);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(62, 23);
+            this.labelX3.TabIndex = 17;
+            this.labelX3.Text = "Slope:";
+            // 
+            // comboBoxSlope
+            // 
+            this.comboBoxSlope.DisplayMember = "Text";
+            this.comboBoxSlope.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxSlope.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxSlope.FormattingEnabled = true;
+            this.comboBoxSlope.ItemHeight = 17;
+            this.comboBoxSlope.Items.AddRange(new object[] {
+            this.comboItem1,
+            this.comboItem2,
+            this.comboItem3,
+            this.comboItem4});
+            this.comboBoxSlope.Location = new System.Drawing.Point(80, 41);
+            this.comboBoxSlope.Name = "comboBoxSlope";
+            this.comboBoxSlope.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxSlope.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxSlope.TabIndex = 16;
+            this.comboBoxSlope.Text = "Select Slope....";
+            // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "1";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.Text = "2";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "3";
+            // 
+            // comboItem4
+            // 
+            this.comboItem4.Text = "4";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSubmit.Enabled = false;
+            this.btnSubmit.Location = new System.Drawing.Point(12, 303);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(231, 23);
+            this.btnSubmit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // frmSessionUpdate
             // 
