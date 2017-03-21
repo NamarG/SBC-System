@@ -55,5 +55,22 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
             //Navigation to the Home page, from the check in page.
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ForgotId checkin = new ForgotId();
+            checkin.MdiParent = this.ParentForm;
+            checkin.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
