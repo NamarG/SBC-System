@@ -187,14 +187,18 @@ namespace Sphere_Booking_and_Check_in_System.Booking
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            Booking book = new Booking(int.Parse(cusidBox.Text.ToString()), int.Parse(sessionBox.Text.ToString()), int.Parse(staffschBox.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), int.Parse(payment.Text.ToString()));
+            book.makeBooking();
+
             con = new SqlConnection(connectionString); //create a new sql connection
+
             if (cusidBox.Text == String.Empty ||
                     sessionBox.Text == String.Empty || dateTimePicker1.Text == String.Empty 
                      || payment.Text == String.Empty) //this code here will check if the all the values have been entered
             {
                 MessageBox.Show("Error, missing valeus", "Please Complete Form", MessageBoxButtons.OK, MessageBoxIcon.Error); //show the error if they are not.
             }
-            else
+            /*else
             {
                 try
                 {
@@ -250,7 +254,7 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                     MessageBox.Show("Unexpected error:" + ex.Message);
                 }
                 
-            }
+            }*/
 
         }
 
