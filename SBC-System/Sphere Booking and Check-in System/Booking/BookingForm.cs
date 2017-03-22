@@ -14,7 +14,7 @@ namespace Sphere_Booking_and_Check_in_System.Booking
 {
     public partial class BookingForm : Form
     {
-
+        int memtype; 
         bool isreg = false; //set to false will change if user is in the system.
         SqlConnection con; //connection
         string connectionString;
@@ -48,17 +48,20 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                     if (rd[3].ToString() == "1")
                     {
                         memcheck.Text = "Member: £20";
-                        payment.Text = "20";
+                        memtype = 2;
+                        
                     }
                     else if (rd[3].ToString() == "2")
                     {
                         memcheck.Text = "Prm Member: £15";
-                        payment.Text = "15";
+                        memtype = 1;
+
                     }
                     else
                     {
                         memcheck.Text = "Non-Member: £25";
-                        payment.Text = "25";
+                        memtype = 3;
+
                     }
                 }
                 //code to ask for the correct price from the user so no mistakes are made
@@ -121,17 +124,19 @@ namespace Sphere_Booking_and_Check_in_System.Booking
                     if (rd[3].ToString() == "1")
                     {
                         memcheck.Text = "Member: £20";
-                        payment.Text = "20";
+                        memtype = 2;
                     }
                     else if (rd[3].ToString() == "2")
                     {
                         memcheck.Text = "Prm Member: £15";
-                        payment.Text = "15";
+                        memtype = 1;
+
                     }
                     else
                     {
                         memcheck.Text = "Non-Member: £25";
-                        payment.Text = "25";
+                        memtype = 3;
+
                     }
                 }
                 //code to ask for the correct price from the user so no mistakes are made
@@ -187,14 +192,13 @@ namespace Sphere_Booking_and_Check_in_System.Booking
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Booking book = new Booking(int.Parse(cusidBox.Text.ToString()), int.Parse(sessionBox.Text.ToString()), int.Parse(staffschBox.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), int.Parse(payment.Text.ToString()));
-            book.makeBooking();
+            factory booking = new factory(int.Parse(cusidBox.Text.ToString()), int.Parse(sessionBox.Text.ToString()), int.Parse(staffschBox.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), memtype);
+            booking.factoryset();
 
             con = new SqlConnection(connectionString); //create a new sql connection
 
             if (cusidBox.Text == String.Empty ||
-                    sessionBox.Text == String.Empty || dateTimePicker1.Text == String.Empty 
-                     || payment.Text == String.Empty) //this code here will check if the all the values have been entered
+                    sessionBox.Text == String.Empty || dateTimePicker1.Text == String.Empty ) //this code here will check if the all the values have been entered
             {
                 MessageBox.Show("Error, missing valeus", "Please Complete Form", MessageBoxButtons.OK, MessageBoxIcon.Error); //show the error if they are not.
             }

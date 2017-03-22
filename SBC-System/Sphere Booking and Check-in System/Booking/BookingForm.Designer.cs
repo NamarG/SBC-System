@@ -50,8 +50,6 @@
             this.cusidBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.memcheck = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.payment = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
             this.staffschBox = new System.Windows.Forms.TextBox();
             this.sessionTableAdapter = new Sphere_Booking_and_Check_in_System.mainDatabaseDataSetTableAdapters.SessionTableAdapter();
@@ -265,26 +263,9 @@
             this.memcheck.TabIndex = 35;
             this.memcheck.Text = "...................";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 635);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(169, 20);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "Accepted Payment: ";
-            // 
-            // payment
-            // 
-            this.payment.Location = new System.Drawing.Point(183, 635);
-            this.payment.Name = "payment";
-            this.payment.Size = new System.Drawing.Size(84, 20);
-            this.payment.TabIndex = 37;
-            // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(9, 670);
+            this.Submit.Location = new System.Drawing.Point(9, 635);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(432, 23);
             this.Submit.TabIndex = 38;
@@ -306,7 +287,7 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(447, 670);
+            this.button1.Location = new System.Drawing.Point(447, 635);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 23);
             this.button1.TabIndex = 40;
@@ -387,7 +368,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 696);
+            this.ClientSize = new System.Drawing.Size(539, 667);
             this.Controls.Add(this.sessionBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -396,8 +377,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.staffschBox);
             this.Controls.Add(this.Submit);
-            this.Controls.Add(this.payment);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.memcheck);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cusidBox);
@@ -459,8 +438,6 @@
         private System.Windows.Forms.TextBox cusidBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label memcheck;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox payment;
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.TextBox staffschBox;
         private System.Windows.Forms.Button button1;
