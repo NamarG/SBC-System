@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="Tom Starling" date="2017-03-26T09:21:49.306Z" timestamp="2017-03-26T09:21:49.306Z">
+    <change idref="t121" to="t-1" to-position="32" resolved="yes">
+      <change idref="t121" attribute="effort" type="real" from="28800" to="43200"/>
+      <change idref="t121" attribute="internalAssignments" type="string" from="" to="1; 5; 6; 7; 8; 9"/>
+      <change idref="t121" attribute="noEarlierThanConstraintDate" type="date" to="2017-03-21T14:00:00.000Z"/>
+      <change idref="t121" attribute="resourceAssignmentType" type="real" from="0" to="1"/>
+      <change idref="t121" attribute="title" type="string" to="Finished Prototype 2"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-26T09:22:13.257Z" timestamp="2017-03-26T09:22:13.257Z">
+    <change idref="t81" attribute="internalEffortDone" type="real" from="10800" to="43200" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-26T09:22:20.135Z" timestamp="2017-03-26T09:22:20.135Z">
+    <change idref="t9" attribute="internalEffortDone" type="real" from="32400" to="43200" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-26T09:22:36.630Z" timestamp="2017-03-26T09:22:36.630Z">
+    <change idref="t103" attribute="internalEffortDone" type="real" from="0" to="14400" resolved="yes"/>
+    <change idref="t104" attribute="internalEffortDone" type="real" from="0" to="14400" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-27T09:36:18.482Z" timestamp="2017-03-27T09:36:18.482Z">
+    <change idref="t102" attribute="internalEffortDone" type="real" from="0" to="14400" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-27T09:36:33.084Z" timestamp="2017-03-27T09:36:33.084Z">
+    <change idref="t121" attribute="internalEffortDone" type="real" from="0" to="21600" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Tom Starling" date="2017-03-27T09:36:49.363Z" timestamp="2017-03-27T09:36:49.363Z">
+    <change idref="t26" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
+  </task-change-set>
+</changelog>
