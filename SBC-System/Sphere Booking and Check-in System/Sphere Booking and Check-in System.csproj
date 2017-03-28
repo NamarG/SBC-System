@@ -198,6 +198,7 @@
     <Compile Include="Session Managment\V1\frmViewSessions.Designer.cs">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\V2\Controller.cs" />
     <Compile Include="Session Managment\V2\Factory.cs" />
     <Compile Include="Session Managment\V2\frmFindSession.cs">
       <SubType>Form</SubType>
