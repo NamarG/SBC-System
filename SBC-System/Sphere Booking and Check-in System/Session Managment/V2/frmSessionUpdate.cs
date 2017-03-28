@@ -26,16 +26,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Session session = new Session();
-            session.getSession(int.Parse(txtSearchBox.Text.ToString()));
-            txtStaffID.Text = session.StaffID.ToString();
-            comboBoxSlope.Text = session.Slope.ToString();
-            dateTimePicker1.Text = session.Date.ToShortDateString();
-            comboBoxEx1.Text = session.StartTime.ToShortTimeString();
-            comboBoxEx2.Text = session.EndTime.ToShortTimeString();
-            checkBox1.Checked = session.Group;
-
-            btnSubmit.Enabled = true;
+            Controller control = new Controller(txtSearchBox, txtStaffID, comboBoxSlope, dateTimePicker1, comboBoxEx1, comboBoxEx2, checkBox1);
+            bool i = control.getSession();
+            if(i)
+            {
+                btnSubmit.Enabled = true;
+            }
         }
 
         private void btnFindStaff_Click(object sender, EventArgs e)
@@ -62,12 +58,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            BookingType type = null;
-            type = Factory.getType(checkBox1.Checked);
-            bool getType = type.type(checkBox1.Checked);
+            Controller control = new Controller(txtSearchBox, txtStaffID, comboBoxSlope, dateTimePicker1, comboBoxEx1, comboBoxEx2, checkBox1);
 
-            Session ses = new Session(int.Parse(txtSearchBox.Text.ToString()), int.Parse(txtStaffID.Text.ToString()), int.Parse(comboBoxSlope.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(comboBoxEx1.Text), Convert.ToDateTime(comboBoxEx2.Text), getType);
-            bool i = ses.Update();
+            bool i = control.Update();
 
             if(i)
             {
@@ -81,6 +74,64 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
                 btnSubmit.Enabled = false;
             }
+        }
+    }
+
+    class Controller : frmSessionUpdate
+    {
+        TextBox sessionID, staffID;
+        ComboBox Slope, StartTime, EndTime;
+        DateTimePicker date;
+        CheckBox b;
+
+        public Controller(TextBox sesID, TextBox staID , ComboBox s, DateTimePicker d, ComboBox start, ComboBox end, CheckBox t)
+        {
+            sessionID = sesID;
+            staffID = staID;
+            Slope = s;
+            date = d;
+            StartTime = start;
+            EndTime = end;
+            b = t;
+        }
+
+        public bool Update()
+        {
+            BookingType type = null;
+            type = Factory.getType(b.Checked);
+            bool getType = type.type(b.Checked);
+
+            Session ses = new Session(int.Parse(sessionID.Text.ToString()), int.Parse(staffID.Text.ToString()), int.Parse(Slope.Text.ToString()), Convert.ToDateTime(date.Text), Convert.ToDateTime(StartTime.Text), Convert.ToDateTime(EndTime.Text), getType);
+            bool i = ses.Update();
+            return i;
+        }
+
+        public bool getSession()
+        {
+            Session session = new Session();
+            bool i = session.getSession(int.Parse(sessionID.Text.ToString()));
+
+            if(i)
+            {
+                staffID.Text = session.StaffID.ToString();
+                Slope.Text = session.Slope.ToString();
+                date.Text = session.Date.ToShortDateString();
+                StartTime.Text = session.StartTime.ToShortTimeString();
+                EndTime.Text = session.EndTime.ToShortTimeString();
+                b.Checked = session.Group;
+            }
+            return i;
+        }
+
+        public bool Save()
+        {
+            BookingType type = null;
+            type = Factory.getType(b.Checked);
+            bool getType = type.type(b.Checked);
+
+            Session ses = new Session(int.Parse(sessionID.Text.ToString()), int.Parse(staffID.Text.ToString()), int.Parse(Slope.Text.ToString()), Convert.ToDateTime(date.Text), Convert.ToDateTime(StartTime.Text), Convert.ToDateTime(EndTime.Text), getType);
+            bool i = ses.Update();
+            return i;
         }
     }
 }
