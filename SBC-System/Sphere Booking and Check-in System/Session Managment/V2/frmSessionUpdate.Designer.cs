@@ -76,13 +76,15 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.btnSubmit = new DevComponents.DotNetBar.ButtonX();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
-            this.groupPanel1.BackColor = System.Drawing.Color.White;
+            this.groupPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupPanel1.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.txtSearchBox);
             this.groupPanel1.Controls.Add(this.labelX1);
@@ -140,7 +142,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.White;
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -178,8 +180,10 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // groupPanel3
             // 
-            this.groupPanel3.BackColor = System.Drawing.Color.White;
+            this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupPanel3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.checkBox1);
             this.groupPanel3.Controls.Add(this.comboBoxEx2);
             this.groupPanel3.Controls.Add(this.comboBoxEx1);
             this.groupPanel3.Controls.Add(this.dateTimePicker1);
@@ -194,7 +198,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel3.Location = new System.Drawing.Point(12, 116);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(231, 181);
+            this.groupPanel3.Size = new System.Drawing.Size(231, 213);
             // 
             // 
             // 
@@ -247,7 +251,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem28,
             this.comboItem29,
             this.comboItem30});
-            this.comboBoxEx2.Location = new System.Drawing.Point(80, 126);
+            this.comboBoxEx2.Location = new System.Drawing.Point(80, 156);
             this.comboBoxEx2.Name = "comboBoxEx2";
             this.comboBoxEx2.Size = new System.Drawing.Size(105, 23);
             this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -327,7 +331,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem15,
             this.comboItem16,
             this.comboItem17});
-            this.comboBoxEx1.Location = new System.Drawing.Point(80, 98);
+            this.comboBoxEx1.Location = new System.Drawing.Point(80, 128);
             this.comboBoxEx1.Name = "comboBoxEx1";
             this.comboBoxEx1.Size = new System.Drawing.Size(105, 23);
             this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -388,9 +392,9 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.BackColor = System.Drawing.Color.White;
+            this.dateTimePicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Location = new System.Drawing.Point(80, 70);
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 100);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(142, 22);
             this.dateTimePicker1.TabIndex = 39;
@@ -398,13 +402,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX6
             // 
-            this.labelX6.BackColor = System.Drawing.Color.White;
+            this.labelX6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.ForeColor = System.Drawing.Color.Black;
-            this.labelX6.Location = new System.Drawing.Point(12, 126);
+            this.labelX6.Location = new System.Drawing.Point(12, 156);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(62, 23);
             this.labelX6.TabIndex = 29;
@@ -412,13 +416,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.Color.White;
+            this.labelX5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.ForeColor = System.Drawing.Color.Black;
-            this.labelX5.Location = new System.Drawing.Point(12, 96);
+            this.labelX5.Location = new System.Drawing.Point(12, 126);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(62, 23);
             this.labelX5.TabIndex = 28;
@@ -426,13 +430,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.Color.White;
+            this.labelX4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(12, 69);
+            this.labelX4.Location = new System.Drawing.Point(12, 99);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(62, 23);
             this.labelX4.TabIndex = 27;
@@ -448,7 +452,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.txtStaffID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtStaffID.DisabledBackColor = System.Drawing.Color.White;
             this.txtStaffID.ForeColor = System.Drawing.Color.Black;
-            this.txtStaffID.Location = new System.Drawing.Point(80, 12);
+            this.txtStaffID.Location = new System.Drawing.Point(80, 42);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.PreventEnterBeep = true;
             this.txtStaffID.Size = new System.Drawing.Size(105, 22);
@@ -457,13 +461,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.White;
+            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(12, 12);
+            this.labelX2.Location = new System.Drawing.Point(12, 42);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(62, 23);
             this.labelX2.TabIndex = 19;
@@ -473,7 +477,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             this.btnFindStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnFindStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
-            this.btnFindStaff.Location = new System.Drawing.Point(191, 12);
+            this.btnFindStaff.Location = new System.Drawing.Point(191, 42);
             this.btnFindStaff.Name = "btnFindStaff";
             this.btnFindStaff.Size = new System.Drawing.Size(31, 23);
             this.btnFindStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -484,13 +488,13 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.Color.White;
+            this.labelX3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(12, 42);
+            this.labelX3.Location = new System.Drawing.Point(12, 72);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(62, 23);
             this.labelX3.TabIndex = 17;
@@ -508,7 +512,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.comboItem2,
             this.comboItem3,
             this.comboItem4});
-            this.comboBoxSlope.Location = new System.Drawing.Point(80, 41);
+            this.comboBoxSlope.Location = new System.Drawing.Point(80, 71);
             this.comboBoxSlope.Name = "comboBoxSlope";
             this.comboBoxSlope.Size = new System.Drawing.Size(105, 23);
             this.comboBoxSlope.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -535,7 +539,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             // 
             this.btnSubmit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSubmit.Enabled = false;
-            this.btnSubmit.Location = new System.Drawing.Point(12, 303);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 335);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(231, 23);
             this.btnSubmit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -543,11 +547,23 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.Red;
+            this.checkBox1.Location = new System.Drawing.Point(61, 13);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(106, 17);
+            this.checkBox1.TabIndex = 42;
+            this.checkBox1.Text = "Group Booking";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // frmSessionUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 336);
+            this.ClientSize = new System.Drawing.Size(255, 370);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
@@ -560,6 +576,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
             this.Load += new System.EventHandler(this.frmSessionUpdate_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
+            this.groupPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -614,5 +631,6 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         private DevComponents.Editors.ComboItem comboItem15;
         private DevComponents.Editors.ComboItem comboItem16;
         private DevComponents.Editors.ComboItem comboItem17;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

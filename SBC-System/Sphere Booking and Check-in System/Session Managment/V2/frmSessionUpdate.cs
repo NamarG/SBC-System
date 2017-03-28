@@ -3,6 +3,9 @@ using DevComponents.DotNetBar;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Sphere_Booking_and_Check_in_System.Session_Managment.V2;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using System.Data;
 
 namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 {
@@ -23,6 +26,15 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Session session = new Session();
+            session.getSession(int.Parse(txtSearchBox.Text.ToString()));
+            txtStaffID.Text = session.StaffID.ToString();
+            comboBoxSlope.Text = session.Slope.ToString();
+            dateTimePicker1.Text = session.Date.ToShortDateString();
+            comboBoxEx1.Text = session.StartTime.ToShortTimeString();
+            comboBoxEx2.Text = session.EndTime.ToShortTimeString();
+            checkBox1.Checked = session.Group;
+
             btnSubmit.Enabled = true;
         }
 
@@ -50,8 +62,12 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Facade ses = new Facade(int.Parse(txtSearchBox.Text.ToString()), int.Parse(txtStaffID.Text.ToString()), int.Parse(comboBoxSlope.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(comboBoxEx1.Text), Convert.ToDateTime(comboBoxEx2.Text));
-            bool i = ses.callUpdate();
+            BookingType type = null;
+            type = Factory.getType(checkBox1.Checked);
+            bool getType = type.type(checkBox1.Checked);
+
+            Session ses = new Session(int.Parse(txtSearchBox.Text.ToString()), int.Parse(txtStaffID.Text.ToString()), int.Parse(comboBoxSlope.Text.ToString()), Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(comboBoxEx1.Text), Convert.ToDateTime(comboBoxEx2.Text), getType);
+            bool i = ses.Update();
 
             if(i)
             {
@@ -61,6 +77,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                 comboBoxEx1.Text = "";
                 comboBoxEx2.Text = "";
                 dateTimePicker1.Text = "";
+                checkBox1.Checked = false;
 
                 btnSubmit.Enabled = false;
             }

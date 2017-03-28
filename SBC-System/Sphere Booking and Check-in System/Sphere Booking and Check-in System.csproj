@@ -75,6 +75,7 @@
     <Compile Include="Booking\BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking\factory.cs" />
     <Compile Include="Check-in\Check.cs" />
     <Compile Include="Check-in\CheckIn.cs">
       <SubType>Form</SubType>
@@ -197,6 +198,7 @@
     <Compile Include="Session Managment\V1\frmViewSessions.Designer.cs">
       <DependentUpon>frmViewSessions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session Managment\V2\Factory.cs" />
     <Compile Include="Session Managment\V2\frmFindSession.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,7 +253,7 @@
     <Compile Include="Session Managment\V2\frmSessionUpdate.Designer.cs">
       <DependentUpon>frmSessionUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session Managment\V2\Facade.cs" />
+    <Compile Include="Session Managment\V2\Session.cs" />
     <Compile Include="Staff Scheduling\frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>

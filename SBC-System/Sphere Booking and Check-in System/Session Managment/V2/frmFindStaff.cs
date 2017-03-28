@@ -161,20 +161,17 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                                 else
                                 {
                                     MessageBoxEx.Show("Staff Member Does Not Exist");
-                                    //Clear rows
                                 }
                             }
 
                             catch (Exception ex)
                             {
                                 MessageBoxEx.Show("Unexpected error:" + ex.Message);
-                                //Clear rows
                             }
                         }
                         else
                         {
                             MessageBoxEx.Show("Invlid Email Addres");
-                            //Clear rows
                         }
                     }
                 }
