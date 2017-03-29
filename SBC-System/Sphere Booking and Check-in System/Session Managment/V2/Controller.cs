@@ -23,8 +23,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         public bool Update()
         {
-            BookingType type = null;
-            type = Factory.getType(b.Checked);
+            BookingType type = Factory.getType(b.Checked);
             bool getType = type.type(b.Checked);
 
             Session ses = new Session(int.Parse(sessionID.Text.ToString()), int.Parse(staffID.Text.ToString()), int.Parse(Slope.Text.ToString()), Convert.ToDateTime(date.Text), Convert.ToDateTime(StartTime.Text), Convert.ToDateTime(EndTime.Text), getType);
@@ -51,8 +50,7 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 
         public bool Save()
         {
-            BookingType type = null;
-            type = Factory.getType(b.Checked);
+            BookingType type = Factory.getType(b.Checked);
             bool getType = type.type(b.Checked);
 
             Session ses = new Session(int.Parse(sessionID.Text.ToString()), int.Parse(staffID.Text.ToString()), int.Parse(Slope.Text.ToString()), Convert.ToDateTime(date.Text), Convert.ToDateTime(StartTime.Text), Convert.ToDateTime(EndTime.Text), getType);
