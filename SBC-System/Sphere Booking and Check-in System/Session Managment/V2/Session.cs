@@ -15,13 +15,14 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
                 try
                 {
                     Connection.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=@staff, slopeID=@slope, startTime=@start, endTime=@end, date=@d, groupBooking=@group WHERE Id = '" + SessionID + "'", Connection);
+                    SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=@staff, slopeID=@slope, startTime=@start, endTime=@end, date=@d, groupBooking=@group WHERE Id=@sesID", Connection);
                     cmd.Parameters.AddWithValue("@staff", staffID);
                     cmd.Parameters.AddWithValue("@slope", slopeID);
                     cmd.Parameters.AddWithValue("@start", startTime);
                     cmd.Parameters.AddWithValue("@end", endTime);
                     cmd.Parameters.AddWithValue("@d", date);
                     cmd.Parameters.AddWithValue("@group", group);
+                    cmd.Parameters.AddWithValue("@sesID", SessionID);
 
                     cmd.ExecuteNonQuery();
                     int i = cmd.ExecuteNonQuery();

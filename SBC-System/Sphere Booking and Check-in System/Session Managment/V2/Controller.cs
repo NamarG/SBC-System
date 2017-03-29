@@ -5,10 +5,10 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
 {
     class Controller
     {
-        TextBox sessionID, staffID;
-        ComboBox Slope, StartTime, EndTime;
-        DateTimePicker date;
-        CheckBox b;
+        private TextBox sessionID, staffID;
+        private ComboBox Slope, StartTime, EndTime;
+        private DateTimePicker date;
+        private CheckBox b;
 
         public Controller(TextBox sesID, TextBox staID, ComboBox s, DateTimePicker d, ComboBox start, ComboBox end, CheckBox t)
         {
