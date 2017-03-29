@@ -30,433 +30,61 @@ namespace CodedUISessionManagement
     {
         
         /// <summary>
-        /// checkDate - Use 'checkDateExpectedValues' to pass parameters into this method.
+        /// RecordedMethodSubmit
         /// </summary>
-        public void checkDate()
+        public void RecordedMethodSubmit()
         {
             #region Variable Declarations
-            WinCell uIItem08032017Cell = this.UIFindStaffWindow.UIDataGridViewX1Window.UIDataGridViewTable.UIRow0Row.UIItem08032017Cell;
+            WinButton uIOKButton = this.UIOKWindow1.UIMessageBoxDialogWindow.UIMessageBoxDialogClient.UIOKButton;
             #endregion
 
-            // Verify that the 'FriendlyName' property of '08/03/2017' cell matches '08/03/2017'
-            StringAssert.Matches(uIItem08032017Cell.FriendlyName, new Regex(this.checkDateExpectedValues.UIItem08032017CellFriendlyName));
+            // Click '&OK' button
+            Mouse.Click(uIOKButton, new Point(36, 11));
         }
         
         /// <summary>
-        /// checkErrorUpdate - Use 'checkErrorUpdateExpectedValues' to pass parameters into this method.
+        /// RecordedMethodUpdate - Use 'RecordedMethodUpdateParams' to pass parameters into this method.
         /// </summary>
-        public void checkErrorUpdate()
-        {
-            #region Variable Declarations
-            WinText uIUnexpectederrorTheUPText = this.UIUnexpectederrorTheUPWindow.UIUnexpectederrorTheUPText;
-            #endregion
-
-            // Verify that the 'DisplayText' property of 'Unexpected error:The UPDATE statement conflicted w...' label contains 'Unexpected error'
-            StringAssert.Contains(uIUnexpectederrorTheUPText.DisplayText, this.checkErrorUpdateExpectedValues.UIUnexpectederrorTheUPTextDisplayText);
-        }
-        
-        /// <summary>
-        /// checkMessageBoxUpdate - Use 'checkMessageBoxUpdateExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkMessageBoxUpdate()
-        {
-            #region Variable Declarations
-            WinTitleBar uISaveRecordTitleBar = this.UISaveRecordWindow.UISaveRecordTitleBar;
-            #endregion
-
-            // Verify that the 'DisplayText' property of 'Save Record' title bar matches 'Save Record'
-            StringAssert.Matches(uISaveRecordTitleBar.DisplayText, new Regex(this.checkMessageBoxUpdateExpectedValues.UISaveRecordTitleBarDisplayText));
-        }
-        
-        /// <summary>
-        /// checkSavedUpdate - Use 'checkSavedUpdateExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkSavedUpdate()
-        {
-            #region Variable Declarations
-            WinText uIRecordSavedText = this.UIRecordSavedWindow.UIRecordSavedText;
-            #endregion
-
-            // Verify that the 'DisplayText' property of 'Record Saved' label matches 'Record Saved'
-            StringAssert.Matches(uIRecordSavedText.DisplayText, new Regex(this.checkSavedUpdateExpectedValues.UIRecordSavedTextDisplayText));
-        }
-        
-        /// <summary>
-        /// checkSessionID - Use 'checkSessionIDExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkSessionID()
+        public void RecordedMethodUpdate()
         {
             #region Variable Declarations
             WinEdit uITxtSearchBoxEdit = this.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtSearchBox' text box matches '3'
-            StringAssert.Matches(uITxtSearchBoxEdit.Text, new Regex(this.checkSessionIDExpectedValues.UITxtSearchBoxEditText));
-        }
-        
-        /// <summary>
-        /// checkStaff - Use 'checkStaffExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaff()
-        {
-            #region Variable Declarations
-            WinEdit uITxtStaffIDEdit = this.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtStaffID' text box matches '2'
-            StringAssert.Matches(uITxtStaffIDEdit.Text, new Regex(this.checkStaffExpectedValues.UITxtStaffIDEditText));
-        }
-        
-        /// <summary>
-        /// checkStaffID - Use 'checkStaffIDExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaffID()
-        {
-            #region Variable Declarations
-            WinText uIItem2Text = this.UIFindStaffWindow.UIItem2Window.UIItem2Text;
-            #endregion
-
-            // Verify that the 'DisplayText' property of '2' label matches '2'
-            StringAssert.Matches(uIItem2Text.DisplayText, new Regex(this.checkStaffIDExpectedValues.UIItem2TextDisplayText));
-        }
-        
-        /// <summary>
-        /// checkStaffIDAv - Use 'checkStaffIDAvExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaffIDAv()
-        {
-            #region Variable Declarations
-            WinEdit uITxtSearchBoxEdit = this.UIFindStaffWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtSearchBox' text box matches '2'
-            StringAssert.Matches(uITxtSearchBoxEdit.Text, new Regex(this.checkStaffIDAvExpectedValues.UITxtSearchBoxEditText));
-        }
-        
-        /// <summary>
-        /// checkStaffIDCarry - Use 'checkStaffIDCarryExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaffIDCarry()
-        {
-            #region Variable Declarations
-            WinEdit uITxtStaffIDEdit = this.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtStaffID' text box matches '2'
-            StringAssert.Matches(uITxtStaffIDEdit.Text, new Regex(this.checkStaffIDCarryExpectedValues.UITxtStaffIDEditText));
-        }
-        
-        /// <summary>
-        /// checkStaffLastName - Use 'checkStaffLastNameExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaffLastName()
-        {
-            #region Variable Declarations
-            WinEdit uITxtLastNameEdit = this.UIFindStaffWindow.UITxtLastNameWindow.UITxtLastNameEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtLastName' text box matches 'starling'
-            StringAssert.Matches(uITxtLastNameEdit.Text, new Regex(this.checkStaffLastNameExpectedValues.UITxtLastNameEditText));
-        }
-        
-        /// <summary>
-        /// checkStaffName - Use 'checkStaffNameExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void checkStaffName()
-        {
-            #region Variable Declarations
-            WinEdit uITxtFirstNameEdit = this.UIFindStaffWindow.UITxtFirstNameWindow.UITxtFirstNameEdit;
-            #endregion
-
-            // Verify that the 'Text' property of 'txtFirstName' text box matches 'thomas'
-            StringAssert.Matches(uITxtFirstNameEdit.Text, new Regex(this.checkStaffNameExpectedValues.UITxtFirstNameEditText));
-        }
-        
-        /// <summary>
-        /// RecordedCheckStaffIDCarry - Use 'RecordedCheckStaffIDCarryParams' to pass parameters into this method.
-        /// </summary>
-        public void RecordedCheckStaffIDCarry()
-        {
-            #region Variable Declarations
-            WinEdit uITxtStaffIDEdit = this.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit;
-            #endregion
-
-            // Type '2' in 'txtStaffID' text box
-            uITxtStaffIDEdit.Text = this.RecordedCheckStaffIDCarryParams.UITxtStaffIDEditText;
-        }
-        
-        /// <summary>
-        /// RecordedFilterStaff - Use 'RecordedFilterStaffParams' to pass parameters into this method.
-        /// </summary>
-        public void RecordedFilterStaff()
-        {
-            #region Variable Declarations
-            WinButton uISearchButton = this.UIFindStaffWindow.UISearchAvailabilityGroup.UISearchButton;
-            WinComboBox uIItem2ComboBox = this.UIFindStaffWindow.UIComboBox1Window.UIItem2ComboBox;
-            WinButton uIApplyButton = this.UIFindStaffWindow.UIFilterOptionsGroup.UIApplyButton;
-            #endregion
-
-            // Click 'Search' button
-            Mouse.Click(uISearchButton, new Point(22, 6));
-
-            // Select 'Wednesday' in '2' combo box
-            uIItem2ComboBox.SelectedItem = this.RecordedFilterStaffParams.UIItem2ComboBoxSelectedItem;
-
-            // Click 'Apply' button
-            Mouse.Click(uIApplyButton, new Point(120, 18));
-        }
-        
-        /// <summary>
-        /// RecordedSearchStaff - Use 'RecordedSearchStaffParams' to pass parameters into this method.
-        /// </summary>
-        public void RecordedSearchStaff()
-        {
-            #region Variable Declarations
-            WinButton uIBtnFindStaffButton = this.UIUpdateSessionWindow.UIUpdateSessionClient.UIBtnFindStaffButton;
-            WinEdit uITxtFirstNameEdit = this.UIFindStaffWindow.UITxtFirstNameWindow.UITxtFirstNameEdit;
-            WinEdit uITxtLastNameEdit = this.UIFindStaffWindow.UITxtLastNameWindow.UITxtLastNameEdit;
-            WinButton uISearchButton = this.UIFindStaffWindow.UISearchStaffGroup.UISearchButton;
-            #endregion
-
-            // Click 'btnFindStaff' button
-            Mouse.Click(uIBtnFindStaffButton, new Point(19, 14));
-
-            // Type 'thomas' in 'txtFirstName' text box
-            uITxtFirstNameEdit.Text = this.RecordedSearchStaffParams.UITxtFirstNameEditText;
-
-            // Type '{Tab}' in 'txtFirstName' text box
-            Keyboard.SendKeys(uITxtFirstNameEdit, this.RecordedSearchStaffParams.UITxtFirstNameEditSendKeys, ModifierKeys.None);
-
-            // Type 'starling' in 'txtLastName' text box
-            uITxtLastNameEdit.Text = this.RecordedSearchStaffParams.UITxtLastNameEditText;
-
-            // Click 'Search' button
-            Mouse.Click(uISearchButton, new Point(115, 8));
-        }
-        
-        /// <summary>
-        /// RecordedUpdateSession - Use 'RecordedUpdateSessionParams' to pass parameters into this method.
-        /// </summary>
-        public void RecordedUpdateSession()
-        {
-            #region Variable Declarations
-            WinEdit uITxtSearchBoxEdit = this.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit;
-            WinEdit uITxtStaffIDEdit = this.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit;
             WinButton uISearchButton = this.UIUpdateSessionWindow.UIEnterSessionIDClient.UISearchButton;
-            WinComboBox uIComboBoxSlopeComboBox = this.UIUpdateSessionWindow.UIComboBoxSlopeWindow.UIComboBoxSlopeComboBox;
             WinDateTimePicker uIDateTimePicker1DateTimePicker = this.UIUpdateSessionWindow.UIDateTimePicker1Window.UIDateTimePicker1DateTimePicker;
             WinComboBox uIComboBoxEx1ComboBox = this.UIUpdateSessionWindow.UIComboBoxEx1Window.UIComboBoxEx1ComboBox;
             WinComboBox uIComboBoxEx2ComboBox = this.UIUpdateSessionWindow.UIComboBoxEx2Window.UIComboBoxEx2ComboBox;
             WinButton uISubmitButton = this.UIUpdateSessionWindow.UIUpdateSessionClient.UISubmitButton;
-            WinButton uIYesButton = this.UISaveRecordWindow.UIYesWindow.UIYesButton;
             #endregion
 
             // Type '3' in 'txtSearchBox' text box
-            uITxtSearchBoxEdit.Text = this.RecordedUpdateSessionParams.UITxtSearchBoxEditText;
-
-            // Type '2' in 'txtStaffID' text box
-            uITxtStaffIDEdit.Text = this.RecordedUpdateSessionParams.UITxtStaffIDEditText;
+            uITxtSearchBoxEdit.Text = this.RecordedMethodUpdateParams.UITxtSearchBoxEditText;
 
             // Click 'Search' button
-            Mouse.Click(uISearchButton, new Point(29, 8));
-
-            // Select '3' in 'comboBoxSlope' combo box
-            uIComboBoxSlopeComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxSlopeComboBoxSelectedItem;
+            Mouse.Click(uISearchButton, new Point(14, 18));
 
             // Select '02/03/2017' in 'dateTimePicker1' date time picker
-            uIDateTimePicker1DateTimePicker.DateTimeAsString = this.RecordedUpdateSessionParams.UIDateTimePicker1DateTimePickerDateTimeAsString;
+            uIDateTimePicker1DateTimePicker.DateTimeAsString = this.RecordedMethodUpdateParams.UIDateTimePicker1DateTimePickerDateTimeAsString;
 
-            // Select '10:00' in 'comboBoxEx1' combo box
-            uIComboBoxEx1ComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxEx1ComboBoxSelectedItem;
+            // Select '09:00' in 'comboBoxEx1' combo box
+            uIComboBoxEx1ComboBox.SelectedItem = this.RecordedMethodUpdateParams.UIComboBoxEx1ComboBoxSelectedItem;
 
-            // Select '15:00' in 'comboBoxEx2' combo box
-            uIComboBoxEx2ComboBox.SelectedItem = this.RecordedUpdateSessionParams.UIComboBoxEx2ComboBoxSelectedItem;
+            // Select '16:00' in 'comboBoxEx2' combo box
+            uIComboBoxEx2ComboBox.SelectedItem = this.RecordedMethodUpdateParams.UIComboBoxEx2ComboBoxSelectedItem;
 
             // Click 'Submit' button
-            Mouse.Click(uISubmitButton, new Point(131, 16));
-
-            // Click '&Yes' button
-            Mouse.Click(uIYesButton, new Point(48, 8));
+            Mouse.Click(uISubmitButton, new Point(126, 19));
         }
         
         #region Properties
-        public virtual checkDateExpectedValues checkDateExpectedValues
+        public virtual RecordedMethodUpdateParams RecordedMethodUpdateParams
         {
             get
             {
-                if ((this.mcheckDateExpectedValues == null))
+                if ((this.mRecordedMethodUpdateParams == null))
                 {
-                    this.mcheckDateExpectedValues = new checkDateExpectedValues();
+                    this.mRecordedMethodUpdateParams = new RecordedMethodUpdateParams();
                 }
-                return this.mcheckDateExpectedValues;
-            }
-        }
-        
-        public virtual checkErrorUpdateExpectedValues checkErrorUpdateExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckErrorUpdateExpectedValues == null))
-                {
-                    this.mcheckErrorUpdateExpectedValues = new checkErrorUpdateExpectedValues();
-                }
-                return this.mcheckErrorUpdateExpectedValues;
-            }
-        }
-        
-        public virtual checkMessageBoxUpdateExpectedValues checkMessageBoxUpdateExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckMessageBoxUpdateExpectedValues == null))
-                {
-                    this.mcheckMessageBoxUpdateExpectedValues = new checkMessageBoxUpdateExpectedValues();
-                }
-                return this.mcheckMessageBoxUpdateExpectedValues;
-            }
-        }
-        
-        public virtual checkSavedUpdateExpectedValues checkSavedUpdateExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckSavedUpdateExpectedValues == null))
-                {
-                    this.mcheckSavedUpdateExpectedValues = new checkSavedUpdateExpectedValues();
-                }
-                return this.mcheckSavedUpdateExpectedValues;
-            }
-        }
-        
-        public virtual checkSessionIDExpectedValues checkSessionIDExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckSessionIDExpectedValues == null))
-                {
-                    this.mcheckSessionIDExpectedValues = new checkSessionIDExpectedValues();
-                }
-                return this.mcheckSessionIDExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffExpectedValues checkStaffExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffExpectedValues == null))
-                {
-                    this.mcheckStaffExpectedValues = new checkStaffExpectedValues();
-                }
-                return this.mcheckStaffExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffIDExpectedValues checkStaffIDExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffIDExpectedValues == null))
-                {
-                    this.mcheckStaffIDExpectedValues = new checkStaffIDExpectedValues();
-                }
-                return this.mcheckStaffIDExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffIDAvExpectedValues checkStaffIDAvExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffIDAvExpectedValues == null))
-                {
-                    this.mcheckStaffIDAvExpectedValues = new checkStaffIDAvExpectedValues();
-                }
-                return this.mcheckStaffIDAvExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffIDCarryExpectedValues checkStaffIDCarryExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffIDCarryExpectedValues == null))
-                {
-                    this.mcheckStaffIDCarryExpectedValues = new checkStaffIDCarryExpectedValues();
-                }
-                return this.mcheckStaffIDCarryExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffLastNameExpectedValues checkStaffLastNameExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffLastNameExpectedValues == null))
-                {
-                    this.mcheckStaffLastNameExpectedValues = new checkStaffLastNameExpectedValues();
-                }
-                return this.mcheckStaffLastNameExpectedValues;
-            }
-        }
-        
-        public virtual checkStaffNameExpectedValues checkStaffNameExpectedValues
-        {
-            get
-            {
-                if ((this.mcheckStaffNameExpectedValues == null))
-                {
-                    this.mcheckStaffNameExpectedValues = new checkStaffNameExpectedValues();
-                }
-                return this.mcheckStaffNameExpectedValues;
-            }
-        }
-        
-        public virtual RecordedCheckStaffIDCarryParams RecordedCheckStaffIDCarryParams
-        {
-            get
-            {
-                if ((this.mRecordedCheckStaffIDCarryParams == null))
-                {
-                    this.mRecordedCheckStaffIDCarryParams = new RecordedCheckStaffIDCarryParams();
-                }
-                return this.mRecordedCheckStaffIDCarryParams;
-            }
-        }
-        
-        public virtual RecordedFilterStaffParams RecordedFilterStaffParams
-        {
-            get
-            {
-                if ((this.mRecordedFilterStaffParams == null))
-                {
-                    this.mRecordedFilterStaffParams = new RecordedFilterStaffParams();
-                }
-                return this.mRecordedFilterStaffParams;
-            }
-        }
-        
-        public virtual RecordedSearchStaffParams RecordedSearchStaffParams
-        {
-            get
-            {
-                if ((this.mRecordedSearchStaffParams == null))
-                {
-                    this.mRecordedSearchStaffParams = new RecordedSearchStaffParams();
-                }
-                return this.mRecordedSearchStaffParams;
-            }
-        }
-        
-        public virtual RecordedUpdateSessionParams RecordedUpdateSessionParams
-        {
-            get
-            {
-                if ((this.mRecordedUpdateSessionParams == null))
-                {
-                    this.mRecordedUpdateSessionParams = new RecordedUpdateSessionParams();
-                }
-                return this.mRecordedUpdateSessionParams;
+                return this.mRecordedMethodUpdateParams;
             }
         }
         
@@ -543,38 +171,34 @@ namespace CodedUISessionManagement
                 return this.mUIRecordSavedWindow;
             }
         }
+        
+        public UIRecordSavedWindow1 UIRecordSavedWindow1
+        {
+            get
+            {
+                if ((this.mUIRecordSavedWindow1 == null))
+                {
+                    this.mUIRecordSavedWindow1 = new UIRecordSavedWindow1();
+                }
+                return this.mUIRecordSavedWindow1;
+            }
+        }
+        
+        public UIOKWindow1 UIOKWindow1
+        {
+            get
+            {
+                if ((this.mUIOKWindow1 == null))
+                {
+                    this.mUIOKWindow1 = new UIOKWindow1();
+                }
+                return this.mUIOKWindow1;
+            }
+        }
         #endregion
         
         #region Fields
-        private checkDateExpectedValues mcheckDateExpectedValues;
-        
-        private checkErrorUpdateExpectedValues mcheckErrorUpdateExpectedValues;
-        
-        private checkMessageBoxUpdateExpectedValues mcheckMessageBoxUpdateExpectedValues;
-        
-        private checkSavedUpdateExpectedValues mcheckSavedUpdateExpectedValues;
-        
-        private checkSessionIDExpectedValues mcheckSessionIDExpectedValues;
-        
-        private checkStaffExpectedValues mcheckStaffExpectedValues;
-        
-        private checkStaffIDExpectedValues mcheckStaffIDExpectedValues;
-        
-        private checkStaffIDAvExpectedValues mcheckStaffIDAvExpectedValues;
-        
-        private checkStaffIDCarryExpectedValues mcheckStaffIDCarryExpectedValues;
-        
-        private checkStaffLastNameExpectedValues mcheckStaffLastNameExpectedValues;
-        
-        private checkStaffNameExpectedValues mcheckStaffNameExpectedValues;
-        
-        private RecordedCheckStaffIDCarryParams mRecordedCheckStaffIDCarryParams;
-        
-        private RecordedFilterStaffParams mRecordedFilterStaffParams;
-        
-        private RecordedSearchStaffParams mRecordedSearchStaffParams;
-        
-        private RecordedUpdateSessionParams mRecordedUpdateSessionParams;
+        private RecordedMethodUpdateParams mRecordedMethodUpdateParams;
         
         private UIUpdateSessionWindow mUIUpdateSessionWindow;
         
@@ -589,234 +213,18 @@ namespace CodedUISessionManagement
         private UIUnexpectederrorTheUPWindow mUIUnexpectederrorTheUPWindow;
         
         private UIRecordSavedWindow mUIRecordSavedWindow;
+        
+        private UIRecordSavedWindow1 mUIRecordSavedWindow1;
+        
+        private UIOKWindow1 mUIOKWindow1;
         #endregion
     }
     
     /// <summary>
-    /// Parameters to be passed into 'checkDate'
+    /// Parameters to be passed into 'RecordedMethodUpdate'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkDateExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'FriendlyName' property of '08/03/2017' cell matches '08/03/2017'
-        /// </summary>
-        public string UIItem08032017CellFriendlyName = "08/03/2017";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkErrorUpdate'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkErrorUpdateExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'DisplayText' property of 'Unexpected error:The UPDATE statement conflicted w...' label contains 'Unexpected error'
-        /// </summary>
-        public string UIUnexpectederrorTheUPTextDisplayText = "Unexpected error";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkMessageBoxUpdate'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkMessageBoxUpdateExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'DisplayText' property of 'Save Record' title bar matches 'Save Record'
-        /// </summary>
-        public string UISaveRecordTitleBarDisplayText = "Save Record";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkSavedUpdate'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkSavedUpdateExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'DisplayText' property of 'Record Saved' label matches 'Record Saved'
-        /// </summary>
-        public string UIRecordSavedTextDisplayText = "Record Saved";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkSessionID'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkSessionIDExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtSearchBox' text box matches '3'
-        /// </summary>
-        public string UITxtSearchBoxEditText = "3";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaff'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtStaffID' text box matches '2'
-        /// </summary>
-        public string UITxtStaffIDEditText = "2";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaffID'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffIDExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'DisplayText' property of '2' label matches '2'
-        /// </summary>
-        public string UIItem2TextDisplayText = "2";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaffIDAv'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffIDAvExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtSearchBox' text box matches '2'
-        /// </summary>
-        public string UITxtSearchBoxEditText = "2";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaffIDCarry'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffIDCarryExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtStaffID' text box matches '2'
-        /// </summary>
-        public string UITxtStaffIDEditText = "2";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaffLastName'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffLastNameExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtLastName' text box matches 'starling'
-        /// </summary>
-        public string UITxtLastNameEditText = "starling";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'checkStaffName'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class checkStaffNameExpectedValues
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Verify that the 'Text' property of 'txtFirstName' text box matches 'thomas'
-        /// </summary>
-        public string UITxtFirstNameEditText = "thomas";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'RecordedCheckStaffIDCarry'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class RecordedCheckStaffIDCarryParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Type '2' in 'txtStaffID' text box
-        /// </summary>
-        public string UITxtStaffIDEditText = "2";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'RecordedFilterStaff'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class RecordedFilterStaffParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Select 'Wednesday' in '2' combo box
-        /// </summary>
-        public string UIItem2ComboBoxSelectedItem = "Wednesday";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'RecordedSearchStaff'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class RecordedSearchStaffParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Type 'thomas' in 'txtFirstName' text box
-        /// </summary>
-        public string UITxtFirstNameEditText = "thomas";
-        
-        /// <summary>
-        /// Type '{Tab}' in 'txtFirstName' text box
-        /// </summary>
-        public string UITxtFirstNameEditSendKeys = "{Tab}";
-        
-        /// <summary>
-        /// Type 'starling' in 'txtLastName' text box
-        /// </summary>
-        public string UITxtLastNameEditText = "starling";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'RecordedUpdateSession'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class RecordedUpdateSessionParams
+    public class RecordedMethodUpdateParams
     {
         
         #region Fields
@@ -826,29 +234,19 @@ namespace CodedUISessionManagement
         public string UITxtSearchBoxEditText = "3";
         
         /// <summary>
-        /// Type '2' in 'txtStaffID' text box
-        /// </summary>
-        public string UITxtStaffIDEditText = "2";
-        
-        /// <summary>
-        /// Select '3' in 'comboBoxSlope' combo box
-        /// </summary>
-        public string UIComboBoxSlopeComboBoxSelectedItem = "3";
-        
-        /// <summary>
         /// Select '02/03/2017' in 'dateTimePicker1' date time picker
         /// </summary>
         public string UIDateTimePicker1DateTimePickerDateTimeAsString = "02-Mar-2017";
         
         /// <summary>
-        /// Select '10:00' in 'comboBoxEx1' combo box
+        /// Select '09:00' in 'comboBoxEx1' combo box
         /// </summary>
-        public string UIComboBoxEx1ComboBoxSelectedItem = "10:00";
+        public string UIComboBoxEx1ComboBoxSelectedItem = "09:00";
         
         /// <summary>
-        /// Select '15:00' in 'comboBoxEx2' combo box
+        /// Select '16:00' in 'comboBoxEx2' combo box
         /// </summary>
-        public string UIComboBoxEx2ComboBoxSelectedItem = "15:00";
+        public string UIComboBoxEx2ComboBoxSelectedItem = "16:00";
         #endregion
     }
     
@@ -1009,6 +407,42 @@ namespace CodedUISessionManagement
                 return this.mUIComboBoxEx2Window;
             }
         }
+        
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this);
+                }
+                return this.mUIItemWindow;
+            }
+        }
+        
+        public UIItemWindow1 UIItemWindow1
+        {
+            get
+            {
+                if ((this.mUIItemWindow1 == null))
+                {
+                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                }
+                return this.mUIItemWindow1;
+            }
+        }
+        
+        public UIItemWindow2 UIItemWindow2
+        {
+            get
+            {
+                if ((this.mUIItemWindow2 == null))
+                {
+                    this.mUIItemWindow2 = new UIItemWindow2(this);
+                }
+                return this.mUIItemWindow2;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1035,6 +469,12 @@ namespace CodedUISessionManagement
         private UIComboBoxEx1Window mUIComboBoxEx1Window;
         
         private UIComboBoxEx2Window mUIComboBoxEx2Window;
+        
+        private UIItemWindow mUIItemWindow;
+        
+        private UIItemWindow1 mUIItemWindow1;
+        
+        private UIItemWindow2 mUIItemWindow2;
         #endregion
     }
     
@@ -1516,6 +956,113 @@ namespace CodedUISessionManagement
         
         #region Fields
         private WinComboBox mUIComboBoxEx2ComboBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow : WinWindow
+    {
+        
+        public UIItemWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1001";
+            this.SearchProperties[WinWindow.PropertyNames.Instance] = "3";
+            this.WindowTitles.Add("Update Session");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("Update Session");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIItemEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow1 : WinWindow
+    {
+        
+        public UIItemWindow1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1001";
+            this.SearchProperties[WinWindow.PropertyNames.Instance] = "2";
+            this.WindowTitles.Add("Update Session");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("Update Session");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIItemEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow2 : WinWindow
+    {
+        
+        public UIItemWindow2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1001";
+            this.WindowTitles.Add("Update Session");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("Update Session");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIItemEdit;
         #endregion
     }
     
@@ -2311,6 +1858,137 @@ The statement has been terminated.");
         
         #region Fields
         private WinText mUIRecordSavedText;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIRecordSavedWindow1 : WinWindow
+    {
+        
+        public UIRecordSavedWindow1()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Record Saved";
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("Record Saved");
+            #endregion
+        }
+        
+        #region Properties
+        public WinClient UIRecordSavedClient
+        {
+            get
+            {
+                if ((this.mUIRecordSavedClient == null))
+                {
+                    this.mUIRecordSavedClient = new WinClient(this);
+                    #region Search Criteria
+                    this.mUIRecordSavedClient.SearchProperties[WinControl.PropertyNames.Name] = "Record Saved";
+                    this.mUIRecordSavedClient.WindowTitles.Add("Record Saved");
+                    #endregion
+                }
+                return this.mUIRecordSavedClient;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinClient mUIRecordSavedClient;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIOKWindow1 : WinWindow
+    {
+        
+        public UIOKWindow1()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "&OK";
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("&OK");
+            #endregion
+        }
+        
+        #region Properties
+        public UIMessageBoxDialogWindow UIMessageBoxDialogWindow
+        {
+            get
+            {
+                if ((this.mUIMessageBoxDialogWindow == null))
+                {
+                    this.mUIMessageBoxDialogWindow = new UIMessageBoxDialogWindow(this);
+                }
+                return this.mUIMessageBoxDialogWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIMessageBoxDialogWindow mUIMessageBoxDialogWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIMessageBoxDialogWindow : WinWindow
+    {
+        
+        public UIMessageBoxDialogWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            #endregion
+        }
+        
+        #region Properties
+        public UIMessageBoxDialogClient UIMessageBoxDialogClient
+        {
+            get
+            {
+                if ((this.mUIMessageBoxDialogClient == null))
+                {
+                    this.mUIMessageBoxDialogClient = new UIMessageBoxDialogClient(this);
+                }
+                return this.mUIMessageBoxDialogClient;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIMessageBoxDialogClient mUIMessageBoxDialogClient;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIMessageBoxDialogClient : WinClient
+    {
+        
+        public UIMessageBoxDialogClient(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+        }
+        
+        #region Properties
+        public WinButton UIOKButton
+        {
+            get
+            {
+                if ((this.mUIOKButton == null))
+                {
+                    this.mUIOKButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
+                    this.mUIOKButton.WindowTitles.Add("&OK");
+                    #endregion
+                }
+                return this.mUIOKButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIOKButton;
         #endregion
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-
+using System.Data.SqlClient;
 
 namespace CodedUISessionManagement
 {
@@ -23,29 +23,26 @@ namespace CodedUISessionManagement
         }
 
         [TestMethod]
-        public void CodedUICheckStaffTest()
-        {
-            //Check Staff information
-            this.UIMap.RecordedSearchStaff();
-            this.UIMap.checkStaffName();
-            this.UIMap.checkStaffLastName();
-            this.UIMap.checkStaffID();
-            this.UIMap.RecordedFilterStaff();
-            this.UIMap.checkStaffIDAv();
-            this.UIMap.checkDate();
-            this.UIMap.RecordedCheckStaffIDCarry();
-            this.UIMap.checkStaffIDCarry();
-
-            //Check errors next
-
-        }
-
-        [TestMethod]
         public void CodedUIUpdateSessionTest()
         {
-            //Add recorded
-            this.UIMap.RecordedUpdateSession();
-            this.UIMap.checkSavedUpdate();
+            //Perform automated test
+            this.UIMap.RecordedMethodUpdate();
+
+            string sID = UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit.Text;
+            string sesID = UIMap.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit.Text;
+            string d = UIMap.UIUpdateSessionWindow.UIDateTimePicker1Window.UIDateTimePicker1DateTimePicker.ToString();
+            string sTime = UIMap.UIUpdateSessionWindow.UIComboBoxEx1Window.UIComboBoxEx1ComboBox.ToString();
+            string eTime = UIMap.UIUpdateSessionWindow.UIComboBoxEx2Window.UIComboBoxEx2ComboBox.ToString();
+
+            this.UIMap.RecordedMethodSubmit();
+
+            //Validation that the data is there
+            Verify verify = new Verify();
+            bool i = verify.getSession(sesID, sID, d, sTime, eTime);
+            if(i == false)
+            {
+                Assert.Fail();
+            }
         }
 
         #region Additional test attributes

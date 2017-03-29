@@ -41,274 +41,16 @@
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
-    <StringAssertAction UIObjectName="UIMap.UIFindStaffWindow.UIDataGridViewX1Window.UIDataGridViewTable.UIRow0Row.UIItem08032017Cell">
-      <ParameterName />
-      <PropertyName>FriendlyName</PropertyName>
-      <ExpectedValue>08/03/2017</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkDate">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIUnexpectederrorTheUPWindow.UIUnexpectederrorTheUPText">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>Unexpected error</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Contains</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkErrorUpdate">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UISaveRecordWindow.UISaveRecordTitleBar">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>Save Record</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkMessageBoxUpdate">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIRecordSavedWindow.UIRecordSavedText">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>Record Saved</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkSavedUpdate">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>3</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkSessionID">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>2</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaff">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIFindStaffWindow.UIItem2Window.UIItem2Text">
-      <ParameterName />
-      <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>2</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaffID">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIFindStaffWindow.UITxtSearchBoxWindow.UITxtSearchBoxEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>2</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaffIDAv">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>2</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaffIDCarry">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIFindStaffWindow.UITxtLastNameWindow.UITxtLastNameEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>starling</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaffLastName">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIFindStaffWindow.UITxtFirstNameWindow.UITxtFirstNameEdit">
-      <ParameterName />
-      <PropertyName>Text</PropertyName>
-      <ExpectedValue>thomas</ExpectedValue>
-      <MessageOnValidationFailure />
-      <Comparison>CurrentCulture</Comparison>
-      <PropertyCondition>Matches</PropertyCondition>
-    </StringAssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="checkStaffName">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Assertion</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
-      <ParameterName />
-      <Value Encoded="false">2</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedCheckStaffIDCarry">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIFindStaffWindow.UISearchAvailabilityGroup.UISearchButton">
+    <MouseAction UIObjectName="UIMap.UIOKWindow1.UIMessageBoxDialogWindow.UIMessageBoxDialogClient.UIOKButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="22" Y="6" />
+      <Location X="36" Y="11" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIFindStaffWindow.UIComboBox1Window.UIItem2ComboBox">
-      <ParameterName />
-      <Value Encoded="false">Wednesday</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIFindStaffWindow.UIFilterOptionsGroup.UIApplyButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="120" Y="18" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedFilterStaff">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIUpdateSessionWindow.UIUpdateSessionClient.UIBtnFindStaffButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="19" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIFindStaffWindow.UITxtFirstNameWindow.UITxtFirstNameEdit">
-      <ParameterName />
-      <Value Encoded="false">thomas</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <SendKeysAction UIObjectName="UIMap.UIFindStaffWindow.UITxtFirstNameWindow.UITxtFirstNameEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Text Encoded="false">{Tab}</Text>
-    </SendKeysAction>
-    <SetValueAction UIObjectName="UIMap.UIFindStaffWindow.UITxtLastNameWindow.UITxtLastNameEdit">
-      <ParameterName />
-      <Value Encoded="false">starling</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIFindStaffWindow.UISearchStaffGroup.UISearchButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="115" Y="8" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedSearchStaff">
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethodSubmit">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -322,25 +64,15 @@
       <Value Encoded="false">3</Value>
       <Type>String</Type>
     </SetValueAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UITxtStaffIDWindow.UITxtStaffIDEdit">
-      <ParameterName />
-      <Value Encoded="false">2</Value>
-      <Type>String</Type>
-    </SetValueAction>
     <MouseAction UIObjectName="UIMap.UIUpdateSessionWindow.UIEnterSessionIDClient.UISearchButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="29" Y="8" />
+      <Location X="14" Y="18" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxSlopeWindow.UIComboBoxSlopeComboBox">
-      <ParameterName />
-      <Value Encoded="false">3</Value>
-      <Type>String</Type>
-    </SetValueAction>
     <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIDateTimePicker1Window.UIDateTimePicker1DateTimePicker">
       <ParameterName />
       <Value Encoded="false">02-Mar-2017</Value>
@@ -348,33 +80,24 @@
     </SetValueAction>
     <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxEx1Window.UIComboBoxEx1ComboBox">
       <ParameterName />
-      <Value Encoded="false">10:00</Value>
+      <Value Encoded="false">09:00</Value>
       <Type>String</Type>
     </SetValueAction>
     <SetValueAction UIObjectName="UIMap.UIUpdateSessionWindow.UIComboBoxEx2Window.UIComboBoxEx2ComboBox">
       <ParameterName />
-      <Value Encoded="false">15:00</Value>
+      <Value Encoded="false">16:00</Value>
       <Type>String</Type>
     </SetValueAction>
     <MouseAction UIObjectName="UIMap.UIUpdateSessionWindow.UIUpdateSessionClient.UISubmitButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="131" Y="16" />
+      <Location X="126" Y="19" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UISaveRecordWindow.UIYesWindow.UIYesButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="48" Y="8" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedUpdateSession">
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethodUpdate">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -812,6 +535,98 @@
                     <PropertyCondition Name="ControlType">ComboBox</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Update Session</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlId">1001</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+                <PropertyCondition Name="Instance">3</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>1</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Edit" Id="UIItemEdit" FriendlyName="" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Update Session</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>1</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIItemWindow1" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Update Session</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlId">1001</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+                <PropertyCondition Name="Instance">2</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>1</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Edit" Id="UIItemEdit" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Update Session</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>1</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIItemWindow2" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Update Session</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlId">1001</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>1</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Edit" Id="UIItemEdit" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Update Session</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>1</SupportLevel>
                   <Descendants />
                 </UIObject>
               </Descendants>
@@ -1351,6 +1166,97 @@ The statement has been terminated.</WindowTitle>
               </AndCondition>
               <SupportLevel>1</SupportLevel>
               <Descendants />
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+        <TopLevelWindow ControlType="Window" Id="UIRecordSavedWindow1" FriendlyName="Record Saved" SpecialControlType="None" SessionId="4393710">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>Record Saved</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">Record Saved</PropertyCondition>
+            <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.Window</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>100</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Client" Id="UIRecordSavedClient" FriendlyName="Record Saved" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Record Saved</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Record Saved</PropertyCondition>
+                <PropertyCondition Name="ControlType">Client</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>100</SupportLevel>
+              <Descendants />
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+        <TopLevelWindow ControlType="Window" Id="UIOKWindow1" FriendlyName="&amp;OK" SpecialControlType="None" SessionId="10423036">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>&amp;OK</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">&amp;OK</PropertyCondition>
+            <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.Window</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Window" Id="UIMessageBoxDialogWindow" FriendlyName="MessageBoxDialog" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles />
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.Window</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Client" Id="UIMessageBoxDialogClient" FriendlyName="MessageBoxDialog" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles />
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Button" Id="UIOKButton" FriendlyName="&amp;OK" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>&amp;OK</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">OK</PropertyCondition>
+                        <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
             </UIObject>
           </Descendants>
         </TopLevelWindow>
