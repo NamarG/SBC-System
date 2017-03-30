@@ -18,7 +18,6 @@ namespace Sphere_Booking_and_Check_in_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_UI.frmMainLogin());
             //Application.Run(new Session_Managment.V2.frmSessionUpdate());
-            //Application.Run(new Booking.BookingForm());
         }
     }
 }

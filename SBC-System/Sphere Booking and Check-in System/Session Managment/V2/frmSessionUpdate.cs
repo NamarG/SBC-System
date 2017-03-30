@@ -46,6 +46,8 @@ namespace Sphere_Booking_and_Check_in_System.Session_Managment.V2
         {
             dateTimePicker1.Value = DateTime.Now;
             Properties.Settings.Default.staffID = 0;
+            Controller control = new Controller();
+            control.manualTest();
         }
 
         private void txtStaffID_Click(object sender, System.EventArgs e)
