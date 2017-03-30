@@ -541,6 +541,8 @@ namespace Sphere_Booking_and_Check_in_System {
             
             private global::System.Data.DataColumn columncheckedIn;
             
+            private global::System.Data.DataColumn columnstaff_Sch;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BookingDataTable() {
@@ -616,6 +618,14 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn staff_SchColumn {
+                get {
+                    return this.columnstaff_Sch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -651,14 +661,15 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BookingRow AddBookingRow(CustomerRow parentCustomerRowByFK_Booking_customerID, decimal cost, SessionRow parentSessionRowByFK_Booking_Session, bool checkedIn) {
+            public BookingRow AddBookingRow(CustomerRow parentCustomerRowByFK_Booking_customerID, decimal cost, SessionRow parentSessionRowByFK_Booking_Session, bool checkedIn, int staff_Sch) {
                 BookingRow rowBookingRow = ((BookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         cost,
                         null,
-                        checkedIn};
+                        checkedIn,
+                        staff_Sch};
                 if ((parentCustomerRowByFK_Booking_customerID != null)) {
                     columnValuesArray[1] = parentCustomerRowByFK_Booking_customerID[0];
                 }
@@ -699,6 +710,7 @@ namespace Sphere_Booking_and_Check_in_System {
                 this.columncost = base.Columns["cost"];
                 this.columnsessionID = base.Columns["sessionID"];
                 this.columncheckedIn = base.Columns["checkedIn"];
+                this.columnstaff_Sch = base.Columns["staff_Sch"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -714,6 +726,8 @@ namespace Sphere_Booking_and_Check_in_System {
                 base.Columns.Add(this.columnsessionID);
                 this.columncheckedIn = new global::System.Data.DataColumn("checkedIn", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncheckedIn);
+                this.columnstaff_Sch = new global::System.Data.DataColumn("staff_Sch", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaff_Sch);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -3027,6 +3041,22 @@ namespace Sphere_Booking_and_Check_in_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int staff_Sch {
+                get {
+                    try {
+                        return ((int)(this[this.tableBooking.staff_SchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'staff_Sch\' in table \'Booking\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBooking.staff_SchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CustomerRow CustomerRow {
                 get {
                     return ((CustomerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Booking_customerID"])));
@@ -3057,6 +3087,18 @@ namespace Sphere_Booking_and_Check_in_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcheckedInNull() {
                 this[this.tableBooking.checkedInColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstaff_SchNull() {
+                return this.IsNull(this.tableBooking.staff_SchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstaff_SchNull() {
+                this[this.tableBooking.staff_SchColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4187,10 +4229,11 @@ namespace Sphere_Booking_and_Check_in_System.mainDatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("cost", "cost");
             tableMapping.ColumnMappings.Add("sessionID", "sessionID");
             tableMapping.ColumnMappings.Add("checkedIn", "checkedIn");
+            tableMapping.ColumnMappings.Add("staff_Sch", "staff_Sch");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Booking] WHERE (([Id] = @Original_Id) AND ([customerID] = @Original_customerID) AND ([cost] = @Original_cost) AND ([sessionID] = @Original_sessionID) AND ((@IsNull_checkedIn = 1 AND [checkedIn] IS NULL) OR ([checkedIn] = @Original_checkedIn)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Booking] WHERE (([Id] = @Original_Id) AND ([customerID] = @Original_customerID) AND ([cost] = @Original_cost) AND ([sessionID] = @Original_sessionID) AND ((@IsNull_checkedIn = 1 AND [checkedIn] IS NULL) OR ([checkedIn] = @Original_checkedIn)) AND ((@IsNull_staff_Sch = 1 AND [staff_Sch] IS NULL) OR ([staff_Sch] = @Original_staff_Sch)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4198,31 +4241,38 @@ namespace Sphere_Booking_and_Check_in_System.mainDatabaseDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sessionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sessionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_checkedIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_checkedIn", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Booking] ([customerID], [cost], [sessionID], [checkedIn]) VALUES (@c" +
-                "ustomerID, @cost, @sessionID, @checkedIn);\r\nSELECT Id, customerID, cost, session" +
-                "ID, checkedIn FROM Booking WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Booking] ([customerID], [cost], [sessionID], [checkedIn], [staff_Sch" +
+                "]) VALUES (@customerID, @cost, @sessionID, @checkedIn, @staff_Sch);\r\nSELECT Id, " +
+                "customerID, cost, sessionID, checkedIn, staff_Sch FROM Booking WHERE (Id = SCOPE" +
+                "_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sessionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sessionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@checkedIn", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Booking] SET [customerID] = @customerID, [cost] = @cost, [sessionID] = @sessionID, [checkedIn] = @checkedIn WHERE (([Id] = @Original_Id) AND ([customerID] = @Original_customerID) AND ([cost] = @Original_cost) AND ([sessionID] = @Original_sessionID) AND ((@IsNull_checkedIn = 1 AND [checkedIn] IS NULL) OR ([checkedIn] = @Original_checkedIn)));
-SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Booking] SET [customerID] = @customerID, [cost] = @cost, [sessionID] = @sessionID, [checkedIn] = @checkedIn, [staff_Sch] = @staff_Sch WHERE (([Id] = @Original_Id) AND ([customerID] = @Original_customerID) AND ([cost] = @Original_cost) AND ([sessionID] = @Original_sessionID) AND ((@IsNull_checkedIn = 1 AND [checkedIn] IS NULL) OR ([checkedIn] = @Original_checkedIn)) AND ((@IsNull_staff_Sch = 1 AND [staff_Sch] IS NULL) OR ([staff_Sch] = @Original_staff_Sch)));
+SELECT Id, customerID, cost, sessionID, checkedIn, staff_Sch FROM Booking WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sessionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sessionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@checkedIn", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sessionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sessionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_checkedIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_checkedIn", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "checkedIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staff_Sch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staff_Sch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4239,7 +4289,7 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking";
+            this._commandCollection[0].CommandText = "SELECT Id, customerID, cost, sessionID, checkedIn, staff_Sch FROM Booking";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4300,7 +4350,7 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn) {
+        public virtual int Delete(int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn, global::System.Nullable<int> Original_staff_Sch) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_customerID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_cost));
@@ -4312,6 +4362,14 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_staff_Sch.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_staff_Sch.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4333,7 +4391,7 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn) {
+        public virtual int Insert(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn, global::System.Nullable<int> staff_Sch) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(customerID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(cost));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(sessionID));
@@ -4342,6 +4400,12 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((staff_Sch.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(staff_Sch.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4363,7 +4427,7 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn, int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn, int Id) {
+        public virtual int Update(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn, global::System.Nullable<int> staff_Sch, int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn, global::System.Nullable<int> Original_staff_Sch, int Id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(customerID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(cost));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(sessionID));
@@ -4373,19 +4437,33 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_customerID));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_cost));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_sessionID));
-            if ((Original_checkedIn.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(Original_checkedIn.Value));
+            if ((staff_Sch.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(staff_Sch.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_customerID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_cost));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_sessionID));
+            if ((Original_checkedIn.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_checkedIn.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_staff_Sch.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_staff_Sch.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4406,8 +4484,8 @@ SELECT Id, customerID, cost, sessionID, checkedIn FROM Booking WHERE (Id = @Id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn, int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn) {
-            return this.Update(customerID, cost, sessionID, checkedIn, Original_Id, Original_customerID, Original_cost, Original_sessionID, Original_checkedIn, Original_Id);
+        public virtual int Update(int customerID, decimal cost, int sessionID, global::System.Nullable<bool> checkedIn, global::System.Nullable<int> staff_Sch, int Original_Id, int Original_customerID, decimal Original_cost, int Original_sessionID, global::System.Nullable<bool> Original_checkedIn, global::System.Nullable<int> Original_staff_Sch) {
+            return this.Update(customerID, cost, sessionID, checkedIn, staff_Sch, Original_Id, Original_customerID, Original_cost, Original_sessionID, Original_checkedIn, Original_staff_Sch, Original_Id);
         }
     }
     
