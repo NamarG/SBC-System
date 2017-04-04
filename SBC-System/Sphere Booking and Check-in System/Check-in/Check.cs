@@ -14,10 +14,19 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         private TextBox Id, firstName, lastName, emailAddress, phoneNumber, address;
         private CheckBox member;
 
-        public CheckInController(int id, TextBox firstName)
+        public CheckInController(int id, TextBox fName, TextBox lName, TextBox eAddress, TextBox pNumber, TextBox addr, CheckBox mem)
         {
             customerID = id;
-            firstName =
+            firstName = fName;
+            lastName = lName;
+            emailAddress = eAddress;
+            phoneNumber = pNumber;
+            address = addr;
+            member = mem;
+        }
+        
+        public controller()
+        {
 
         }
 
@@ -76,23 +85,69 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         }
 
         internal void checkin()
-        {
-            throw new NotImplementedException();
-        }
+{
+    throw new NotImplementedException();
+}
 
-        public int saveCustomer(int id)
-        {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("UPDATE Booking SET checkedIn = 1 WHERE customerID=@cusID", connection);
-                command.Parameters.AddWithValue("cusID", id);
-                command.ExecuteNonQuery();
-                MessageBox.Show("You have successfully checked in.");
-                connection.Close();
-                return 1;
-            }
-        }
+public int saveCustomer(int id)
+{
+    using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+    {
+        connection.Open();
+        SqlCommand command = new SqlCommand("UPDATE Booking SET checkedIn = 1 WHERE customerID=@cusID", connection);
+        command.Parameters.AddWithValue("cusID", id);
+        command.ExecuteNonQuery();
+        MessageBox.Show("You have successfully checked in.");
+        connection.Close();
+        return 1;
+    }
+}
     }
 
-}
+
+    //public bool manualTest()
+    //{
+    //    Console.WriteLine("Start test:");
+    //    using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+    //    {
+    //        try
+    //        {
+    //            Connection.Open();
+    //            SqlCommand cmd = new SqlCommand("UPDATE Session SET staffID=2, slopeID=2, startTime=CAST('09:00' AS TIME), endTime=CAST('14:00' AS TIME), date=CAST('03-30-2017' AS DATETIME) WHERE Id=18", Connection);
+    //            int i = cmd.ExecuteNonQuery();
+
+    //            if (i > 0)
+    //            {
+    //                Console.WriteLine("--------UPDATE PASS--------");
+    //                cmd = new SqlCommand("SELECT Count(*) FROM Session WHERE Id=18 AND staffID=2 AND slopeID=2 AND startTime=CAST('09:00:00' AS TIME) AND endTime=CAST('14:00:00' AS TIME) AND date=CAST('03-30-2017' AS DATETIME)", Connection);
+    //                i = (int)cmd.ExecuteScalar();
+
+    //                if (i > 0)
+    //                {
+    //                    Console.WriteLine("--------VERIFY PASS--------");
+    //                    Console.WriteLine("----------------ALL PASS----------------");
+    //                    Connection.Close();
+    //                    return true;
+    //                }
+    //                else
+    //                {
+    //                    Console.WriteLine("--------VERIFY FAIL--------");
+    //                    Connection.Close();
+    //                    return false;
+    //                }
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("--------UPDATE FAIL--------");
+    //                Connection.Close();
+    //                return false;
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Connection.Close();
+    //            MessageBox.Show(ex.ToString());
+    //            Console.WriteLine("--------UNKNOWN FAIL--------");
+    //            return false;
+    //        }
+        }
