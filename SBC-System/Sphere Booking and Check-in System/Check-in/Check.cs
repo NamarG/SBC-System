@@ -8,9 +8,11 @@ using System.Windows.Forms;
 
 namespace Sphere_Booking_and_Check_in_System.Check_in
 {
+
     class CheckInController
     {
         private int customerID;
+        private int membership;
         private TextBox Id, firstName, lastName, emailAddress, phoneNumber, address;
         private CheckBox member;
         private int v;
@@ -104,6 +106,7 @@ public int saveCustomer(int id)
     }
 }
     }
+
 
 
     //public bool manualTest()
