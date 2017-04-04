@@ -28,8 +28,12 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         private void button3_Click(object sender, EventArgs e)
         {
             CheckInController check = new CheckInController(int.Parse(textBox1.Text.ToString())); //making new object.
-            //HAVING ERROR RUNNING CONFIRMED CHECK IN
-            //check.checkin(); //calls function, to return back to checkin.
+            check.checkin(); //calls function, to return back to checkin.
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

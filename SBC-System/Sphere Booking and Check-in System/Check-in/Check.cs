@@ -13,6 +13,7 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
         private int customerID;
         private TextBox Id, firstName, lastName, emailAddress, phoneNumber, address;
         private CheckBox member;
+        private int v;
 
         public CheckInController(int id, TextBox fName, TextBox lName, TextBox eAddress, TextBox pNumber, TextBox addr, CheckBox mem)
         {
@@ -24,10 +25,10 @@ namespace Sphere_Booking_and_Check_in_System.Check_in
             address = addr;
             member = mem;
         }
-        
-        public controller()
-        {
 
+        public CheckInController(int v)
+        {
+            this.v = v;
         }
 
         public int getCustomer(int id)
