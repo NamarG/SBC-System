@@ -24,8 +24,8 @@ namespace Sphere_Booking_and_Check_in_System.Scheduling
 
             using (SqlConnection Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\mainDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
             {
-                SqlDataAdapter staffcheck = new SqlDataAdapter("SELECT * FROM [Staff_Scheduling] WHERE date ='" + dateTimePicker1.Value.ToLongDateString()  + "'", Connection);
-                DataTable staffdata = new DataTable(); //datagridviewer will be filled with data of sessions available on the day which has less than 30 people booked onit.
+                SqlDataAdapter staffcheck = new SqlDataAdapter("SELECT * FROM [Staff_Scheduling] WHERE date ='" + dateTimePicker1.Value.ToLongDateString()  + "'", Connection); // // get the information from staff_schedling
+                DataTable staffdata = new DataTable(); // show staff members who are not booked on the day
 
                 staffcheck.Fill(staffdata);
                 dataGridView1.DataSource = staffdata;
