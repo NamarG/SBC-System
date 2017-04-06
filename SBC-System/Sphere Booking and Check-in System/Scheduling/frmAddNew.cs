@@ -64,6 +64,18 @@ namespace Sphere_Booking_and_Check_in_System.Scheduling
                 }
             }
             }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Scheduling.frmdate checkdate = new Scheduling.frmdate();
+            checkdate.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Scheduling.frmstaff checkdate = new Scheduling.frmstaff();
+            checkdate.Show();
+        }
     }
 }
 
